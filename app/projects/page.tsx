@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { MapPin, Bed, Home } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
+import { Navigation } from "@/components/navigation"
 
 const estates = [
   {
@@ -296,48 +297,7 @@ function PropertyCard({ property, category }: { property: any; category: string 
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/logo-nondon.png"
-                alt="Nondon Real Estate Logo"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <span className="font-bold text-xl text-gray-900">Nondon Real Estate</span>
-            </Link>
-
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-red-600 transition-colors">
-                Home
-              </Link>
-              <Link href="/projects" className="text-red-600 font-semibold">
-                Projects
-              </Link>
-              <Link href="/gallery" className="text-gray-600 hover:text-red-600 transition-colors">
-                Gallery
-              </Link>
-              <Link href="/about" className="text-gray-600 hover:text-red-600 transition-colors">
-                About
-              </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-red-600 transition-colors">
-                Contact
-              </Link>
-              <Link href="/nondon-hub" className="text-gray-600 hover:text-red-600 transition-colors">
-                Nondon HUB
-              </Link>
-            </div>
-
-            <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
-              <Link href="/contact">Reserve Now</Link>
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">

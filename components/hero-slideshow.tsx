@@ -64,12 +64,12 @@ export default function HeroSlideshow() {
       ))}
 
       <div className="relative z-10 flex items-center justify-center h-full">
-        <div className="text-center text-white px-4 max-w-4xl mx-auto">
+        <div className="text-center text-white px-6 sm:px-8 max-w-5xl mx-auto">
           <div className="animate-fade-in-up">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-balance transition-all duration-500">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance transition-all duration-500 leading-tight">
               {slides[currentSlide].mainTitle}
             </h1>
-            <p className="text-xl md:text-2xl mb-8 text-balance opacity-90 transition-all duration-500">
+            <p className="text-lg sm:text-xl md:text-2xl mb-8 text-balance opacity-90 transition-all duration-500 max-w-4xl mx-auto">
               {slides[currentSlide].subtitle}
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">

@@ -6,6 +6,7 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Navigation } from "@/components/navigation"
 
 const galleryProjects = [
   {
@@ -119,47 +120,7 @@ export default function GalleryPage() {
   return (
     <div className="min-h-screen bg-white">
       {/* Navigation */}
-      <nav className="bg-white shadow-sm border-b sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link href="/" className="flex items-center space-x-2">
-              <Image
-                src="/logo-nondon.png"
-                alt="Nondon Real Estate Logo"
-                width={40}
-                height={40}
-                className="rounded-full"
-              />
-              <span className="font-bold text-xl text-gray-900">Nondon Real Estate</span>
-            </Link>
-
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-red-600 transition-colors">
-                Home
-              </Link>
-              <Link href="/projects" className="text-gray-600 hover:text-red-600 transition-colors">
-                Projects
-              </Link>
-              <Link href="/gallery" className="text-red-600 font-semibold">
-                Gallery
-              </Link>
-              <Link href="/about" className="text-gray-600 hover:text-red-600 transition-colors">
-                About
-              </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-red-600 transition-colors">
-                Contact
-              </Link>
-            </div>
-
-            <Button
-              asChild
-              className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white"
-            >
-              <Link href="/contact">Reserve Now</Link>
-            </Button>
-          </div>
-        </div>
-      </nav>
+      <Navigation />
 
       {/* Hero Section */}
       <section className="relative py-20 bg-gradient-to-br from-gray-50 to-red-50 overflow-hidden">
