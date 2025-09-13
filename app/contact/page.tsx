@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
@@ -5,10 +7,13 @@ import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Separator } from "@/components/ui/separator"
-import { Phone, Mail, MapPin, Clock, MessageCircle, Send, Home, Calendar } from "lucide-react"
+import { Phone, Mail, MapPin, Clock, MessageCircle, Send, Home, Calendar, CheckCircle, XCircle, Loader2 } from "lucide-react"
 import Link from "next/link"
 import Image from "next/image"
 import { Navigation } from "@/components/navigation"
+import { useFormSubmission } from "@/hooks/useFormSubmission"
+import { initEmailJS, testEmailJS } from "@/lib/emailjs"
+import { useEffect, useState } from "react"
 
 const contactMethods = [
   {
@@ -40,14 +45,14 @@ const contactMethods = [
 const offices = [
   {
     name: "Head Office - Enugu",
-    address: "Independence Layout, Enugu State, Nigeria",
+    address: "No2 Ituku Street Upper Chime, New Haven, Enugu State, Nigeria",
     phone: "+234 814 332 6274",
     email: "info@nondonreals.com",
     hours: "Monday - Saturday: 8:00 AM - 6:00 PM",
   },
   {
     name: "Sales Office",
-    address: "Enugu State, Nigeria",
+    address: "No2 Ituku Street Upper Chime, New Haven, Enugu State, Nigeria",
     phone: "+234 814 332 9493",
     email: "sales@nondonreals.com",
     hours: "Monday - Saturday: 8:00 AM - 6:00 PM",
@@ -63,6 +68,93 @@ const properties = [
 ]
 
 export default function ContactPage() {
+  // Separate form submission states for each form
+  const { 
+    isSubmitting: generalSubmitting, 
+    submitStatus: generalStatus, 
+    handleGeneralInquiry, 
+    clearStatus: clearGeneralStatus 
+  } = useFormSubmission();
+  
+  const { 
+    isSubmitting: reservationSubmitting, 
+    submitStatus: reservationStatus, 
+    handlePropertyReservation, 
+    clearStatus: clearReservationStatus 
+  } = useFormSubmission();
+  
+  // Form state for General Inquiry
+  const [generalForm, setGeneralForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    subject: '',
+    message: ''
+  });
+
+  // Form state for Property Reservation
+  const [reservationForm, setReservationForm] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    property: '',
+    budget: '',
+    timeline: '',
+    message: ''
+  });
+
+  // Initialize EmailJS on component mount
+  useEffect(() => {
+    initEmailJS();
+  }, []);
+
+  // Test EmailJS function
+  const handleTestEmailJS = async () => {
+    console.log('Testing EmailJS...');
+    const result = await testEmailJS();
+    if (result.success) {
+      alert('EmailJS test successful! Check your email.');
+    } else {
+      alert('EmailJS test failed. Check console for details.');
+    }
+  };
+
+  // Handle general inquiry form submission
+  const handleGeneralSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const success = await handleGeneralInquiry(generalForm);
+    if (success) {
+      setGeneralForm({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        subject: '',
+        message: ''
+      });
+    }
+  };
+
+  // Handle property reservation form submission
+  const handleReservationSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    const success = await handlePropertyReservation(reservationForm);
+    if (success) {
+      setReservationForm({
+        firstName: '',
+        lastName: '',
+        email: '',
+        phone: '',
+        property: '',
+        budget: '',
+        timeline: '',
+        message: ''
+      });
+    }
+  };
+
   return (
     <div className="min-h-screen bg-white">
       <Navigation />
@@ -94,6 +186,17 @@ export default function ContactPage() {
               Choose your preferred way to contact us. Our team is ready to assist you with any questions or property
               reservations.
             </p>
+            
+            {/* Debug Test Button */}
+            <div className="mt-6">
+              <Button 
+                onClick={handleTestEmailJS}
+                variant="outline"
+                className="bg-yellow-100 border-yellow-300 text-yellow-800 hover:bg-yellow-200"
+              >
+                🧪 Test EmailJS Connection
+              </Button>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
@@ -142,52 +245,119 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="firstName">First Name</Label>
-                    <Input id="firstName" placeholder="Enter your first name" />
+                <form onSubmit={handleGeneralSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="firstName">First Name *</Label>
+                      <Input 
+                        id="firstName" 
+                        placeholder="Enter your first name" 
+                        value={generalForm.firstName}
+                        onChange={(e) => setGeneralForm({...generalForm, firstName: e.target.value})}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="lastName">Last Name *</Label>
+                      <Input 
+                        id="lastName" 
+                        placeholder="Enter your last name" 
+                        value={generalForm.lastName}
+                        onChange={(e) => setGeneralForm({...generalForm, lastName: e.target.value})}
+                        required
+                      />
+                    </div>
                   </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="lastName">Last Name</Label>
-                    <Input id="lastName" placeholder="Enter your last name" />
+                    <Label htmlFor="email">Email Address *</Label>
+                    <Input 
+                      id="email" 
+                      type="email" 
+                      placeholder="Enter your email address" 
+                      value={generalForm.email}
+                      onChange={(e) => setGeneralForm({...generalForm, email: e.target.value})}
+                      required
+                    />
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="email">Email Address</Label>
-                  <Input id="email" type="email" placeholder="Enter your email address" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="phone">Phone Number *</Label>
+                    <Input 
+                      id="phone" 
+                      type="tel" 
+                      placeholder="Enter your phone number" 
+                      value={generalForm.phone}
+                      onChange={(e) => setGeneralForm({...generalForm, phone: e.target.value})}
+                      required
+                    />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="phone">Phone Number</Label>
-                  <Input id="phone" type="tel" placeholder="Enter your phone number" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="subject">Subject *</Label>
+                    <Select 
+                      value={generalForm.subject}
+                      onValueChange={(value) => setGeneralForm({...generalForm, subject: value})}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select inquiry type" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="General Information">General Information</SelectItem>
+                        <SelectItem value="Property Details">Property Details</SelectItem>
+                        <SelectItem value="Schedule a Visit">Schedule a Visit</SelectItem>
+                        <SelectItem value="Payment Plans">Payment Plans</SelectItem>
+                        <SelectItem value="Customer Support">Customer Support</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="subject">Subject</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select inquiry type" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="general">General Information</SelectItem>
-                      <SelectItem value="property">Property Details</SelectItem>
-                      <SelectItem value="visit">Schedule a Visit</SelectItem>
-                      <SelectItem value="payment">Payment Plans</SelectItem>
-                      <SelectItem value="support">Customer Support</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="message">Message *</Label>
+                    <Textarea 
+                      id="message" 
+                      placeholder="Tell us more about your inquiry..." 
+                      className="min-h-[120px]"
+                      value={generalForm.message}
+                      onChange={(e) => setGeneralForm({...generalForm, message: e.target.value})}
+                      required
+                    />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="message">Message</Label>
-                  <Textarea id="message" placeholder="Tell us more about your inquiry..." className="min-h-[120px]" />
-                </div>
+                  {/* Status Message */}
+                  {generalStatus.type && (
+                    <div className={`p-4 rounded-lg flex items-center gap-2 ${
+                      generalStatus.type === 'success' 
+                        ? 'bg-green-50 text-green-800 border border-green-200' 
+                        : 'bg-red-50 text-red-800 border border-red-200'
+                    }`}>
+                      {generalStatus.type === 'success' ? (
+                        <CheckCircle className="w-5 h-5" />
+                      ) : (
+                        <XCircle className="w-5 h-5" />
+                      )}
+                      <span className="text-sm">{generalStatus.message}</span>
+                    </div>
+                  )}
 
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                  <Send className="w-4 h-4 mr-2" />
-                  Send Message
-                </Button>
+                  <Button 
+                    type="submit"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    disabled={generalSubmitting}
+                  >
+                    {generalSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="w-4 h-4 mr-2" />
+                        Send Message
+                      </>
+                    )}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
 
@@ -203,88 +373,156 @@ export default function ContactPage() {
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                  <div className="space-y-2">
-                    <Label htmlFor="resFirstName">First Name</Label>
-                    <Input id="resFirstName" placeholder="Enter your first name" />
+                <form onSubmit={handleReservationSubmit} className="space-y-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div className="space-y-2">
+                      <Label htmlFor="resFirstName">First Name *</Label>
+                      <Input 
+                        id="resFirstName" 
+                        placeholder="Enter your first name" 
+                        value={reservationForm.firstName}
+                        onChange={(e) => setReservationForm({...reservationForm, firstName: e.target.value})}
+                        required
+                      />
+                    </div>
+                    <div className="space-y-2">
+                      <Label htmlFor="resLastName">Last Name *</Label>
+                      <Input 
+                        id="resLastName" 
+                        placeholder="Enter your last name" 
+                        value={reservationForm.lastName}
+                        onChange={(e) => setReservationForm({...reservationForm, lastName: e.target.value})}
+                        required
+                      />
+                    </div>
                   </div>
+
                   <div className="space-y-2">
-                    <Label htmlFor="resLastName">Last Name</Label>
-                    <Input id="resLastName" placeholder="Enter your last name" />
+                    <Label htmlFor="resEmail">Email Address *</Label>
+                    <Input 
+                      id="resEmail" 
+                      type="email" 
+                      placeholder="Enter your email address" 
+                      value={reservationForm.email}
+                      onChange={(e) => setReservationForm({...reservationForm, email: e.target.value})}
+                      required
+                    />
                   </div>
-                </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="resEmail">Email Address</Label>
-                  <Input id="resEmail" type="email" placeholder="Enter your email address" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="resPhone">Phone Number *</Label>
+                    <Input 
+                      id="resPhone" 
+                      type="tel" 
+                      placeholder="Enter your phone number" 
+                      value={reservationForm.phone}
+                      onChange={(e) => setReservationForm({...reservationForm, phone: e.target.value})}
+                      required
+                    />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="resPhone">Phone Number</Label>
-                  <Input id="resPhone" type="tel" placeholder="Enter your phone number" />
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="property">Property of Interest *</Label>
+                    <Select 
+                      value={reservationForm.property}
+                      onValueChange={(value) => setReservationForm({...reservationForm, property: value})}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select a property" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {properties.map((property) => (
+                          <SelectItem key={property} value={property}>
+                            {property}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="property">Property of Interest</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select a property" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      {properties.map((property) => (
-                        <SelectItem key={property} value={property.toLowerCase().replace(/\s+/g, "-")}>
-                          {property}
-                        </SelectItem>
-                      ))}
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="budget">Budget Range *</Label>
+                    <Select 
+                      value={reservationForm.budget}
+                      onValueChange={(value) => setReservationForm({...reservationForm, budget: value})}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="Select your budget range" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="₦100M - ₦150M">₦100M - ₦150M</SelectItem>
+                        <SelectItem value="₦150M - ₦200M">₦150M - ₦200M</SelectItem>
+                        <SelectItem value="₦200M - ₦250M">₦200M - ₦250M</SelectItem>
+                        <SelectItem value="₦250M - ₦300M">₦250M - ₦300M</SelectItem>
+                        <SelectItem value="₦300M+">₦300M+</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="budget">Budget Range</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="Select your budget range" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="100-150">₦100M - ₦150M</SelectItem>
-                      <SelectItem value="150-200">₦150M - ₦200M</SelectItem>
-                      <SelectItem value="200-250">₦200M - ₦250M</SelectItem>
-                      <SelectItem value="250-300">₦250M - ₦300M</SelectItem>
-                      <SelectItem value="300+">₦300M+</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="timeline">Purchase Timeline *</Label>
+                    <Select 
+                      value={reservationForm.timeline}
+                      onValueChange={(value) => setReservationForm({...reservationForm, timeline: value})}
+                    >
+                      <SelectTrigger>
+                        <SelectValue placeholder="When are you looking to purchase?" />
+                      </SelectTrigger>
+                      <SelectContent>
+                        <SelectItem value="Immediately">Immediately</SelectItem>
+                        <SelectItem value="1-3 months">1-3 months</SelectItem>
+                        <SelectItem value="3-6 months">3-6 months</SelectItem>
+                        <SelectItem value="6-12 months">6-12 months</SelectItem>
+                        <SelectItem value="12+ months">12+ months</SelectItem>
+                      </SelectContent>
+                    </Select>
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="timeline">Purchase Timeline</Label>
-                  <Select>
-                    <SelectTrigger>
-                      <SelectValue placeholder="When are you looking to purchase?" />
-                    </SelectTrigger>
-                    <SelectContent>
-                      <SelectItem value="immediate">Immediately</SelectItem>
-                      <SelectItem value="1-3months">1-3 months</SelectItem>
-                      <SelectItem value="3-6months">3-6 months</SelectItem>
-                      <SelectItem value="6-12months">6-12 months</SelectItem>
-                      <SelectItem value="12months+">12+ months</SelectItem>
-                    </SelectContent>
-                  </Select>
-                </div>
+                  <div className="space-y-2">
+                    <Label htmlFor="resMessage">Additional Notes</Label>
+                    <Textarea
+                      id="resMessage"
+                      placeholder="Any specific requirements or questions..."
+                      className="min-h-[100px]"
+                      value={reservationForm.message}
+                      onChange={(e) => setReservationForm({...reservationForm, message: e.target.value})}
+                    />
+                  </div>
 
-                <div className="space-y-2">
-                  <Label htmlFor="resMessage">Additional Notes</Label>
-                  <Textarea
-                    id="resMessage"
-                    placeholder="Any specific requirements or questions..."
-                    className="min-h-[100px]"
-                  />
-                </div>
+                  {/* Status Message */}
+                  {reservationStatus.type && (
+                    <div className={`p-4 rounded-lg flex items-center gap-2 ${
+                      reservationStatus.type === 'success' 
+                        ? 'bg-green-50 text-green-800 border border-green-200' 
+                        : 'bg-red-50 text-red-800 border border-red-200'
+                    }`}>
+                      {reservationStatus.type === 'success' ? (
+                        <CheckCircle className="w-5 h-5" />
+                      ) : (
+                        <XCircle className="w-5 h-5" />
+                      )}
+                      <span className="text-sm">{reservationStatus.message}</span>
+                    </div>
+                  )}
 
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg">
-                  <Calendar className="w-4 h-4 mr-2" />
-                  Reserve Property
-                </Button>
+                  <Button 
+                    type="submit"
+                    className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    disabled={reservationSubmitting}
+                  >
+                    {reservationSubmitting ? (
+                      <>
+                        <Loader2 className="w-4 h-4 mr-2 animate-spin" />
+                        Submitting...
+                      </>
+                    ) : (
+                      <>
+                        <Calendar className="w-4 h-4 mr-2" />
+                        Reserve Property
+                      </>
+                    )}
+                  </Button>
+                </form>
               </CardContent>
             </Card>
           </div>

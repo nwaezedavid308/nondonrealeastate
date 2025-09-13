@@ -18,7 +18,7 @@ const estates = [
     location: "Naira Triangle / NNPC Mega Station, Enugu",
     price: "₦110,000,000",
     priceRange: null,
-    image: "/images/phases/phase-1.jpg", // Updated to use organized phase 1 image
+    image: "/images/phases/phase-1.jpg",
     amenities: [
       "All rooms en-suite",
       "POP ceilings",
@@ -39,7 +39,7 @@ const estates = [
     location: "Chief Geff Ozor Avenue by Adorable British College, Enugu",
     price: "₦110,000,000",
     priceRange: null,
-    image: "/images/phases/phase-2-c.jpg", // Updated to use organized phase 2 image
+    image: "/images/phases/phase-2-c.jpg",
     amenities: [
       "All rooms en-suite",
       "POP ceilings",
@@ -59,8 +59,8 @@ const estates = [
     units: "Multiple",
     location: "Opp. Innoson warehouse New Heaven Extension, Enugu State",
     price: null,
-    priceRange: "₦130,000,000 - ₦300,000,000",
-    image: "/images/3d-renders/nondon-real-estate-3d-6.jpeg", // Updated to use correct Phase 3 3D render image
+    priceRange: "₦125,000,000 - ₦290,000,000",
+    image: "/images/phases/PHASE 3/PHASE 3 (1).jpg",
     amenities: [
       "5-aside football pitch",
       "Swimming pool",
@@ -68,7 +68,7 @@ const estates = [
       "24-hour power",
       "Round-the-clock security",
     ],
-    paymentPlan: "Pay 30% now; spread 70% over 12 months",
+    paymentPlan: "4BR Duplex: ₦160M (Outright) | ₦170M (Installment) • 4BR Semi: ₦125M (Outright) | ₦135M (Installment) • 5BR Duplex: ₦200M (Outright) | ₦210M (Installment) • 5BR Luxury: ₦280M (Outright) | ₦290M (Installment)",
     soldOut: false,
   },
 ]
@@ -84,7 +84,7 @@ const apartments = [
     location: "Nza Street, Independence Layout, Enugu",
     price: null,
     priceRange: "₦200,000,000 - ₦380,000,000",
-    image: "/images/3d-renders/nondon-apartments-3d.jpeg", // Updated to use organized apartment 3D render
+    image: "/images/apartments/APARTMENTS (1).jpg",
     amenities: [
       "Fully furnished",
       "Smart home facilities",
@@ -107,9 +107,9 @@ const smartHomes = [
     bedrooms: 6,
     units: 3,
     location: "Thinkers Corner, Enugu East, Enugu State",
-    price: "₦240,000,000",
-    priceRange: null,
-    image: "/images/3d-renders/nondon-smart-homes-8-3d.jpeg", // Updated to use organized smart homes 3D render
+    price: "₦235,000,000",
+    priceRange: "₦235,000,000 - ₦250,000,000",
+    image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
     amenities: [
       "Smart lighting & locks",
       "24/7 smart security cameras",
@@ -117,7 +117,7 @@ const smartHomes = [
       "Voice assistants",
       "Modern water fountains",
     ],
-    paymentPlan: "Pay 30% now; spread 70% over 12 months",
+    paymentPlan: "Instant Payment: ₦235M | Installment Payment: ₦250M",
     soldOut: false,
   },
 ]
@@ -127,13 +127,13 @@ const otherProjects = [
     id: "nondon-almonds",
     name: "Nondon Almonds",
     status: "Now Selling", // Updated status to show it's actively selling with green badge
-    type: "4-bedroom luxury bungalows",
+    type: "Premium luxury bungalows",
     bedrooms: 4,
     units: 2,
-    location: "Almond Estate, Catenary City, Enugu State",
-    price: "₦120,000,000",
+    location: "Centenary City, Enugu",
+    price: "₦135,000,000",
     priceRange: null,
-    image: "/images/bungalows/nondon-almonds-bungalows.jpg", // Updated to use the correct bungalow image
+    image: "/images/bungalows/BUNGALOW (1).jpg",
     amenities: [
       "Fully fitted bathroom",
       "State of the art kitchen",

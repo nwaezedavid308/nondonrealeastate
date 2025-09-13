@@ -16,18 +16,18 @@ const galleryProjects = [
     status: "Multiple Phases",
     vision: [
       {
-        image: "/images/3d-renders/nondon-real-estate-3d-6.jpeg",
-        title: "Modern Townhouse Design",
-        description: "Contemporary architectural vision",
+        image: "/images/phases/PHASE 3/PHASE 3 (1).jpg",
+        title: "Phase 3 Vision",
+        description: "4 & 5-bedroom luxury duplexes",
       },
       {
-        image: "/images/3d-renders/nondon-real-estate-3d-aerial.jpeg",
-        title: "Residential Complex Overview",
-        description: "Complete estate development plan",
+        image: "/images/3d-renders/3D RENDER 4 BEDROOM DUPLEX PHASE 3.jpeg",
+        title: "Modern Duplex Design",
+        description: "Contemporary architectural excellence",
       },
       {
-        image: "/images/3d-renders/smarthomes-3d.jpeg",
-        title: "Smart Home Integration",
+        image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
+        title: "Smart Home Innovation",
         description: "Technology-enabled luxury living",
       },
     ],
@@ -39,13 +39,13 @@ const galleryProjects = [
       },
       {
         image: "/images/phases/phase-2-c.jpg",
-        title: "Phase 2 Construction",
-        description: "Active development in progress",
+        title: "Phase 2 Excellence",
+        description: "Executive bungalows delivered",
       },
       {
-        image: "/images/smart-homes/nodon-smart-homes-9.jpeg",
-        title: "Completed Smart Homes",
-        description: "Real construction progress",
+        image: "/images/phases/PHASE 3/PHASE 3 (2).jpg",
+        title: "Phase 3 Progress",
+        description: "Active construction in progress",
       },
     ],
   },
@@ -61,16 +61,101 @@ const galleryProjects = [
         description: "Modern architectural visualization",
       },
       {
-        image: "/images/3d-renders/nodon-smart-homes-8-3d.jpeg",
+        image: "/images/apartments/APARTMENTS (1).jpg",
         title: "Premium Interior Concept",
         description: "Luxury living space design",
+      },
+      {
+        image: "/images/apartments/APARTMENTS (2).jpg",
+        title: "Modern Living Spaces",
+        description: "Contemporary apartment layouts",
       },
     ],
     reality: [
       {
-        image: "/images/apartments/nondon-apartments-4.jpeg",
+        image: "/images/apartments/APARTMENTS (3).jpg",
         title: "Apartment Construction Progress",
         description: "Multi-story development in progress",
+      },
+      {
+        image: "/images/apartments/APARTMENTS (4).jpg",
+        title: "Interior Finishing",
+        description: "Premium quality construction",
+      },
+      {
+        image: "/images/apartments/APARTMENTS (5).jpg",
+        title: "Amenity Areas",
+        description: "Luxury common facilities",
+      },
+    ],
+  },
+  {
+    id: "smart-homes",
+    name: "Nondon Smart Homes",
+    description: "Fully automated luxury homes with cutting-edge technology",
+    status: "Sales Ongoing - ₦235M-₦250M",
+    vision: [
+      {
+        image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
+        title: "Smart Home Exterior",
+        description: "Modern automated luxury living",
+      },
+      {
+        image: "/images/3d-renders/3D RENDER SMART HOME (2).jpg",
+        title: "Smart Technology Integration",
+        description: "Voice-controlled home automation",
+      },
+      {
+        image: "/images/3d-renders/3D RENDER SMART HOME (3).jpg",
+        title: "Luxury Interior Design",
+        description: "Premium smart home finishes",
+      },
+    ],
+    reality: [
+      {
+        image: "/images/smart-homes/nodon-smart-homes-9.jpeg",
+        title: "Smart Home Construction",
+        description: "Active development progress",
+      },
+    ],
+  },
+  {
+    id: "bungalows",
+    name: "Nondon Almonds Bungalows",
+    description: "Premium luxury bungalows in Centenary City, Enugu",
+    status: "Now Selling - ₦135M",
+    vision: [
+      {
+        image: "/images/bungalows/BUNGALOW (1).jpg",
+        title: "Luxury Bungalow Design",
+        description: "Elegant single-story living",
+      },
+      {
+        image: "/images/bungalows/BUNGALOW (2).jpg",
+        title: "Premium Finishing",
+        description: "State-of-the-art kitchen and bathrooms",
+      },
+      {
+        image: "/images/bungalows/BUNGALOW (3).jpg",
+        title: "Modern Architecture",
+        description: "Contemporary bungalow aesthetics",
+      },
+    ],
+    reality: [
+      {
+        image: "/images/bungalows/BUNGALOWS (1).PNG",
+        title: "Bungalow Construction",
+        description: "Active development progress",
+      },
+      {
+        image: "/images/bungalows/BUNGALOWS (2).PNG",
+        title: "Interior Finishing",
+        description: "Premium quality construction",
+      },
+      {
+        image: "/images/bungalows/BUNGALOWS (3).PNG",
+        title: "Exterior Completion",
+        description: "Final construction stages",
       },
     ],
   },

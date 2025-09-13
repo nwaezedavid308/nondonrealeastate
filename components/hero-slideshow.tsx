@@ -22,7 +22,7 @@ const slides = [
     subtitle: "Luxury duplexes in serene locations",
   },
   {
-    image: "/images/3d-renders/nondon-smart-homes-8-3d.jpeg",
+    image: "/images/3d-renders/nodon-smart-homes-8-3d.jpeg",
     mainTitle: "Crafting timeless elegance",
     subtitle: "Where sophistication meets functionality",
   },

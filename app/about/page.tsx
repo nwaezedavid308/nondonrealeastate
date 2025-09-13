@@ -99,27 +99,58 @@ const milestones = [
     year: "2016",
     title: "Company Founded",
     description: "Nondon Real Estate was established with a vision to transform luxury living in Enugu.",
+    image: "/images/phases/phase-1.jpg",
+    phase: "Foundation",
+    color: "from-blue-600 to-blue-800"
   },
   {
     year: "2018",
-    title: "First Estate Completed",
-    description: "Successfully delivered Nondon Estate Phase 1, setting new standards for luxury housing.",
+    title: "Phase 1 Completed",
+    description: "Successfully delivered Nondon Estate Phase 1, setting new standards for luxury housing with fully detached 5-bedroom duplexes.",
+    image: "/images/phases/phase-1.jpg",
+    phase: "Phase 1",
+    color: "from-green-600 to-green-800"
   },
   {
     year: "2020",
-    title: "Smart Home Innovation",
-    description: "Introduced smart home technology, becoming pioneers in automated luxury living.",
+    title: "Phase 2 Excellence",
+    description: "Delivered executive fully detached 4-bedroom bungalows, establishing our reputation for premium residential communities.",
+    image: "/images/phases/phase-2-c.jpg",
+    phase: "Phase 2",
+    color: "from-purple-600 to-purple-800"
   },
   {
     year: "2022",
-    title: "Expansion Beyond Enugu",
-    description: "Expanded operations to include developments in Delta State and other regions.",
+    title: "Phase 3 Innovation",
+    description: "Launched Phase 3 with 4 & 5-bedroom detached and semi-detached duplexes, featuring modern amenities and smart technology.",
+    image: "/images/phases/PHASE 3/PHASE 3 (1).jpg",
+    phase: "Phase 3",
+    color: "from-orange-600 to-orange-800"
+  },
+  {
+    year: "2023",
+    title: "Luxury Apartments",
+    description: "Introduced serviced studio apartments with smart-home technology, rooftop lounges, and premium amenities.",
+    image: "/images/apartments/APARTMENTS (1).jpg",
+    phase: "Apartments",
+    color: "from-pink-600 to-pink-800"
   },
   {
     year: "2024",
-    title: "Sustainable Development",
-    description: "Launched eco-friendly initiatives and sustainable building practices across all projects.",
+    title: "Smart Homes Revolution",
+    description: "Pioneered fully automated luxury homes with cutting-edge smart technology, voice assistants, and 24/7 security.",
+    image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
+    phase: "Smart Homes",
+    color: "from-cyan-600 to-cyan-800"
   },
+  {
+    year: "2024",
+    title: "Bungalow Collection",
+    description: "Launched Nondon Almonds luxury bungalows, combining traditional elegance with modern luxury finishes.",
+    image: "/images/bungalows/BUNGALOW (1).jpg",
+    phase: "Bungalows",
+    color: "from-red-600 to-red-800"
+  }
 ]
 
 export default function AboutPage() {
@@ -324,50 +355,85 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Company Timeline */}
-      <section className="py-16 bg-gray-50">
+      {/* Parallax Journey Timeline */}
+      <section className="py-20 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-balance">Our Journey</h2>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 text-balance">Our Journey</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto text-balance">
-              Key milestones that have shaped our growth and success over the years.
+              A visual journey through our evolution from foundation to innovation in luxury real estate.
             </p>
           </div>
 
           <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-red-200 hidden md:block"></div>
+            {/* Central Timeline Line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-red-200 via-red-400 to-red-600 hidden md:block rounded-full"></div>
 
-            <div className="space-y-12">
+            <div className="space-y-24">
               {milestones.map((milestone, index) => (
                 <div
                   key={index}
-                  className={`flex items-center ${index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"}`}
+                  className={`relative flex items-center ${
+                    index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+                  }`}
                 >
+                  {/* Content Card */}
                   <div
-                    className={`w-full md:w-5/12 ${index % 2 === 0 ? "md:text-right md:pr-8" : "md:text-left md:pl-8"}`}
+                    className={`w-full md:w-5/12 ${
+                      index % 2 === 0 ? "md:pr-12" : "md:pl-12"
+                    }`}
                   >
-                    <Card className="border-0 shadow-lg">
-                      <CardHeader>
-                        <div className="flex items-center gap-3 mb-2">
-                          <Badge className="bg-red-600 text-white text-sm px-3 py-1">{milestone.year}</Badge>
+                    <div className="group">
+                      <Card className="border-0 shadow-2xl hover:shadow-3xl transition-all duration-500 transform hover:-translate-y-2 overflow-hidden">
+                        {/* Image Background */}
+                        <div className="relative h-48 overflow-hidden">
+                          <Image
+                            src={milestone.image}
+                            alt={milestone.title}
+                            fill
+                            className="object-cover group-hover:scale-110 transition-transform duration-700"
+                          />
+                          <div className={`absolute inset-0 bg-gradient-to-t ${milestone.color} opacity-80`}></div>
+                          <div className="absolute top-4 left-4">
+                            <div className="bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full">
+                              <span className="text-sm font-bold text-gray-900">{milestone.phase}</span>
+                            </div>
+                          </div>
+                          <div className="absolute bottom-4 left-4">
+                            <div className="text-3xl font-bold text-white drop-shadow-lg">{milestone.year}</div>
+                          </div>
                         </div>
-                        <CardTitle className="text-xl font-bold text-gray-900">{milestone.title}</CardTitle>
-                      </CardHeader>
-                      <CardContent>
-                        <p className="text-gray-600 leading-relaxed">{milestone.description}</p>
-                      </CardContent>
-                    </Card>
+                        
+                        <CardContent className="p-6">
+                          <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-red-600 transition-colors">
+                            {milestone.title}
+                          </h3>
+                          <p className="text-gray-600 leading-relaxed text-lg">{milestone.description}</p>
+                        </CardContent>
+                      </Card>
+                    </div>
                   </div>
 
-                  {/* Timeline dot */}
-                  <div className="hidden md:flex w-2/12 justify-center">
-                    <div className="w-4 h-4 bg-red-600 rounded-full border-4 border-white shadow-lg"></div>
+                  {/* Timeline Dot with Animation */}
+                  <div className="hidden md:flex w-2/12 justify-center relative">
+                    <div className="relative">
+                      <div className={`w-6 h-6 bg-gradient-to-r ${milestone.color} rounded-full border-4 border-white shadow-2xl animate-pulse`}></div>
+                      <div className={`absolute inset-0 w-6 h-6 bg-gradient-to-r ${milestone.color} rounded-full opacity-30 animate-ping`}></div>
+                    </div>
                   </div>
 
+                  {/* Spacer */}
                   <div className="hidden md:block w-5/12"></div>
                 </div>
               ))}
+            </div>
+
+            {/* Journey End Badge */}
+            <div className="text-center mt-16">
+              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full shadow-2xl">
+                <span className="text-lg font-bold">Journey Continues...</span>
+                <div className="ml-3 w-2 h-2 bg-white rounded-full animate-pulse"></div>
+              </div>
             </div>
           </div>
         </div>

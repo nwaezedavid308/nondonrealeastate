@@ -20,8 +20,8 @@ const propertyData = {
     price: "₦110,000,000",
     priceRange: null,
     images: [
-      "/luxury-duplex-house-exterior-modern-architecture-e.jpg",
-      "/luxury-duplex-house-phase-3-nondon-estate.jpg",
+      "/images/phases/phase-1.jpg",
+      "/images/phases/PHASE 3/PHASE 3 (1).jpg",
     ],
     description:
       "Experience luxury living in our fully detached 5-bedroom duplexes with Boys' Quarters. Located in the prestigious Naira Triangle area near NNPC Mega Station, these homes offer the perfect blend of comfort, security, and modern amenities.",
@@ -108,10 +108,11 @@ const propertyData = {
     units: "Multiple",
     location: "Opp. Innoson warehouse New Heaven Extension, Enugu State",
     price: null,
-    priceRange: "₦130,000,000 - ₦300,000,000",
+    priceRange: "₦125,000,000 - ₦290,000,000",
     images: [
-      "/luxury-duplex-house-phase-3-nondon-estate.jpg",
-      "/luxury-duplex-house-exterior-modern-architecture-e.jpg",
+      "/images/phases/PHASE 3/PHASE 3 (1).jpg",
+      "/images/phases/PHASE 3/PHASE 3 (2).jpg",
+      "/images/phases/PHASE 3/PHASE 3 (3).jpg",
     ],
     description:
       "Our most ambitious project yet, featuring a variety of luxury options from 4-bedroom semi-detached to 5-bedroom luxury duplexes. This estate includes recreational facilities and modern infrastructure for the ultimate living experience.",
@@ -129,7 +130,7 @@ const propertyData = {
       "Visitor parking areas",
       "Modern drainage and sewage system",
     ],
-    paymentPlan: "Pay 30% now; spread 70% over 12 months",
+    paymentPlan: "4BR Duplex: ₦160M (Outright) | ₦170M (Installment) • 4BR Semi: ₦125M (Outright) | ₦135M (Installment) • 5BR Duplex: ₦200M (Outright) | ₦210M (Installment) • 5BR Luxury: ₦280M (Outright) | ₦290M (Installment)",
     soldOut: false,
     specifications: {
       landSize: "400-600 sqm",
@@ -194,8 +195,8 @@ const propertyData = {
     bedrooms: 6,
     units: 3,
     location: "Thinkers Corner, Enugu East, Enugu State",
-    price: "₦240,000,000",
-    priceRange: null,
+    price: "₦235,000,000",
+    priceRange: "₦235,000,000 - ₦250,000,000",
     images: [
       "/smart-home-technology-modern-house-automation.jpg",
       "/luxury-duplex-house-exterior-modern-architecture-e.jpg",
@@ -216,7 +217,7 @@ const propertyData = {
       "Efficient water and power supply",
       "Modern decorative water fountains",
     ],
-    paymentPlan: "Pay 30% now; spread 70% over 12 months",
+    paymentPlan: "Instant Payment: ₦235M | Installment Payment: ₦250M",
     soldOut: false,
     specifications: {
       landSize: "600 sqm",
@@ -238,15 +239,15 @@ const propertyData = {
     type: "4-bedroom bungalow",
     bedrooms: 4,
     units: 2,
-    location: "Almond Estate, Catenary City, Enugu State",
-    price: "₦120,000,000",
+    location: "Centenary City, Enugu",
+    price: "₦135,000,000",
     priceRange: null,
     images: [
       "/4-bedroom-bungalow-luxury-nondon-almonds.jpg",
       "/luxury-duplex-house-exterior-modern-architecture-e.jpg",
     ],
     description:
-      "Elegant 4-bedroom bungalows in the serene Almond Estate within Catenary City. These homes combine modern design with premium finishing, offering comfortable single-level living in a peaceful environment.",
+      "Premium luxury 4-bedroom bungalows in the prestigious Centenary City, Enugu. These homes combine traditional elegance with modern luxury, offering comfortable single-level living in a prime location.",
     amenities: [
       "Fully fitted luxury bathrooms",
       "State-of-the-art kitchen with modern appliances",
@@ -261,7 +262,7 @@ const propertyData = {
       "Quality tiles and fixtures",
       "Spacious rooms with natural lighting",
     ],
-    paymentPlan: "Pay 30% now; spread 70% over 12 months",
+    paymentPlan: "₦135,000,000 - Premium luxury bungalows in Centenary City",
     soldOut: false,
     specifications: {
       landSize: "500 sqm",
@@ -270,10 +271,10 @@ const propertyData = {
       floors: "1 floor bungalow",
     },
     nearbyAmenities: [
-      "Catenary City center - 10 minutes drive",
-      "Shopping areas - 15 minutes drive",
-      "Schools - 20 minutes drive",
-      "Medical facilities - 18 minutes drive",
+      "Centenary City center - 5 minutes drive",
+      "Shopping areas - 10 minutes drive",
+      "Schools - 15 minutes drive",
+      "Medical facilities - 12 minutes drive",
     ],
   },
 }
