@@ -26,7 +26,7 @@ export default function NondonRealEstate() {
             <Card className="group hover:shadow-xl transition-all duration-500 hover:-translate-y-2 animate-fade-in-up">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img
-                  src="/images/3d-renders/nondon-real-estate-3d-6.jpeg"
+                  src="/images/3d-renders/3D RENDER 4  BEDROOM DUPLEX PHASE 3.jpeg"
                   alt="Nondon Estate Phase 3"
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
@@ -40,7 +40,7 @@ export default function NondonRealEstate() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  <div className="text-2xl font-bold text-red-600">₦130M – ₦300M</div>
+                  <div className="text-2xl font-bold text-red-600">₦125M – ₦290M</div>
                   <p className="text-sm text-muted-foreground">4–5 Bedroom Luxury & Deluxe Duplexes</p>
                   <Button
                     asChild
@@ -100,7 +100,7 @@ export default function NondonRealEstate() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  <div className="text-2xl font-bold text-red-600">₦240M</div>
+                  <div className="text-2xl font-bold text-red-600">₦235M – ₦250M</div>
                   <p className="text-sm text-muted-foreground">6-Bedroom Smart Duplexes with BQ</p>
                   <Button
                     asChild
@@ -125,12 +125,12 @@ export default function NondonRealEstate() {
               <CardHeader>
                 <CardTitle className="text-xl">Nondon Almonds</CardTitle>
                 <CardDescription className="flex items-center text-muted-foreground">
-                  Almond Estate, Catenary City, Enugu State
+                  Centenary City, Enugu
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  <div className="text-2xl font-bold text-red-600">₦120M</div>
+                  <div className="text-2xl font-bold text-red-600">₦135M</div>
                   <p className="text-sm text-muted-foreground">4-Bedroom Luxury Bungalows</p>
                   <Button
                     asChild
