@@ -21,21 +21,40 @@ export default function HeroVideo({ videoId }: HeroVideoProps) {
   }
 
   useEffect(() => {
-    // Attempt to play unmuted shortly after mount
     const attemptPlay = () => {
-      // Ensure player exists
       sendYTCommand("playVideo")
       sendYTCommand("unMute")
       sendYTCommand("setVolume", [100])
     }
 
+    // Initial attempt shortly after mount
     const t = setTimeout(() => {
       attemptPlay()
-      // If mobile blocks sound autoplay, show a subtle prompt
       setNeedsUnmutePrompt(true)
-    }, 800)
+    }, 600)
 
-    return () => clearTimeout(t)
+    // Retry on visibility change (e.g., returning to tab)
+    const onVisibility = () => {
+      if (!document.hidden) attemptPlay()
+    }
+    document.addEventListener("visibilitychange", onVisibility)
+
+    // First user interaction anywhere on page: try to unmute and play
+    const onFirstUserInteract = () => {
+      attemptPlay()
+      setNeedsUnmutePrompt(false)
+      window.removeEventListener("pointerdown", onFirstUserInteract)
+      window.removeEventListener("keydown", onFirstUserInteract)
+    }
+    window.addEventListener("pointerdown", onFirstUserInteract, { once: true })
+    window.addEventListener("keydown", onFirstUserInteract, { once: true })
+
+    return () => {
+      clearTimeout(t)
+      document.removeEventListener("visibilitychange", onVisibility)
+      window.removeEventListener("pointerdown", onFirstUserInteract)
+      window.removeEventListener("keydown", onFirstUserInteract)
+    }
   }, [])
 
   const onUserUnmute = () => {
@@ -45,7 +64,8 @@ export default function HeroVideo({ videoId }: HeroVideoProps) {
     setNeedsUnmutePrompt(false)
   }
 
-  const src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&loop=1&playlist=${videoId}&rel=0&modestbranding=1&showinfo=0&controls=1&playsinline=1&enablejsapi=1`;
+  // Start muted to guarantee autoplay across mobile browsers; we then programmatically unmute
+  const src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=1&loop=1&playlist=${videoId}&rel=0&modestbranding=1&showinfo=0&controls=1&playsinline=1&enablejsapi=1`;
 
   return (
     <div className="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">

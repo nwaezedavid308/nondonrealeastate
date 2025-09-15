@@ -150,6 +150,15 @@ const milestones = [
     image: "/images/bungalows/BUNGALOW (1).jpg",
     phase: "Bungalows",
     color: "from-red-600 to-red-800"
+  },
+  {
+    year: "2025",
+    title: "Nondon Crest & Asaba Expansion",
+    description:
+      "Premium Nondon Crest luxury development in Enugu and expansion of our luxury apartments to Asaba. Status: Ongoing.",
+    image: "/images/coming-soon/coming-soon-1.jpg",
+    phase: "Future Developments",
+    color: "from-red-600 to-red-800"
   }
 ]
 
