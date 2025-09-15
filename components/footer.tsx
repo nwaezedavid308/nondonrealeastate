@@ -35,7 +35,6 @@ export function Footer() {
                   height={40}
                   className="rounded-full"
                 />
-                <span className="font-bold text-xl">Nondon Real Estate</span>
               </Link>
               <p className="text-gray-300 leading-relaxed mb-6">
                 Your trusted partner for luxury real estate in Enugu and beyond. Building dreams, creating communities
@@ -156,10 +155,10 @@ export function Footer() {
                 <div className="flex items-center space-x-3">
                   <span className="text-red-500 flex-shrink-0 text-sm font-medium">Email:</span>
                   <Link
-                    href="mailto:info@nondonreals.com"
+                    href="mailto:nondonprojects@gmail.com"
                     className="text-gray-300 hover:text-red-500 transition-colors"
                   >
-                    info@nondonreals.com
+                    nondonprojects@gmail.com
                   </Link>
                 </div>
               </div>

@@ -36,8 +36,8 @@ const contactMethods = [
     icon: Mail,
     title: "Email Us",
     description: "Send us detailed inquiries",
-    contact: "info@nondonreals.com",
-    action: "mailto:info@nondonreals.com",
+    contact: "nondonprojects@gmail.com",
+    action: "mailto:nondonprojects@gmail.com",
     available: "Response within 24hrs",
   },
 ]
@@ -47,14 +47,14 @@ const offices = [
     name: "Head Office - Enugu",
     address: "No2 Ituku Street Upper Chime, New Haven, Enugu State, Nigeria",
     phone: "+234 814 332 6274",
-    email: "info@nondonreals.com",
+    email: "nondonprojects@gmail.com",
     hours: "Monday - Saturday: 8:00 AM - 6:00 PM",
   },
   {
     name: "Sales Office",
     address: "No2 Ituku Street Upper Chime, New Haven, Enugu State, Nigeria",
     phone: "+234 814 332 9493",
-    email: "sales@nondonreals.com",
+    email: "nondonprojects@gmail.com",
     hours: "Monday - Saturday: 8:00 AM - 6:00 PM",
   },
 ]
