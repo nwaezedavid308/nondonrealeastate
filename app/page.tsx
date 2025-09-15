@@ -5,6 +5,7 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import { Footer } from "@/components/footer"
 import HeroSlideshow from "@/components/hero-slideshow"
+import { Home, Video, Star, Check } from "lucide-react"
 
 export default function NondonRealEstate() {
   return (
@@ -13,12 +14,67 @@ export default function NondonRealEstate() {
 
       <HeroSlideshow />
 
+      {/* Engaging Video Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4">
+          <div className="text-center mb-12 animate-fade-in-up">
+            <h2 className="text-4xl font-bold mb-4 text-balance">Experience Nondon Real Estate</h2>
+            <p className="text-xl text-muted-foreground text-pretty font-normal max-w-3xl mx-auto">
+              Take a virtual journey through our premium properties and discover what makes Nondon the preferred choice for luxury living
+            </p>
+          </div>
+          
+          <div className="relative max-w-5xl mx-auto animate-fade-in-up">
+            <div className="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube.com/embed/Z0OQ-TyXvlM?si=A81YyViIBoMa08eb&autoplay=1&mute=0&loop=1&playlist=Z0OQ-TyXvlM&rel=0&modestbranding=1&showinfo=0&controls=1"
+                title="Nondon Real Estate - Experience Luxury Living"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                allowFullScreen
+                className="absolute inset-0 w-full h-full"
+              ></iframe>
+            </div>
+            
+            {/* Video Features */}
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <div className="text-center animate-fade-in-up">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Home className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Virtual Tours</h3>
+                <p className="text-muted-foreground text-sm font-normal">Experience our properties from the comfort of your home</p>
+              </div>
+              
+              <div className="text-center animate-fade-in-up">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Video className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Behind the Scenes</h3>
+                <p className="text-muted-foreground text-sm font-normal">See the craftsmanship and attention to detail in every project</p>
+              </div>
+              
+              <div className="text-center animate-fade-in-up">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Star className="w-8 h-8 text-red-600" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Customer Stories</h3>
+                <p className="text-muted-foreground text-sm font-normal">Hear from satisfied homeowners about their Nondon experience</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Properties */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl font-bold mb-4 text-balance">Featured Properties</h2>
-            <p className="text-xl text-muted-foreground text-pretty">Discover our premium collection of luxury homes</p>
+            <p className="text-xl text-muted-foreground text-pretty font-normal">Discover our premium collection of luxury homes</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -41,7 +97,7 @@ export default function NondonRealEstate() {
               <CardContent>
                 <div className="space-y-3">
                   <div className="text-2xl font-bold text-red-600">₦125M – ₦290M</div>
-                  <p className="text-sm text-muted-foreground">4–5 Bedroom Luxury & Deluxe Duplexes</p>
+                  <p className="text-sm text-muted-foreground font-normal">4–5 Bedroom Luxury & Deluxe Duplexes</p>
                   <Button
                     asChild
                     className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:shadow-lg"
@@ -71,7 +127,7 @@ export default function NondonRealEstate() {
               <CardContent>
                 <div className="space-y-3">
                   <div className="text-2xl font-bold text-red-600">₦200M – ₦380M</div>
-                  <p className="text-sm text-muted-foreground">1,2,3 Bedroom Studio Apartments</p>
+                  <p className="text-sm text-muted-foreground font-normal">1,2,3 Bedroom Studio Apartments</p>
                   <Button
                     asChild
                     className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:shadow-lg"
@@ -101,7 +157,7 @@ export default function NondonRealEstate() {
               <CardContent>
                 <div className="space-y-3">
                   <div className="text-2xl font-bold text-red-600">₦235M – ₦250M</div>
-                  <p className="text-sm text-muted-foreground">6-Bedroom Smart Duplexes with BQ</p>
+                  <p className="text-sm text-muted-foreground font-normal">6-Bedroom Smart Duplexes with BQ</p>
                   <Button
                     asChild
                     className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:shadow-lg"
@@ -131,7 +187,7 @@ export default function NondonRealEstate() {
               <CardContent>
                 <div className="space-y-3">
                   <div className="text-2xl font-bold text-red-600">₦135M</div>
-                  <p className="text-sm text-muted-foreground">4-Bedroom Luxury Bungalows</p>
+                  <p className="text-sm text-muted-foreground font-normal">4-Bedroom Luxury Bungalows</p>
                   <Button
                     asChild
                     className="w-full bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:shadow-lg"
@@ -155,20 +211,29 @@ export default function NondonRealEstate() {
               <CardHeader>
                 <CardTitle className="text-xl">Nondon Crest Luxury</CardTitle>
                 <CardDescription className="flex items-center text-muted-foreground">
-                  Premium Development, Enugu
+                  Luxury Development, Enugu
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <div className="text-2xl font-bold text-muted-foreground">Coming Soon</div>
-                  <p className="text-sm text-muted-foreground">Ultra-Luxury Residences</p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="w-full bg-transparent border-red-200 text-red-600 hover:bg-red-50 transition-all duration-300"
-                  >
-                    <Link href="/contact">Join Waitlist →</Link>
-                  </Button>
+                  <p className="text-sm text-muted-foreground font-normal">Premium luxury development coming soon to Enugu</p>
+                  <div className="flex gap-2">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="flex-1 bg-transparent border-red-200 text-red-600 hover:bg-red-50 transition-all duration-300"
+                    >
+                      <Link href="/contact">Join Waitlist</Link>
+                    </Button>
+                    <Button
+                      asChild
+                      size="sm"
+                      className="bg-red-600 hover:bg-red-700 text-white"
+                    >
+                      <Link href="/contact">Learn More</Link>
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -186,20 +251,29 @@ export default function NondonRealEstate() {
               <CardHeader>
                 <CardTitle className="text-xl">Nondon Luxury Apartment Asaba</CardTitle>
                 <CardDescription className="flex items-center text-muted-foreground">
-                  Asaba, Delta State
+                  Luxury Apartments, Asaba, Delta State
                 </CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
                   <div className="text-2xl font-bold text-muted-foreground">Coming Soon</div>
-                  <p className="text-sm text-muted-foreground">Premium Apartment Complex</p>
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="w-full bg-transparent border-red-200 text-red-600 hover:bg-red-50 transition-all duration-300"
-                  >
-                    <Link href="/contact">Join Waitlist →</Link>
-                  </Button>
+                  <p className="text-sm text-muted-foreground font-normal">Expanding our luxury apartment offerings to Asaba</p>
+                  <div className="flex gap-2">
+                    <Button
+                      asChild
+                      variant="outline"
+                      className="flex-1 bg-transparent border-red-200 text-red-600 hover:bg-red-50 transition-all duration-300"
+                    >
+                      <Link href="/contact">Join Waitlist</Link>
+                    </Button>
+                    <Button
+                      asChild
+                      size="sm"
+                      className="bg-red-600 hover:bg-red-700 text-white"
+                    >
+                      <Link href="/contact">Learn More</Link>
+                    </Button>
+                  </div>
                 </div>
               </CardContent>
             </Card>
@@ -212,7 +286,7 @@ export default function NondonRealEstate() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl font-bold mb-4 text-balance">How It Works</h2>
-            <p className="text-xl text-muted-foreground text-pretty">Your journey to luxury living in 4 simple steps</p>
+            <p className="text-xl text-muted-foreground text-pretty font-normal">Your journey to luxury living in 4 simple steps</p>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -221,7 +295,7 @@ export default function NondonRealEstate() {
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Browse</h3>
-              <p className="text-muted-foreground">Explore our estates, apartments & smart homes.</p>
+              <p className="text-muted-foreground font-normal">Explore our estates, apartments & smart homes.</p>
             </div>
 
             <div className="text-center animate-fade-in-up">
@@ -229,7 +303,7 @@ export default function NondonRealEstate() {
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Reserve</h3>
-              <p className="text-muted-foreground">Pay 30% to secure your unit.</p>
+              <p className="text-muted-foreground font-normal">Pay 30% to secure your unit.</p>
             </div>
 
             <div className="text-center animate-fade-in-up">
@@ -237,7 +311,7 @@ export default function NondonRealEstate() {
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Pay Flexibly</h3>
-              <p className="text-muted-foreground">Spread the balance over 12 months.</p>
+              <p className="text-muted-foreground font-normal">Spread the balance over 12 months.</p>
             </div>
 
             <div className="text-center animate-fade-in-up">
@@ -245,7 +319,7 @@ export default function NondonRealEstate() {
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Move In</h3>
-              <p className="text-muted-foreground">Enjoy luxury living with Nondon.</p>
+              <p className="text-muted-foreground font-normal">Enjoy luxury living with Nondon.</p>
             </div>
           </div>
         </div>
@@ -256,7 +330,7 @@ export default function NondonRealEstate() {
         <div className="max-w-7xl mx-auto px-4">
           <div className="text-center mb-16 animate-fade-in-up">
             <h2 className="text-4xl font-bold mb-4 text-balance">Why Choose Nondon</h2>
-            <p className="text-xl text-muted-foreground text-pretty">
+            <p className="text-xl text-muted-foreground text-pretty font-normal">
               Experience the difference with our premium services
             </p>
           </div>
@@ -265,41 +339,41 @@ export default function NondonRealEstate() {
             <div className="text-center animate-fade-in-up group">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110">
                 <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <Check className="w-4 h-4 text-white" />
                 </div>
               </div>
               <h3 className="text-lg font-semibold mb-2">Flexible Payment Plans</h3>
-              <p className="text-muted-foreground text-sm">12-month payment options to suit your budget</p>
+              <p className="text-muted-foreground text-sm font-normal">12-month payment options to suit your budget</p>
             </div>
 
             <div className="text-center animate-fade-in-up group">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110">
                 <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <Check className="w-4 h-4 text-white" />
                 </div>
               </div>
               <h3 className="text-lg font-semibold mb-2">Secure Estates</h3>
-              <p className="text-muted-foreground text-sm">24/7 security and gated communities</p>
+              <p className="text-muted-foreground text-sm font-normal">24/7 security and gated communities</p>
             </div>
 
             <div className="text-center animate-fade-in-up group">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110">
                 <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <Check className="w-4 h-4 text-white" />
                 </div>
               </div>
               <h3 className="text-lg font-semibold mb-2">Transparent Pricing</h3>
-              <p className="text-muted-foreground text-sm">No hidden costs, clear pricing structure</p>
+              <p className="text-muted-foreground text-sm font-normal">No hidden costs, clear pricing structure</p>
             </div>
 
             <div className="text-center animate-fade-in-up group">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:scale-110">
                 <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
-                  <span className="text-white text-sm font-bold">✓</span>
+                  <Check className="w-4 h-4 text-white" />
                 </div>
               </div>
               <h3 className="text-lg font-semibold mb-2">Premium Amenities</h3>
-              <p className="text-muted-foreground text-sm">24/7 power, water & modern facilities</p>
+              <p className="text-muted-foreground text-sm font-normal">24/7 power, water & modern facilities</p>
             </div>
           </div>
         </div>
@@ -309,7 +383,7 @@ export default function NondonRealEstate() {
       <section className="py-20 bg-red-600 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 animate-fade-in-up">
           <h2 className="text-4xl font-bold mb-6 text-balance">Start Your Homeownership Journey Today</h2>
-          <p className="text-xl mb-8 text-pretty opacity-90">
+          <p className="text-xl mb-8 text-pretty opacity-90 font-normal">
             Join hundreds of satisfied homeowners who chose Nondon for their luxury living experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

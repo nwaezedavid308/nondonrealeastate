@@ -4,6 +4,7 @@ import { useState, useEffect } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
+import SearchComponent from "@/components/search-component"
 
 const slides = [
   {
@@ -17,7 +18,7 @@ const slides = [
     subtitle: "Contemporary architecture meets intelligent design",
   },
   {
-    image: "/images/3d-renders/nondon-real-estate-3d-6.jpeg",
+    image: "/images/3d-renders/nondon-real-estate-3d-aerial.jpeg",
     mainTitle: "Invest Today, Enjoy Tomorrow",
     subtitle: "Luxury duplexes in serene locations",
   },
@@ -59,7 +60,7 @@ export default function HeroSlideshow() {
             className="object-cover"
             priority={index === 0}
           />
-          <div className="absolute inset-0 bg-black/40" />
+          <div className="absolute inset-0 bg-black/60" />
         </div>
       ))}
 
@@ -69,9 +70,15 @@ export default function HeroSlideshow() {
             <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-balance transition-all duration-500 leading-tight">
               {slides[currentSlide].mainTitle}
             </h1>
-            <p className="text-lg sm:text-xl md:text-2xl mb-8 text-balance opacity-90 transition-all duration-500 max-w-4xl mx-auto">
+            <p className="text-lg sm:text-xl md:text-2xl mb-8 text-balance opacity-90 transition-all duration-500 max-w-4xl mx-auto font-normal">
               {slides[currentSlide].subtitle}
             </p>
+            
+            {/* Search Component */}
+            <div className="mb-8 max-w-2xl mx-auto">
+              <SearchComponent />
+            </div>
+            
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button
                 asChild

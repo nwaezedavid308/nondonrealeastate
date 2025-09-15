@@ -16,11 +16,6 @@ const galleryProjects = [
     status: "Multiple Phases",
     vision: [
       {
-        image: "/images/phases/PHASE 3/PHASE 3 (1).jpg",
-        title: "Phase 3 Vision",
-        description: "4 & 5-bedroom luxury duplexes",
-      },
-      {
         image: "/images/3d-renders/3D RENDER 4 BEDROOM DUPLEX PHASE 3.jpeg",
         title: "Modern Duplex Design",
         description: "Contemporary architectural excellence",
@@ -29,6 +24,11 @@ const galleryProjects = [
         image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
         title: "Smart Home Innovation",
         description: "Technology-enabled luxury living",
+      },
+      {
+        image: "/images/3d-renders/nondon-real-estate-3d-aerial.jpeg",
+        title: "Aerial View Design",
+        description: "Overall estate visualization",
       },
     ],
     reality: [
@@ -41,6 +41,11 @@ const galleryProjects = [
         image: "/images/phases/phase-2-c.jpg",
         title: "Phase 2 Excellence",
         description: "Executive bungalows delivered",
+      },
+      {
+        image: "/images/phases/PHASE 3/PHASE 3 (1).jpg",
+        title: "Phase 3 Real Construction",
+        description: "4 & 5-bedroom luxury duplexes under construction",
       },
       {
         image: "/images/phases/PHASE 3/PHASE 3 (2).jpg",
@@ -61,17 +66,27 @@ const galleryProjects = [
         description: "Modern architectural visualization",
       },
       {
-        image: "/images/apartments/APARTMENTS (1).jpg",
-        title: "Premium Interior Concept",
-        description: "Luxury living space design",
+        image: "/images/3d-renders/3D APARTMENT RENDER (1).jpg",
+        title: "3D Apartment Interior",
+        description: "Virtual interior design concept",
       },
       {
-        image: "/images/apartments/APARTMENTS (2).jpg",
-        title: "Modern Living Spaces",
-        description: "Contemporary apartment layouts",
+        image: "/images/3d-renders/3D APARTMENT RENDER (2).jpg",
+        title: "3D Living Space",
+        description: "Contemporary apartment visualization",
       },
     ],
     reality: [
+      {
+        image: "/images/apartments/APARTMENTS (1).jpg",
+        title: "Real Apartment Interior",
+        description: "Actual luxury living space",
+      },
+      {
+        image: "/images/apartments/APARTMENTS (2).jpg",
+        title: "Completed Living Spaces",
+        description: "Real apartment layouts",
+      },
       {
         image: "/images/apartments/APARTMENTS (3).jpg",
         title: "Apartment Construction Progress",
@@ -160,32 +175,42 @@ const galleryProjects = [
     ],
   },
   {
-    id: "coming-soon",
-    name: "Future Developments",
-    description: "Upcoming luxury projects in prime locations",
+    id: "nondon-crest-luxury",
+    name: "Nondon Crest Luxury",
+    description: "Premium luxury development coming soon to Enugu",
     status: "Coming Soon",
     vision: [
       {
         image: "/images/coming-soon/coming-soon-1.jpg",
-        title: "Premium Land Development",
-        description: "Future luxury residential community",
-      },
-      {
-        image: "/images/coming-soon/coming-soon-2.jpg",
-        title: "Exclusive Estate Planning",
-        description: "Strategic location for luxury living",
+        title: "Nondon Crest Luxury",
+        description: "Premium luxury development coming soon to Enugu",
       },
     ],
     reality: [
       {
         image: "/images/coming-soon/coming-soon-1.jpg",
-        title: "Site Preparation",
-        description: "Land acquisition and planning phase",
+        title: "Site Planning",
+        description: "Development planning and site preparation",
       },
+    ],
+  },
+  {
+    id: "nondon-luxury-apartment-asaba",
+    name: "Nondon Luxury Apartment Asaba",
+    description: "Expanding our luxury apartment offerings to Asaba",
+    status: "Coming Soon",
+    vision: [
       {
         image: "/images/coming-soon/coming-soon-2.jpg",
-        title: "Development Planning",
-        description: "Strategic development in progress",
+        title: "Nondon Luxury Apartment Asaba",
+        description: "Expanding our luxury apartment offerings to Asaba",
+      },
+    ],
+    reality: [
+      {
+        image: "/images/coming-soon/coming-soon-2.jpg",
+        title: "Location Assessment",
+        description: "Strategic location planning in Asaba, Delta State",
       },
     ],
   },

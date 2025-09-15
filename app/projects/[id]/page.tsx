@@ -65,8 +65,8 @@ const propertyData = {
     price: "₦110,000,000",
     priceRange: null,
     images: [
-      "/luxury-duplex-house-exterior-modern-architecture-e.jpg",
-      "/4-bedroom-bungalow-luxury-nondon-almonds.jpg",
+      "/images/phases/phase-2-c.jpg",
+      "/images/bungalows/nondon-almonds-bungalows.jpg",
     ],
     description:
       "Elegant executive bungalows designed for sophisticated living. Located on the prestigious Chief Geff Ozor Avenue, these properties offer single-level luxury with all the modern amenities you expect from Nondon Real Estate.",
@@ -155,7 +155,7 @@ const propertyData = {
     location: "Nza Street, Independence Layout, Enugu",
     price: null,
     priceRange: "₦200,000,000 - ₦380,000,000",
-    images: ["/luxury-apartment-building-modern-nondon.jpg", "/smart-home-technology-modern-house-automation.jpg"],
+    images: ["/images/apartments/APARTMENTS (1).jpg", "/images/apartments/APARTMENTS (2).jpg"],
     description:
       "Modern serviced apartments with smart home technology in the heart of Independence Layout. These luxury studios offer the perfect blend of convenience, technology, and premium amenities for contemporary urban living.",
     amenities: [
@@ -198,8 +198,8 @@ const propertyData = {
     price: "₦235,000,000",
     priceRange: "₦235,000,000 - ₦250,000,000",
     images: [
-      "/smart-home-technology-modern-house-automation.jpg",
-      "/luxury-duplex-house-exterior-modern-architecture-e.jpg",
+      "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
+      "/images/3d-renders/3D RENDER SMART HOME (2).jpg",
     ],
     description:
       "Experience the future of living with our fully automated smart homes. These 6-bedroom duplexes feature cutting-edge technology, premium finishes, and intelligent systems that respond to your lifestyle needs.",
@@ -243,8 +243,8 @@ const propertyData = {
     price: "₦135,000,000",
     priceRange: null,
     images: [
-      "/4-bedroom-bungalow-luxury-nondon-almonds.jpg",
-      "/luxury-duplex-house-exterior-modern-architecture-e.jpg",
+      "/images/bungalows/nondon-almonds-bungalows.jpg",
+      "/images/bungalows/BUNGALOW (1).jpg",
     ],
     description:
       "Premium luxury 4-bedroom bungalows in the prestigious Centenary City, Enugu. These homes combine traditional elegance with modern luxury, offering comfortable single-level living in a prime location.",
