@@ -65,20 +65,20 @@ export const useFormSubmission = () => {
       if (result.success) {
         setSubmitStatus({
           type: 'success',
-          message: 'Thank you! Your property reservation has been submitted successfully. Our sales team will contact you within 24 hours.'
+          message: 'Thank you! Your property request has been submitted successfully. Our sales team will contact you within 24 hours.'
         });
         return true;
       } else {
         setSubmitStatus({
           type: 'error',
-          message: 'Sorry, there was an error submitting your reservation. Please try again or contact us directly.'
+          message: 'Sorry, there was an error submitting your request. Please try again or contact us directly.'
         });
         return false;
       }
     } catch (error) {
       setSubmitStatus({
         type: 'error',
-        message: 'Sorry, there was an error submitting your reservation. Please try again or contact us directly.'
+        message: 'Sorry, there was an error submitting your request. Please try again or contact us directly.'
       });
       return false;
     } finally {

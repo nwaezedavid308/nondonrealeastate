@@ -87,7 +87,7 @@ export const sendGeneralInquiry = async (formData: {
   }
 };
 
-// Send property reservation email
+// Send property request (secure) email
 export const sendPropertyReservation = async (formData: {
   firstName: string;
   lastName: string;

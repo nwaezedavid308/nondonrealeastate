@@ -75,7 +75,7 @@ const teamMembers = [
       "Chuka Charles Chima brings over 20 years of extensive experience in business, investment banking, and real estate management. Mr. Chima holds a degree in geology and a business management education from the University of Nigeria, Nsukka (UNN), and Enugu State University of Science and Technology (ESUT). As an intellectual leader, Mr. Chima is renowned for his focus on value ideation, innovation, and impact investing.",
   },
   {
-    name: "Mma Nwaigwe Chidimma",
+    name: "Nwaigwe Chidimma",
     role: "Head of Marketing",
     image: "/images/team/mma-nwaigwe-updated.png",
     description:

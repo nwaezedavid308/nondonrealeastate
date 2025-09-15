@@ -174,7 +174,7 @@ export function Footer() {
             <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
               <p className="text-gray-400 text-sm">&copy; 2024 Nondon Real Estate. All rights reserved.</p>
               <p className="text-gray-500 text-xs">
-                DESIGN BY <span className="text-white">NIUXVERSE SOLUTIONS</span>, <span className="text-white">BENCHUKSGLOBAL LIMITED</span>
+                DESIGN UPGRADE: <span className="text-white">Niuxverse solutions +2348133979105/+2348110607341</span>, <span className="text-white">BenChuksGlobalLimited (Source Credit)</span>
               </p>
             </div>
             <div className="flex space-x-6 mt-4 md:mt-0">

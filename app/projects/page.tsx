@@ -284,7 +284,7 @@ function PropertyCard({ property, category }: { property: any; category: string 
                     : "border-red-200 text-red-600 hover:bg-red-50"
                 } bg-transparent`}
               >
-                <Link href="/contact">Reserve Now</Link>
+                <Link href="/contact">Secure Now</Link>
               </Button>
             )}
           </div>
@@ -457,7 +457,7 @@ export default function ProjectsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button asChild size="lg" className="bg-white text-red-600 hover:bg-gray-100 px-8">
-              <Link href="/contact">Reserve Now</Link>
+              <Link href="/contact">Secure Now</Link>
             </Button>
             <Button
               asChild

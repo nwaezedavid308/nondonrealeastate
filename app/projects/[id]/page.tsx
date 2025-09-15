@@ -328,7 +328,7 @@ export default function PropertyPage({ params }: PropertyPageProps) {
             </div>
 
             <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
-              <Link href="/contact">Reserve Now</Link>
+              <Link href="/contact">Secure Now</Link>
             </Button>
           </div>
         </div>
@@ -389,7 +389,7 @@ export default function PropertyPage({ params }: PropertyPageProps) {
                     className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-8"
                     disabled={property.soldOut}
                   >
-                    <Link href="/contact">{property.soldOut ? "Sold Out" : "Reserve Now"}</Link>
+                    <Link href="/contact">{property.soldOut ? "Sold Out" : "Secure Now"}</Link>
                   </Button>
                   {!property.soldOut && (
                     <Button
@@ -608,7 +608,7 @@ export default function PropertyPage({ params }: PropertyPageProps) {
             Ready to Make This Your Home?
           </h2>
           <p className="text-xl text-gray-600 mb-8 text-balance">
-            Don't miss out on this opportunity. Contact us today to schedule a viewing or make a reservation.
+            Don't miss out on this opportunity. Contact us today to schedule a viewing or secure a property.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
@@ -617,7 +617,7 @@ export default function PropertyPage({ params }: PropertyPageProps) {
               className="bg-red-600 hover:bg-red-700 text-white px-8"
               disabled={property.soldOut}
             >
-              <Link href="/contact">{property.soldOut ? "Property Sold Out" : "Reserve This Property"}</Link>
+              <Link href="/contact">{property.soldOut ? "Property Sold Out" : "Secure This Property"}</Link>
             </Button>
             <Button
               asChild

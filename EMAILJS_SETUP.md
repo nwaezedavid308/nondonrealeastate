@@ -30,9 +30,9 @@ Message: {{message}}
 This inquiry was sent from your website contact form.
 ```
 
-#### Template 2: Property Reservation
+#### Template 2: Secure Property Request
 - **Template Name:** `property_reservation`
-- **Subject:** `New Property Reservation from {{from_name}}`
+- **Subject:** `New Secure Property Request from {{from_name}}`
 - **Content:**
 ```
 Name: {{from_name}} {{from_lastname}}
@@ -43,7 +43,7 @@ Budget: {{budget}}
 Timeline: {{timeline}}
 Additional Notes: {{message}}
 
-This reservation was sent from your website contact form.
+This secure property request was sent from your website contact form.
 ```
 
 ### 4. Get Your Credentials
@@ -91,7 +91,7 @@ NEXT_PUBLIC_EMAILJS_PUBLIC_KEY=your_actual_public_key
   - Subject dropdown (required)
   - Message textarea (required)
   
-- **Property Reservation Form:**
+- **Secure Property Form:**
   - Name, Email, Phone (required)
   - Property selection (required)
   - Budget range (required)

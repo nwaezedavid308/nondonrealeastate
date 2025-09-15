@@ -290,7 +290,7 @@ export default function NondonRealEstate() {
               <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 hover:scale-110 hover:shadow-lg">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
-              <h3 className="text-xl font-semibold mb-2">Reserve</h3>
+              <h3 className="text-xl font-semibold mb-2">Secure</h3>
               <p className="text-muted-foreground font-normal">Pay 30% to secure your unit.</p>
             </div>
 
@@ -388,7 +388,7 @@ export default function NondonRealEstate() {
               variant="outline"
               className="border-white text-white hover:bg-white hover:text-red-600 bg-transparent transition-all duration-300 hover:scale-105"
             >
-              <Link href="/contact">Reserve Now</Link>
+              <Link href="/contact">Secure Now</Link>
             </Button>
           </div>
         </div>

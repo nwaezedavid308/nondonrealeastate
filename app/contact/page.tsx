@@ -93,7 +93,7 @@ export default function ContactPage() {
     message: ''
   });
 
-  // Form state for Property Reservation
+  // Form state for Property Security (formerly Reservation)
   const [reservationForm, setReservationForm] = useState({
     firstName: '',
     lastName: '',
@@ -137,7 +137,7 @@ export default function ContactPage() {
     }
   };
 
-  // Handle property reservation form submission
+  // Handle secure property form submission
   const handleReservationSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const success = await handlePropertyReservation(reservationForm);
@@ -170,9 +170,9 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-black/50" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance animate-fade-in-up">Contact & Reserve</h1>
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance animate-fade-in-up">Contact & Secure</h1>
           <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto text-balance animate-fade-in-up">
-            Ready to own your dream home? Get in touch with our expert team or reserve your property today.
+            Ready to own your dream home? Get in touch with our expert team or secure your property today.
           </p>
         </div>
       </section>
@@ -361,15 +361,15 @@ export default function ContactPage() {
               </CardContent>
             </Card>
 
-            {/* Property Reservation Form */}
+            {/* Secure Property Form */}
             <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 animate-slide-in-right">
               <CardHeader>
                 <CardTitle className="text-2xl font-bold text-gray-900 flex items-center gap-2">
                   <Home className="w-6 h-6 text-red-600" />
-                  Property Reservation
+                  Secure a Property
                 </CardTitle>
                 <CardDescription>
-                  Ready to reserve a property? Fill out this form and our sales team will contact you within 24 hours.
+                  Ready to secure a property? Fill out this form and our sales team will contact you within 24 hours.
                 </CardDescription>
               </CardHeader>
               <CardContent className="space-y-6">
@@ -518,7 +518,7 @@ export default function ContactPage() {
                     ) : (
                       <>
                         <Calendar className="w-4 h-4 mr-2" />
-                        Reserve Property
+                        Secure Property
                       </>
                     )}
                   </Button>

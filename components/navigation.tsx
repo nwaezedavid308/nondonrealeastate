@@ -61,7 +61,7 @@ export function Navigation() {
               asChild
               className="bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-2 transition-all duration-300 hover:shadow-lg"
             >
-              <Link href="/contact">Reserve Now</Link>
+              <Link href="/contact">Secure Now</Link>
             </Button>
 
             {/* Mobile Navigation */}
@@ -101,7 +101,7 @@ export function Navigation() {
                     className="bg-red-600 hover:bg-red-700 text-white font-medium mt-8 mx-4 py-3 transition-all duration-300"
                   >
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
-                      Reserve Now
+                      Secure Now
                     </Link>
                   </Button>
                 </div>
