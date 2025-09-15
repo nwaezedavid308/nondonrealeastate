@@ -39,7 +39,7 @@ export function Navigation() {
               height={40}
               className="rounded-full"
             />
-            <span className="font-bold text-xl text-gray-900">NONDON</span>
+            <span className="font-bold text-xl text-gray-900">Nondon Real Estate</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -82,7 +82,7 @@ export function Navigation() {
                       height={32}
                       className="rounded-full"
                     />
-                    <span className="font-bold text-lg text-gray-900">NONDON</span>
+                    <span className="font-bold text-lg text-gray-900">Nondon Real Estate</span>
                   </div>
                   {navItems.map((item) => (
                     <Link

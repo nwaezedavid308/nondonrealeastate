@@ -3,8 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
 import { Navigation } from "@/components/navigation"
-import { Footer } from "@/components/footer"
 import HeroSlideshow from "@/components/hero-slideshow"
+import HeroVideo from "@/components/hero-video"
 import { Home, Video, Star, Check } from "lucide-react"
 
 export default function NondonRealEstate() {
@@ -25,19 +25,7 @@ export default function NondonRealEstate() {
           </div>
           
           <div className="relative max-w-5xl mx-auto animate-fade-in-up">
-            <div className="relative aspect-video bg-black rounded-2xl overflow-hidden shadow-2xl">
-              <iframe
-                width="100%"
-                height="100%"
-                src="https://www.youtube.com/embed/Z0OQ-TyXvlM?si=A81YyViIBoMa08eb&autoplay=1&mute=0&loop=1&playlist=Z0OQ-TyXvlM&rel=0&modestbranding=1&showinfo=0&controls=1"
-                title="Nondon Real Estate - Experience Luxury Living"
-                frameBorder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
-                allowFullScreen
-                className="absolute inset-0 w-full h-full"
-              ></iframe>
-            </div>
+            <HeroVideo videoId="Z0OQ-TyXvlM" />
             
             {/* Video Features */}
             <div className="grid md:grid-cols-3 gap-6 mt-12">
@@ -406,7 +394,7 @@ export default function NondonRealEstate() {
         </div>
       </section>
 
-      <Footer />
+      
     </div>
   )
 }
