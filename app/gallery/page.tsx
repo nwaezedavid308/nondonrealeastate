@@ -7,8 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Navigation } from "@/components/navigation"
-import { FadeInUp, FadeInLeft, FadeInRight, ScaleIn, StaggerContainer, StaggerItem } from "@/components/animated-wrapper"
-import { motion } from "framer-motion"
+// import { FadeInUp, FadeInLeft, FadeInRight, ScaleIn, StaggerContainer, StaggerItem } from "@/components/animated-wrapper"
+// import { motion, AnimatePresence } from "framer-motion"
 
 const galleryProjects = [
   {
@@ -305,14 +305,10 @@ export default function GalleryPage() {
       {/* Project Selection */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {galleryProjects.map((project, index) => (
-              <StaggerItem key={project.id}>
-                <motion.div
-                  whileHover={{ y: -8, scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
-                  transition={{ duration: 0.3 }}
-                >
+              <div key={project.id} className="animate-fadeInUp" style={{animationDelay: `${index * 100}ms`}}>
+                <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
                   <Card
                     className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${
                       selectedProject === index ? "ring-2 ring-red-500 shadow-lg" : ""
@@ -327,23 +323,19 @@ export default function GalleryPage() {
                       <p className="text-gray-600 text-sm">{project.description}</p>
                     </CardContent>
                   </Card>
-                </motion.div>
-              </StaggerItem>
+                </div>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 
       {/* Vision vs Reality Toggle */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <FadeInUp className="text-center mb-8">
+          <div className="text-center mb-8 animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">{currentProject.name}</h2>
-            <motion.div 
-              className="inline-flex bg-white rounded-lg p-1 shadow-sm border"
-              whileHover={{ scale: 1.02 }}
-              transition={{ duration: 0.2 }}
-            >
+            <div className="inline-flex bg-white rounded-lg p-1 shadow-sm border hover:scale-105 transition-transform duration-200">
               <button
                 onClick={() => setActiveTab("vision")}
                 className={`px-6 py-3 rounded-md text-sm font-medium transition-all duration-200 ${
@@ -360,22 +352,18 @@ export default function GalleryPage() {
               >
                 The Reality (Construction)
               </button>
-            </motion.div>
-          </FadeInUp>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Gallery Grid */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {(activeTab === "vision" ? currentProject.vision : currentProject.reality).map((item, index) => (
-              <StaggerItem key={index}>
-                <motion.div
-                  className="group relative overflow-hidden rounded-xl shadow-lg"
-                  whileHover={{ scale: 1.05, y: -8 }}
-                  transition={{ duration: 0.3 }}
-                >
+              <div key={index} className="animate-fadeInUp" style={{animationDelay: `${index * 100}ms`}}>
+                <div className="group relative overflow-hidden rounded-xl shadow-lg hover:scale-105 hover:-translate-y-2 transition-all duration-300">
                 <div className="relative h-80">
                   <Image
                     src={item.image || "/placeholder.svg"}
@@ -396,78 +384,51 @@ export default function GalleryPage() {
                 >
                   {activeTab === "vision" ? "Vision" : "Reality"}
                 </div>
-                </motion.div>
-              </StaggerItem>
+                </div>
+              </div>
             ))}
-          </StaggerContainer>
+          </div>
         </div>
       </section>
 
       {/* Comparison Stats */}
       <section className="py-16 bg-gradient-to-r from-gray-50 to-red-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <FadeInUp>
+          <div className="animate-fadeInUp">
             <h2 className="text-3xl font-bold text-gray-900 mb-8">From Vision to Reality</h2>
-          </FadeInUp>
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <StaggerItem>
-              <motion.div 
-                className="text-center"
-                whileHover={{ scale: 1.1, y: -5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="text-4xl font-bold text-red-600 mb-2"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.2 }}
-                >
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                <div className="text-4xl font-bold text-red-600 mb-2 animate-scaleIn" style={{animationDelay: '200ms'}}>
                   8+
-                </motion.div>
+                </div>
                 <div className="text-gray-600">Years of Experience</div>
-              </motion.div>
-            </StaggerItem>
-            <StaggerItem>
-              <motion.div 
-                className="text-center"
-                whileHover={{ scale: 1.1, y: -5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="text-4xl font-bold text-red-600 mb-2"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.4 }}
-                >
+              </div>
+            </div>
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                <div className="text-4xl font-bold text-red-600 mb-2 animate-scaleIn" style={{animationDelay: '400ms'}}>
                   500+
-                </motion.div>
+                </div>
                 <div className="text-gray-600">Properties Delivered</div>
-              </motion.div>
-            </StaggerItem>
-            <StaggerItem>
-              <motion.div 
-                className="text-center"
-                whileHover={{ scale: 1.1, y: -5 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="text-4xl font-bold text-red-600 mb-2"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ duration: 0.5, delay: 0.6 }}
-                >
+              </div>
+            </div>
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center hover:scale-110 hover:-translate-y-1 transition-all duration-300">
+                <div className="text-4xl font-bold text-red-600 mb-2 animate-scaleIn" style={{animationDelay: '600ms'}}>
                   100%
-                </motion.div>
+                </div>
                 <div className="text-gray-600">Vision Accuracy</div>
-              </motion.div>
-            </StaggerItem>
-          </StaggerContainer>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-white">
-        <FadeInUp className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fadeInUp">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-balance">
             Ready to Turn Your Vision into Reality?
           </h2>
@@ -475,11 +436,7 @@ export default function GalleryPage() {
             Experience the Nondon difference. From concept to completion, we deliver exactly what we promise.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
+            <div className="animate-fadeInUp hover:scale-105 active:scale-95 transition-transform duration-200">
               <Button
                 asChild
                 size="lg"
@@ -487,12 +444,8 @@ export default function GalleryPage() {
               >
                 <Link href="/contact">Start Your Project</Link>
               </Button>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
+            </div>
+            <div className="animate-fadeInUp hover:scale-105 active:scale-95 transition-transform duration-200">
               <Button
                 asChild
                 variant="outline"
@@ -501,9 +454,9 @@ export default function GalleryPage() {
               >
                 <Link href="/projects">View All Projects</Link>
               </Button>
-            </motion.div>
+            </div>
           </div>
-        </FadeInUp>
+        </div>
       </section>
     </div>
   )

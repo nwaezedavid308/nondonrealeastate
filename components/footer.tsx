@@ -41,18 +41,6 @@ export function Footer() {
                 since 2016.
               </p>
               
-              {/* Enhanced Social Media Section */}
-              <div className="mb-8">
-                <h3 className="text-xl font-bold mb-6 text-white">Follow Us for Updates</h3>
-                <p className="text-gray-300 text-sm mb-6">
-                  Stay connected with our latest projects, news, and exclusive offers
-                </p>
-                <SocialMedia 
-                  variant="large" 
-                  showLabels={true}
-                  className="text-white"
-                />
-              </div>
             </div>
 
             {/* Quick Links */}

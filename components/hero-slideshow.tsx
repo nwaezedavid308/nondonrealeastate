@@ -5,7 +5,7 @@ import Image from "next/image"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import SearchComponent from "@/components/search-component"
-import { motion, AnimatePresence } from "framer-motion"
+// import { motion, AnimatePresence } from "framer-motion"
 
 const slides = [
   {
@@ -100,90 +100,64 @@ export default function HeroSlideshow() {
       {/* Main Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen py-12 sm:py-16 lg:py-20">
         <div className="text-center text-white px-6 sm:px-8 max-w-5xl mx-auto w-full">
-          <AnimatePresence mode="wait">
-            <motion.div
-              key={currentSlide}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-              transition={{ duration: 0.7, ease: "easeOut" }}
-            >
+          <div
+            key={currentSlide}
+            className="animate-fadeInUp"
+          >
               {/* Luxury Brand Accent */}
-              <motion.div
-                initial={{ opacity: 0, scale: 0.8 }}
-                animate={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.5, delay: 0.2 }}
-              >
+              <div className="animate-scaleIn" style={{animationDelay: '200ms'}}>
                 <span className="inline-block px-6 py-2 border border-white/30 rounded-full text-sm font-light tracking-widest uppercase backdrop-blur-sm bg-white/10">
                   {currentSlideData.accent}
                 </span>
-              </motion.div>
+              </div>
 
               {/* Enhanced Typography with Split Styling */}
-              <motion.h1 
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extralight mb-4 sm:mb-6 mt-6 sm:mt-8"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.3 }}
+              <h1 
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extralight mb-4 sm:mb-6 mt-6 sm:mt-8 animate-fadeInUp"
+                style={{animationDelay: '300ms'}}
               >
                 <span className="font-thin whitespace-nowrap">{currentSlideData.mainTitle.split(' ').slice(0, -2).join(' ')}</span>
                 <br />
                 <span className="font-bold bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
                   {currentSlideData.mainTitle.split(' ').slice(-2).join(' ')}
                 </span>
-              </motion.h1>
+              </h1>
               
               {/* Elegant Divider */}
-              <motion.div 
-                className="w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-6 sm:mb-8"
-                initial={{ scaleX: 0 }}
-                animate={{ scaleX: 1 }}
-                transition={{ duration: 0.8, delay: 0.5 }}
-              ></motion.div>
+              <div 
+                className="w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-6 sm:mb-8 animate-slideIn"
+                style={{animationDelay: '500ms'}}
+              ></div>
               
-              <motion.p 
-                className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-balance opacity-90 max-w-4xl mx-auto font-light"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 0.9, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.4 }}
+              <p 
+                className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-balance opacity-90 max-w-4xl mx-auto font-light animate-fadeInUp"
+                style={{animationDelay: '400ms'}}
               >
                 {currentSlideData.subtitle}
-              </motion.p>
+              </p>
             
               {/* Glassmorphism Search Container */}
-              <motion.div 
-                className="backdrop-blur-md bg-white/10 rounded-2xl p-4 sm:p-6 border border-white/20 shadow-2xl mb-6 sm:mb-8 max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.6 }}
+              <div 
+                className="backdrop-blur-md bg-white/10 rounded-2xl p-4 sm:p-6 border border-white/20 shadow-2xl mb-6 sm:mb-8 max-w-2xl mx-auto animate-fadeInUp"
+                style={{animationDelay: '600ms'}}
               >
                 <SearchComponent />
-              </motion.div>
+              </div>
               
               {/* Call to Action Buttons - Positioned below search for better responsive flow */}
-              <motion.div 
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-2xl mx-auto"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.8 }}
+              <div 
+                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-2xl mx-auto animate-fadeInUp"
+                style={{animationDelay: '800ms'}}
               >
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                >
+                <div className="hover:scale-105 transition-transform duration-200">
                   <Button
                     asChild
                     className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg"
                   >
                     <Link href="/projects">Explore Properties</Link>
                   </Button>
-                </motion.div>
-                <motion.div
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  transition={{ duration: 0.2 }}
-                >
+                </div>
+                <div className="hover:scale-105 transition-transform duration-200">
                   <Button
                     asChild
                     variant="outline"
@@ -191,10 +165,9 @@ export default function HeroSlideshow() {
                   >
                     <Link href="/contact">Contact Us</Link>
                   </Button>
-                </motion.div>
-              </motion.div>
-            </motion.div>
-          </AnimatePresence>
+                </div>
+              </div>
+            </div>
         </div>
       </div>
 

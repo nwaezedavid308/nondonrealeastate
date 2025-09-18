@@ -1,6 +1,6 @@
 "use client"
 
-import { motion, HTMLMotionProps } from "framer-motion"
+import { motion, HTMLMotionProps, Variants } from "framer-motion"
 import { ReactNode } from "react"
 import { fadeInUp, fadeInDown, fadeInLeft, fadeInRight, scaleIn, staggerContainer, staggerItem } from "@/lib/animations"
 

@@ -5,8 +5,7 @@ import Link from "next/link"
 import { Navigation } from "@/components/navigation"
 import HeroSlideshow from "@/components/hero-slideshow"
 import HeroVideo from "@/components/hero-video"
-import { FadeInUp, FadeInLeft, FadeInRight, ScaleIn, StaggerContainer, StaggerItem } from "@/components/animated-wrapper"
-import { motion } from "framer-motion"
+// import { FadeInUp, FadeInLeft, FadeInRight, ScaleIn, StaggerContainer, StaggerItem } from "@/components/css-animations"
 import { Home, Video, Star, Check } from "lucide-react"
 
 export default function NondonRealEstate() {
@@ -19,79 +18,58 @@ export default function NondonRealEstate() {
       {/* Engaging Video Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4">
-          <FadeInUp className="text-center mb-12">
+          <div className="text-center mb-12 animate-fadeInUp">
             <h2 className="text-4xl font-bold mb-4 text-balance">Experience Nondon Real Estate</h2>
             <p className="text-xl text-muted-foreground text-pretty font-normal max-w-3xl mx-auto">
               Take a virtual journey through our premium properties and discover what makes Nondon the preferred choice for luxury living
             </p>
-          </FadeInUp>
+          </div>
           
-          <FadeInUp className="relative max-w-5xl mx-auto">
+          <div className="relative max-w-5xl mx-auto animate-fadeInUp">
             <HeroVideo videoId="Z0OQ-TyXvlM" />
             
             {/* Video Features */}
-            <StaggerContainer className="grid md:grid-cols-3 gap-6 mt-12">
-              <StaggerItem>
-                <motion.div 
-                  className="text-center group"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-300">
-                    <Home className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">Virtual Tours</h3>
-                  <p className="text-muted-foreground text-sm font-normal">Experience our properties from the comfort of your home</p>
-                </motion.div>
-              </StaggerItem>
+            <div className="grid md:grid-cols-3 gap-6 mt-12">
+              <div className="text-center group hover:scale-105 transition-transform duration-300 animate-fadeInUp">
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-300">
+                  <Home className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Virtual Tours</h3>
+                <p className="text-muted-foreground text-sm font-normal">Experience our properties from the comfort of your home</p>
+              </div>
               
-              <StaggerItem>
-                <motion.div 
-                  className="text-center group"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-300">
-                    <Video className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">Behind the Scenes</h3>
-                  <p className="text-muted-foreground text-sm font-normal">See the craftsmanship and attention to detail in every project</p>
-                </motion.div>
-              </StaggerItem>
+              <div className="text-center group hover:scale-105 transition-transform duration-300 animate-fadeInUp" style={{animationDelay: '100ms'}}>
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-300">
+                  <Video className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Behind the Scenes</h3>
+                <p className="text-muted-foreground text-sm font-normal">See the craftsmanship and attention to detail in every project</p>
+              </div>
               
-              <StaggerItem>
-                <motion.div 
-                  className="text-center group"
-                  whileHover={{ scale: 1.05 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-300">
-                    <Star className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
-                  </div>
-                  <h3 className="text-lg font-semibold mb-2">Customer Stories</h3>
-                  <p className="text-muted-foreground text-sm font-normal">Hear from satisfied homeowners about their Nondon experience</p>
-                </motion.div>
-              </StaggerItem>
-            </StaggerContainer>
-          </FadeInUp>
+              <div className="text-center group hover:scale-105 transition-transform duration-300 animate-fadeInUp" style={{animationDelay: '200ms'}}>
+                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-300">
+                  <Star className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
+                </div>
+                <h3 className="text-lg font-semibold mb-2">Customer Stories</h3>
+                <p className="text-muted-foreground text-sm font-normal">Hear from satisfied homeowners about their Nondon experience</p>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Featured Properties */}
       <section className="py-20 px-4">
         <div className="max-w-7xl mx-auto">
-          <FadeInUp className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold mb-4 text-balance">Featured Properties</h2>
             <p className="text-xl text-muted-foreground text-pretty font-normal">Discover our premium collection of luxury homes</p>
-          </FadeInUp>
+          </div>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Nondon Estate Phase 3 */}
-            <StaggerItem>
-              <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
                 <Card className="group hover:shadow-xl transition-all duration-500">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img
@@ -120,15 +98,12 @@ export default function NondonRealEstate() {
                 </div>
               </CardContent>
             </Card>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
             {/* Nondon Luxury Apartments */}
-            <StaggerItem>
-              <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
                 <Card className="group hover:shadow-xl transition-all duration-500">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img
@@ -157,15 +132,12 @@ export default function NondonRealEstate() {
                 </div>
               </CardContent>
             </Card>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
             {/* Nondon Smart Homes */}
-            <StaggerItem>
-              <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
                 <Card className="group hover:shadow-xl transition-all duration-500">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img
@@ -194,15 +166,12 @@ export default function NondonRealEstate() {
                 </div>
               </CardContent>
             </Card>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
             {/* Nondon Almonds */}
-            <StaggerItem>
-              <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
                 <Card className="group hover:shadow-xl transition-all duration-500">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img
@@ -231,15 +200,12 @@ export default function NondonRealEstate() {
                 </div>
               </CardContent>
             </Card>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
             {/* Coming Soon - Nondon Crest Luxury */}
-            <StaggerItem>
-              <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
                 <Card className="group hover:shadow-xl transition-all duration-500 opacity-90">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img
@@ -278,15 +244,12 @@ export default function NondonRealEstate() {
                 </div>
               </CardContent>
             </Card>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
             {/* Coming Soon - Luxury Apartment Asaba */}
-            <StaggerItem>
-              <motion.div
-                whileHover={{ y: -8, scale: 1.02 }}
-                transition={{ duration: 0.3 }}
-              >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
                 <Card className="group hover:shadow-xl transition-all duration-500 opacity-90">
               <div className="relative overflow-hidden rounded-t-lg">
                 <img
@@ -325,203 +288,135 @@ export default function NondonRealEstate() {
                 </div>
               </CardContent>
             </Card>
-              </motion.div>
-            </StaggerItem>
-          </StaggerContainer>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* How It Works */}
       <section className="py-20 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4">
-          <FadeInUp className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold mb-4 text-balance">How It Works</h2>
             <p className="text-xl text-muted-foreground text-pretty font-normal">Your journey to luxury living in 4 simple steps</p>
-          </FadeInUp>
+          </div>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <StaggerItem>
-              <motion.div 
-                className="text-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
                   <span className="text-2xl font-bold text-white">1</span>
-                </motion.div>
+                </div>
                 <h3 className="text-xl font-semibold mb-2">Browse</h3>
                 <p className="text-muted-foreground font-normal">Explore our estates, apartments & smart homes.</p>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
-            <StaggerItem>
-              <motion.div 
-                className="text-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
                   <span className="text-2xl font-bold text-white">2</span>
-                </motion.div>
+                </div>
                 <h3 className="text-xl font-semibold mb-2">Secure</h3>
                 <p className="text-muted-foreground font-normal">Pay 30% to secure your unit.</p>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
-            <StaggerItem>
-              <motion.div 
-                className="text-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
                   <span className="text-2xl font-bold text-white">3</span>
-                </motion.div>
+                </div>
                 <h3 className="text-xl font-semibold mb-2">Pay Flexibly</h3>
                 <p className="text-muted-foreground font-normal">Spread the balance over 12 months.</p>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
-            <StaggerItem>
-              <motion.div 
-                className="text-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
                   <span className="text-2xl font-bold text-white">4</span>
-                </motion.div>
+                </div>
                 <h3 className="text-xl font-semibold mb-2">Move In</h3>
                 <p className="text-muted-foreground font-normal">Enjoy luxury living with Nondon.</p>
-              </motion.div>
-            </StaggerItem>
-          </StaggerContainer>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Why Choose Nondon */}
       <section className="py-20">
         <div className="max-w-7xl mx-auto px-4">
-          <FadeInUp className="text-center mb-16">
+          <div className="text-center mb-16 animate-fadeInUp">
             <h2 className="text-4xl font-bold mb-4 text-balance">Why Choose Nondon</h2>
             <p className="text-xl text-muted-foreground text-pretty font-normal">
               Experience the difference with our premium services
             </p>
-          </FadeInUp>
+          </div>
 
-          <StaggerContainer className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <StaggerItem>
-              <motion.div 
-                className="text-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-green-200"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-green-200 hover:scale-110 hover:rotate-5">
                   <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                </motion.div>
+                </div>
                 <h3 className="text-lg font-semibold mb-2">Flexible Payment Plans</h3>
                 <p className="text-muted-foreground text-sm font-normal">12-month payment options to suit your budget</p>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
-            <StaggerItem>
-              <motion.div 
-                className="text-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-green-200"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-green-200 hover:scale-110 hover:rotate-5">
                   <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                </motion.div>
+                </div>
                 <h3 className="text-lg font-semibold mb-2">Secure Estates</h3>
                 <p className="text-muted-foreground text-sm font-normal">24/7 security and gated communities</p>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
-            <StaggerItem>
-              <motion.div 
-                className="text-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-green-200"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-green-200 hover:scale-110 hover:rotate-5">
                   <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                </motion.div>
+                </div>
                 <h3 className="text-lg font-semibold mb-2">Transparent Pricing</h3>
                 <p className="text-muted-foreground text-sm font-normal">No hidden costs, clear pricing structure</p>
-              </motion.div>
-            </StaggerItem>
+              </div>
+            </div>
 
-            <StaggerItem>
-              <motion.div 
-                className="text-center group"
-                whileHover={{ scale: 1.05 }}
-                transition={{ duration: 0.3 }}
-              >
-                <motion.div 
-                  className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-green-200"
-                  whileHover={{ scale: 1.1, rotate: 5 }}
-                  transition={{ duration: 0.3 }}
-                >
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="text-center group hover:scale-105 transition-transform duration-300">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-green-200 hover:scale-110 hover:rotate-5">
                   <div className="w-8 h-8 bg-green-600 rounded-full flex items-center justify-center">
                     <Check className="w-4 h-4 text-white" />
                   </div>
-                </motion.div>
+                </div>
                 <h3 className="text-lg font-semibold mb-2">Premium Amenities</h3>
                 <p className="text-muted-foreground text-sm font-normal">24/7 power, water & modern facilities</p>
-              </motion.div>
-            </StaggerItem>
-          </StaggerContainer>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* Call to Action */}
       <section className="py-20 bg-red-600 text-white">
-        <FadeInUp className="max-w-4xl mx-auto text-center px-4">
+        <div className="max-w-4xl mx-auto text-center px-4 animate-fadeInUp">
           <h2 className="text-4xl font-bold mb-6 text-balance">Start Your Homeownership Journey Today</h2>
           <p className="text-xl mb-8 text-pretty opacity-90 font-normal">
             Join hundreds of satisfied homeowners who chose Nondon for their luxury living experience.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
+            <div className="hover:scale-105 active:scale-95 transition-transform duration-200">
               <Button
                 asChild
                 size="lg"
@@ -529,12 +424,8 @@ export default function NondonRealEstate() {
               >
                 <Link href="/contact">Talk to Us</Link>
               </Button>
-            </motion.div>
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              transition={{ duration: 0.2 }}
-            >
+            </div>
+            <div className="hover:scale-105 active:scale-95 transition-transform duration-200">
               <Button
                 asChild
                 size="lg"
@@ -543,9 +434,9 @@ export default function NondonRealEstate() {
               >
                 <Link href="/contact">Secure Now</Link>
               </Button>
-            </motion.div>
+            </div>
           </div>
-        </FadeInUp>
+        </div>
       </section>
 
       
