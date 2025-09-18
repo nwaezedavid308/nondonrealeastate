@@ -7,6 +7,8 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Navigation } from "@/components/navigation"
+import { FadeInUp, FadeInLeft, FadeInRight, ScaleIn, StaggerContainer, StaggerItem } from "@/components/animated-wrapper"
+import { motion } from "framer-motion"
 
 const galleryProjects = [
   {
@@ -16,7 +18,7 @@ const galleryProjects = [
     status: "Multiple Phases",
     vision: [
       {
-        image: "/images/3d-renders/3D RENDER 4 BEDROOM DUPLEX PHASE 3.jpeg",
+        image: "/images/3d-renders/3D RENDER 4  BEDROOM DUPLEX PHASE 3.jpeg",
         title: "Modern Duplex Design",
         description: "Contemporary architectural excellence",
       },
@@ -66,12 +68,12 @@ const galleryProjects = [
         description: "Modern architectural visualization",
       },
       {
-        image: "/images/3d-renders/3D APARTMENT RENDER (1).jpg",
+        image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
         title: "3D Apartment Interior",
         description: "Virtual interior design concept",
       },
       {
-        image: "/images/3d-renders/3D APARTMENT RENDER (2).jpg",
+        image: "/images/3d-renders/3D RENDER SMART HOME (2).jpg",
         title: "3D Living Space",
         description: "Contemporary apartment visualization",
       },
@@ -232,28 +234,70 @@ export default function GalleryPage() {
       {/* Navigation */}
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative py-20 bg-gradient-to-br from-gray-50 to-red-50 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-600/5 to-transparent"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div
-            className={`text-center transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
-          >
-            <h1 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6 text-balance">Project Gallery</h1>
-            <p className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto text-balance">
-              Witness the transformation from architectural vision to stunning reality. Explore our projects through
-              detailed 3D renders and actual construction progress.
-            </p>
-            <div className="flex items-center justify-center space-x-8 text-sm text-gray-500">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                <span>Vision (3D Renders)</span>
+      {/* Hero Section with Background Image */}
+      <section className="relative h-screen overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0">
+          <Image
+            src="/images/3d-renders/nondon-real-estate-3d-aerial.jpeg"
+            alt="Nondon Real Estate Gallery"
+            fill
+            className="object-cover"
+            priority
+          />
+          {/* Multi-layer Gradient Overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/60 to-black/40"></div>
+          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-black/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-red-900/30 via-transparent to-amber-900/20"></div>
+        </div>
+
+        {/* Hero Content */}
+        <div className="relative z-10 flex items-center justify-center h-full">
+          <div className="text-center text-white px-6 sm:px-8 max-w-5xl mx-auto">
+            <div
+              className={`transform transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"}`}
+            >
+              {/* Luxury Brand Accent */}
+              <div className="inline-block px-6 py-2 border border-white/30 rounded-full text-sm font-light tracking-widest uppercase backdrop-blur-sm bg-white/10 mb-8">
+                Project Gallery
               </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
-                <span>Reality (Construction)</span>
+
+              {/* Main Title */}
+              <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extralight mb-6">
+                <span className="font-thin whitespace-nowrap">Witness the transformation from</span>
+                <br />
+                <span className="font-bold bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
+                  Vision to Reality
+                </span>
+              </h1>
+              
+              {/* Elegant Divider */}
+              <div className="w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-8"></div>
+              
+              <p className="text-lg sm:text-xl md:text-2xl mb-8 text-balance opacity-90 max-w-4xl mx-auto font-light">
+                Explore our projects through detailed 3D renders and actual construction progress. 
+                See how we bring architectural visions to life.
+              </p>
+              
+              {/* Vision vs Reality Indicators */}
+              <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm">
+                <div className="flex items-center space-x-2 px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
+                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                  <span className="font-medium">Vision (3D Renders)</span>
+                </div>
+                <div className="flex items-center space-x-2 px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-400/30">
+                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                  <span className="font-medium">Reality (Construction)</span>
+                </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+          <div className="w-6 h-10 border-2 border-white/50 rounded-full flex justify-center">
+            <div className="w-1 h-3 bg-white/70 rounded-full mt-2 animate-pulse"></div>
           </div>
         </div>
       </section>
@@ -261,34 +305,45 @@ export default function GalleryPage() {
       {/* Project Selection */}
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
             {galleryProjects.map((project, index) => (
-              <Card
-                key={project.id}
-                className={`cursor-pointer transition-all duration-300 hover:shadow-lg transform hover:-translate-y-1 ${
-                  selectedProject === index ? "ring-2 ring-red-500 shadow-lg" : ""
-                }`}
-                onClick={() => setSelectedProject(index)}
-              >
-                <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <h3 className="text-lg font-semibold text-gray-900">{project.name}</h3>
-                    <Badge className="bg-red-100 text-red-700 border-red-200">{project.status}</Badge>
-                  </div>
-                  <p className="text-gray-600 text-sm">{project.description}</p>
-                </CardContent>
-              </Card>
+              <StaggerItem key={project.id}>
+                <motion.div
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  whileTap={{ scale: 0.98 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <Card
+                    className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${
+                      selectedProject === index ? "ring-2 ring-red-500 shadow-lg" : ""
+                    }`}
+                    onClick={() => setSelectedProject(index)}
+                  >
+                    <CardContent className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <h3 className="text-lg font-semibold text-gray-900">{project.name}</h3>
+                        <Badge className="bg-red-100 text-red-700 border-red-200">{project.status}</Badge>
+                      </div>
+                      <p className="text-gray-600 text-sm">{project.description}</p>
+                    </CardContent>
+                  </Card>
+                </motion.div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Vision vs Reality Toggle */}
       <section className="py-8 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-8">
+          <FadeInUp className="text-center mb-8">
             <h2 className="text-3xl font-bold text-gray-900 mb-4">{currentProject.name}</h2>
-            <div className="inline-flex bg-white rounded-lg p-1 shadow-sm border">
+            <motion.div 
+              className="inline-flex bg-white rounded-lg p-1 shadow-sm border"
+              whileHover={{ scale: 1.02 }}
+              transition={{ duration: 0.2 }}
+            >
               <button
                 onClick={() => setActiveTab("vision")}
                 className={`px-6 py-3 rounded-md text-sm font-medium transition-all duration-200 ${
@@ -305,23 +360,22 @@ export default function GalleryPage() {
               >
                 The Reality (Construction)
               </button>
-            </div>
-          </div>
+            </motion.div>
+          </FadeInUp>
         </div>
       </section>
 
       {/* Gallery Grid */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {(activeTab === "vision" ? currentProject.vision : currentProject.reality).map((item, index) => (
-              <div
-                key={index}
-                className={`group relative overflow-hidden rounded-xl shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl ${
-                  isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
-                }`}
-                style={{ transitionDelay: `${index * 100}ms` }}
-              >
+              <StaggerItem key={index}>
+                <motion.div
+                  className="group relative overflow-hidden rounded-xl shadow-lg"
+                  whileHover={{ scale: 1.05, y: -8 }}
+                  transition={{ duration: 0.3 }}
+                >
                 <div className="relative h-80">
                   <Image
                     src={item.image || "/placeholder.svg"}
@@ -342,36 +396,78 @@ export default function GalleryPage() {
                 >
                   {activeTab === "vision" ? "Vision" : "Reality"}
                 </div>
-              </div>
+                </motion.div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Comparison Stats */}
       <section className="py-16 bg-gradient-to-r from-gray-50 to-red-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">From Vision to Reality</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="transform hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold text-red-600 mb-2">8+</div>
-              <div className="text-gray-600">Years of Experience</div>
-            </div>
-            <div className="transform hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold text-red-600 mb-2">500+</div>
-              <div className="text-gray-600">Properties Delivered</div>
-            </div>
-            <div className="transform hover:scale-105 transition-transform duration-300">
-              <div className="text-4xl font-bold text-red-600 mb-2">100%</div>
-              <div className="text-gray-600">Vision Accuracy</div>
-            </div>
-          </div>
+          <FadeInUp>
+            <h2 className="text-3xl font-bold text-gray-900 mb-8">From Vision to Reality</h2>
+          </FadeInUp>
+          <StaggerContainer className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <StaggerItem>
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.1, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div 
+                  className="text-4xl font-bold text-red-600 mb-2"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.2 }}
+                >
+                  8+
+                </motion.div>
+                <div className="text-gray-600">Years of Experience</div>
+              </motion.div>
+            </StaggerItem>
+            <StaggerItem>
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.1, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div 
+                  className="text-4xl font-bold text-red-600 mb-2"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.4 }}
+                >
+                  500+
+                </motion.div>
+                <div className="text-gray-600">Properties Delivered</div>
+              </motion.div>
+            </StaggerItem>
+            <StaggerItem>
+              <motion.div 
+                className="text-center"
+                whileHover={{ scale: 1.1, y: -5 }}
+                transition={{ duration: 0.3 }}
+              >
+                <motion.div 
+                  className="text-4xl font-bold text-red-600 mb-2"
+                  initial={{ scale: 0 }}
+                  whileInView={{ scale: 1 }}
+                  transition={{ duration: 0.5, delay: 0.6 }}
+                >
+                  100%
+                </motion.div>
+                <div className="text-gray-600">Vision Accuracy</div>
+              </motion.div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-white">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
+        <FadeInUp className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-balance">
             Ready to Turn Your Vision into Reality?
           </h2>
@@ -379,23 +475,35 @@ export default function GalleryPage() {
             Experience the Nondon difference. From concept to completion, we deliver exactly what we promise.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button
-              asChild
-              size="lg"
-              className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-8"
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             >
-              <Link href="/contact">Start Your Project</Link>
-            </Button>
-            <Button
-              asChild
-              variant="outline"
-              size="lg"
-              className="border-red-200 text-red-600 hover:bg-red-50 px-8 bg-transparent"
+              <Button
+                asChild
+                size="lg"
+                className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-8"
+              >
+                <Link href="/contact">Start Your Project</Link>
+              </Button>
+            </motion.div>
+            <motion.div
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.2 }}
             >
-              <Link href="/projects">View All Projects</Link>
-            </Button>
+              <Button
+                asChild
+                variant="outline"
+                size="lg"
+                className="border-red-200 text-red-600 hover:bg-red-50 px-8 bg-transparent"
+              >
+                <Link href="/projects">View All Projects</Link>
+              </Button>
+            </motion.div>
           </div>
-        </div>
+        </FadeInUp>
       </section>
     </div>
   )
