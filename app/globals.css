@@ -115,11 +115,11 @@
   --color-sidebar-ring: var(--sidebar-ring);
 }
 
-/* Added custom animations for professional feel */
+/* Enhanced luxury animations inspired by premium designs */
 @keyframes fadeInUp {
   from {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(40px);
   }
   to {
     opacity: 1;
@@ -130,7 +130,7 @@
 @keyframes slideInLeft {
   from {
     opacity: 0;
-    transform: translateX(-50px);
+    transform: translateX(-60px);
   }
   to {
     opacity: 1;
@@ -141,7 +141,7 @@
 @keyframes slideInRight {
   from {
     opacity: 0;
-    transform: translateX(50px);
+    transform: translateX(60px);
   }
   to {
     opacity: 1;
@@ -152,7 +152,7 @@
 @keyframes scaleIn {
   from {
     opacity: 0;
-    transform: scale(0.9);
+    transform: scale(0.85);
   }
   to {
     opacity: 1;
@@ -160,40 +160,128 @@
   }
 }
 
+@keyframes luxuryFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes gentleFloat {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes luxuryPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 0 15px rgba(255, 255, 255, 0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes pulse-red {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(220, 38, 38, 0.4);
+  }
+  50% {
+    box-shadow: 0 0 0 20px rgba(220, 38, 38, 0);
+  }
+}
+
 .animate-fade-in-up {
-  animation: fadeInUp 0.8s ease-out forwards;
+  animation: fadeInUp 1s ease-out forwards;
 }
 
 .animate-slide-in-left {
-  animation: slideInLeft 0.8s ease-out forwards;
+  animation: slideInLeft 1s ease-out forwards;
 }
 
 .animate-slide-in-right {
-  animation: slideInRight 0.8s ease-out forwards;
+  animation: slideInRight 1s ease-out forwards;
 }
 
 .animate-scale-in {
-  animation: scaleIn 0.6s ease-out forwards;
+  animation: scaleIn 0.8s ease-out forwards;
+}
+
+.animate-luxury-fade {
+  animation: luxuryFadeIn 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
+
+.animate-gentle-float {
+  animation: gentleFloat 4s ease-in-out infinite;
+}
+
+.animate-luxury-pulse {
+  animation: luxuryPulse 3s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+.animate-pulse-red {
+  animation: pulse-red 2s infinite;
+}
+
+/* Luxury backdrop blur effect */
+.backdrop-blur-luxury {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
 }
 
 /* Staggered animation delays for sequential appearance */
 .animate-fade-in-up:nth-child(1) {
-  animation-delay: 0.1s;
-}
-.animate-fade-in-up:nth-child(2) {
   animation-delay: 0.2s;
 }
-.animate-fade-in-up:nth-child(3) {
-  animation-delay: 0.3s;
-}
-.animate-fade-in-up:nth-child(4) {
+.animate-fade-in-up:nth-child(2) {
   animation-delay: 0.4s;
 }
+.animate-fade-in-up:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.animate-fade-in-up:nth-child(4) {
+  animation-delay: 0.8s;
+}
 .animate-fade-in-up:nth-child(5) {
-  animation-delay: 0.5s;
+  animation-delay: 1s;
 }
 .animate-fade-in-up:nth-child(6) {
-  animation-delay: 0.6s;
+  animation-delay: 1.2s;
 }
 
 /* Smooth scroll behavior */
@@ -237,6 +325,54 @@ html {
   background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+}
+
+/* Luxury glass morphism effect */
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-morphism-dark {
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Premium red gradient variations */
+.bg-red-gradient-luxury {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+}
+
+.bg-red-gradient-luxury-hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 50%, #7f1d1d 100%);
+}
+
+/* Text with luxury red gradient */
+.text-red-gradient-luxury {
+  background: linear-gradient(135deg, #dc2626 0%, #b91c1c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Sophisticated shadow effects */
+.shadow-luxury {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1), 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+.shadow-red-luxury {
+  box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15), 0 8px 20px rgba(220, 38, 38, 0.1);
+}
+
+/* Enhanced border styles */
+.border-red-luxury {
+  border: 1px solid rgba(220, 38, 38, 0.3);
+}
+
+.border-red-luxury-hover {
+  border: 1px solid rgba(220, 38, 38, 0.6);
 }
 
 @layer base {
