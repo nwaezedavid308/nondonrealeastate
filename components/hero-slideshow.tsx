@@ -48,6 +48,7 @@ const slides = [
 export default function HeroSlideshow() {
   const [currentSlide, setCurrentSlide] = useState(0)
   const [isTransitioning, setIsTransitioning] = useState(false)
+  const [isSearchActive, setIsSearchActive] = useState(false)
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -100,79 +101,87 @@ export default function HeroSlideshow() {
       {/* Main Content */}
       <div className="relative z-10 flex items-center justify-center min-h-screen py-12 sm:py-16 lg:py-20">
         <div className="text-center text-white px-6 sm:px-8 max-w-5xl mx-auto w-full">
+          
+          {/* TRANSITIONING CONTENT - Only captions and taglines change */}
           <div
             key={currentSlide}
             className="animate-fadeInUp"
           >
-              {/* Luxury Brand Accent */}
-              <div className="animate-scaleIn" style={{animationDelay: '200ms'}}>
-                <span className="inline-block px-6 py-2 border border-white/30 rounded-full text-sm font-light tracking-widest uppercase backdrop-blur-sm bg-white/10">
-                  {currentSlideData.accent}
-                </span>
-              </div>
-
-              {/* Enhanced Typography with Split Styling */}
-              <h1 
-                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extralight mb-4 sm:mb-6 mt-6 sm:mt-8 animate-fadeInUp"
-                style={{animationDelay: '300ms'}}
-              >
-                <span className="font-thin whitespace-nowrap">{currentSlideData.mainTitle.split(' ').slice(0, -2).join(' ')}</span>
-                <br />
-                <span className="font-bold bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
-                  {currentSlideData.mainTitle.split(' ').slice(-2).join(' ')}
-                </span>
-              </h1>
-              
-              {/* Elegant Divider */}
-              <div 
-                className="w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-6 sm:mb-8 animate-slideIn"
-                style={{animationDelay: '500ms'}}
-              ></div>
-              
-              <p 
-                className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-balance opacity-90 max-w-4xl mx-auto font-light animate-fadeInUp"
-                style={{animationDelay: '400ms'}}
-              >
-                {currentSlideData.subtitle}
-              </p>
-            
-              {/* Glassmorphism Search Container */}
-              <div 
-                className="backdrop-blur-md bg-white/10 rounded-2xl p-4 sm:p-6 border border-white/20 shadow-2xl mb-6 sm:mb-8 max-w-2xl mx-auto animate-fadeInUp"
-                style={{animationDelay: '600ms'}}
-              >
-                <SearchComponent />
-              </div>
-              
-              {/* Call to Action Buttons - Positioned below search for better responsive flow */}
-              <div 
-                className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-2xl mx-auto animate-fadeInUp"
-                style={{animationDelay: '800ms'}}
-              >
-                <div className="hover:scale-105 transition-transform duration-200">
-                  <Button
-                    asChild
-                    className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg"
-                  >
-                    <Link href="/projects">Explore Properties</Link>
-                  </Button>
-                </div>
-                <div className="hover:scale-105 transition-transform duration-200">
-                  <Button
-                    asChild
-                    variant="outline"
-                    className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 bg-transparent"
-                  >
-                    <Link href="/contact">Contact Us</Link>
-                  </Button>
-                </div>
-              </div>
+            {/* Luxury Brand Accent */}
+            <div className="animate-scaleIn" style={{animationDelay: '200ms'}}>
+              <span className="inline-block px-6 py-2 border border-white/30 rounded-full text-sm font-light tracking-widest uppercase backdrop-blur-sm bg-white/10">
+                {currentSlideData.accent}
+              </span>
             </div>
+
+            {/* Enhanced Typography with Split Styling */}
+            <h1 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extralight mb-4 sm:mb-6 mt-6 sm:mt-8 animate-fadeInUp"
+              style={{animationDelay: '300ms'}}
+            >
+              <span className="font-thin whitespace-nowrap">{currentSlideData.mainTitle.split(' ').slice(0, -2).join(' ')}</span>
+              <br />
+              <span className="font-bold bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
+                {currentSlideData.mainTitle.split(' ').slice(-2).join(' ')}
+              </span>
+            </h1>
+            
+            {/* Elegant Divider */}
+            <div 
+              className="w-24 h-px bg-gradient-to-r from-transparent via-white/60 to-transparent mx-auto mb-6 sm:mb-8 animate-slideIn"
+              style={{animationDelay: '500ms'}}
+            ></div>
+            
+            <p 
+              className="text-base sm:text-lg md:text-xl lg:text-2xl mb-6 sm:mb-8 text-balance opacity-90 max-w-4xl mx-auto font-light animate-fadeInUp"
+              style={{animationDelay: '400ms'}}
+            >
+              {currentSlideData.subtitle}
+            </p>
+          </div>
+
+          {/* CONSTANT CONTENT - Search and buttons never change */}
+          {/* Glassmorphism Search Container */}
+          <div 
+            className="backdrop-blur-md bg-white/10 rounded-2xl p-4 sm:p-6 border border-white/20 shadow-2xl mb-6 sm:mb-8 max-w-2xl mx-auto animate-fadeInUp"
+            style={{animationDelay: '600ms'}}
+          >
+            <SearchComponent onSearchStateChange={setIsSearchActive} />
+          </div>
+          
+          {/* Call to Action Buttons - Moved to bottom when search is active */}
+          <div 
+            className={`flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center max-w-2xl mx-auto animate-fadeInUp transition-all duration-500 ${
+              isSearchActive 
+                ? 'fixed bottom-4 left-1/2 transform -translate-x-1/2 z-50' 
+                : 'relative'
+            }`}
+            style={{animationDelay: '800ms'}}
+          >
+            <div className="hover:scale-105 transition-transform duration-200">
+              <Button
+                asChild
+                className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg"
+              >
+                <Link href="/projects">Explore Properties</Link>
+              </Button>
+            </div>
+            <div className="hover:scale-105 transition-transform duration-200">
+              <Button
+                asChild
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 bg-transparent"
+              >
+                <Link href="/contact">Contact Us</Link>
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Elegant Slide Indicators */}
-      <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex items-center space-x-3 sm:space-x-4 backdrop-blur-md bg-white/10 rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-white/20 z-10">
+      {/* Elegant Slide Indicators - Hidden when search is active */}
+      {!isSearchActive && (
+        <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex items-center space-x-3 sm:space-x-4 backdrop-blur-md bg-white/10 rounded-full px-4 sm:px-6 py-2 sm:py-3 border border-white/20 z-10">
         {slides.map((slide, index) => (
           <button
             key={index}
@@ -188,14 +197,17 @@ export default function HeroSlideshow() {
             )}
           </button>
         ))}
-      </div>
+        </div>
+      )}
 
-      {/* Professional Slide Counter */}
-      <div className="text-center mt-2 sm:mt-4 text-white/70 text-xs sm:text-sm font-light tracking-widest absolute bottom-12 sm:bottom-16 left-1/2 transform -translate-x-1/2 z-10">
-        <span className="text-white font-medium">{String(currentSlide + 1).padStart(2, '0')}</span>
-        <span className="mx-1 sm:mx-2">/</span>
-        <span>{String(slides.length).padStart(2, '0')}</span>
-      </div>
+      {/* Professional Slide Counter - Hidden when search is active */}
+      {!isSearchActive && (
+        <div className="text-center mt-2 sm:mt-4 text-white/70 text-xs sm:text-sm font-light tracking-widest absolute bottom-12 sm:bottom-16 left-1/2 transform -translate-x-1/2 z-10">
+          <span className="text-white font-medium">{String(currentSlide + 1).padStart(2, '0')}</span>
+          <span className="mx-1 sm:mx-2">/</span>
+          <span>{String(slides.length).padStart(2, '0')}</span>
+        </div>
+      )}
     </div>
   )
 }

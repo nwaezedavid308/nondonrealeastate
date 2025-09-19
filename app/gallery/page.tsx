@@ -40,11 +40,6 @@ const galleryProjects = [
         description: "Successfully delivered luxury homes",
       },
       {
-        image: "/images/phases/phase-2-c.jpg",
-        title: "Phase 2 Excellence",
-        description: "Executive bungalows delivered",
-      },
-      {
         image: "/images/phases/PHASE 3/PHASE 3 (1).jpg",
         title: "Phase 3 Real Construction",
         description: "4 & 5-bedroom luxury duplexes under construction",
@@ -68,14 +63,14 @@ const galleryProjects = [
         description: "Modern architectural visualization",
       },
       {
-        image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
-        title: "3D Apartment Interior",
-        description: "Virtual interior design concept",
+        image: "/images/3d-renders/nondon-apartments-3d.jpeg",
+        title: "3D Apartment Complex View",
+        description: "Multi-story apartment development",
       },
       {
-        image: "/images/3d-renders/3D RENDER SMART HOME (2).jpg",
-        title: "3D Living Space",
-        description: "Contemporary apartment visualization",
+        image: "/images/3d-renders/nondon-real-estate-3d-aerial.jpeg",
+        title: "3D Aerial Apartment View",
+        description: "Bird's eye view of luxury apartments",
       },
     ],
     reality: [
@@ -282,11 +277,11 @@ export default function GalleryPage() {
               {/* Vision vs Reality Indicators */}
               <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-8 text-sm">
                 <div className="flex items-center space-x-2 px-4 py-2 bg-blue-500/20 backdrop-blur-sm rounded-full border border-blue-400/30">
-                  <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
                   <span className="font-medium">Vision (3D Renders)</span>
-                </div>
+              </div>
                 <div className="flex items-center space-x-2 px-4 py-2 bg-green-500/20 backdrop-blur-sm rounded-full border border-green-400/30">
-                  <div className="w-3 h-3 bg-green-500 rounded-full"></div>
+                <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                   <span className="font-medium">Reality (Construction)</span>
                 </div>
               </div>
@@ -309,20 +304,20 @@ export default function GalleryPage() {
             {galleryProjects.map((project, index) => (
               <div key={project.id} className="animate-fadeInUp" style={{animationDelay: `${index * 100}ms`}}>
                 <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
-                  <Card
+              <Card
                     className={`cursor-pointer transition-all duration-300 hover:shadow-lg ${
-                      selectedProject === index ? "ring-2 ring-red-500 shadow-lg" : ""
-                    }`}
-                    onClick={() => setSelectedProject(index)}
-                  >
-                    <CardContent className="p-6">
-                      <div className="flex items-center justify-between mb-3">
-                        <h3 className="text-lg font-semibold text-gray-900">{project.name}</h3>
-                        <Badge className="bg-red-100 text-red-700 border-red-200">{project.status}</Badge>
-                      </div>
-                      <p className="text-gray-600 text-sm">{project.description}</p>
-                    </CardContent>
-                  </Card>
+                  selectedProject === index ? "ring-2 ring-red-500 shadow-lg" : ""
+                }`}
+                onClick={() => setSelectedProject(index)}
+              >
+                <CardContent className="p-6">
+                  <div className="flex items-center justify-between mb-3">
+                    <h3 className="text-lg font-semibold text-gray-900">{project.name}</h3>
+                    <Badge className="bg-red-100 text-red-700 border-red-200">{project.status}</Badge>
+                  </div>
+                  <p className="text-gray-600 text-sm">{project.description}</p>
+                </CardContent>
+              </Card>
                 </div>
               </div>
             ))}
@@ -395,7 +390,7 @@ export default function GalleryPage() {
       <section className="py-16 bg-gradient-to-r from-gray-50 to-red-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <div className="animate-fadeInUp">
-            <h2 className="text-3xl font-bold text-gray-900 mb-8">From Vision to Reality</h2>
+          <h2 className="text-3xl font-bold text-gray-900 mb-8">From Vision to Reality</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
@@ -403,23 +398,23 @@ export default function GalleryPage() {
                 <div className="text-4xl font-bold text-red-600 mb-2 animate-scaleIn" style={{animationDelay: '200ms'}}>
                   8+
                 </div>
-                <div className="text-gray-600">Years of Experience</div>
-              </div>
+              <div className="text-gray-600">Years of Experience</div>
+            </div>
             </div>
             <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
               <div className="text-center hover:scale-110 hover:-translate-y-1 transition-all duration-300">
                 <div className="text-4xl font-bold text-red-600 mb-2 animate-scaleIn" style={{animationDelay: '400ms'}}>
                   500+
                 </div>
-                <div className="text-gray-600">Properties Delivered</div>
-              </div>
+              <div className="text-gray-600">Properties Delivered</div>
+            </div>
             </div>
             <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
               <div className="text-center hover:scale-110 hover:-translate-y-1 transition-all duration-300">
                 <div className="text-4xl font-bold text-red-600 mb-2 animate-scaleIn" style={{animationDelay: '600ms'}}>
                   100%
                 </div>
-                <div className="text-gray-600">Vision Accuracy</div>
+              <div className="text-gray-600">Vision Accuracy</div>
               </div>
             </div>
           </div>
@@ -437,23 +432,23 @@ export default function GalleryPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <div className="animate-fadeInUp hover:scale-105 active:scale-95 transition-transform duration-200">
-              <Button
-                asChild
-                size="lg"
-                className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-8"
-              >
-                <Link href="/contact">Start Your Project</Link>
-              </Button>
+            <Button
+              asChild
+              size="lg"
+              className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-8"
+            >
+              <Link href="/contact">Start Your Project</Link>
+            </Button>
             </div>
             <div className="animate-fadeInUp hover:scale-105 active:scale-95 transition-transform duration-200">
-              <Button
-                asChild
-                variant="outline"
-                size="lg"
-                className="border-red-200 text-red-600 hover:bg-red-50 px-8 bg-transparent"
-              >
-                <Link href="/projects">View All Projects</Link>
-              </Button>
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="border-red-200 text-red-600 hover:bg-red-50 px-8 bg-transparent"
+            >
+              <Link href="/projects">View All Projects</Link>
+            </Button>
             </div>
           </div>
         </div>

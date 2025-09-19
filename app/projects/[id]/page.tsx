@@ -54,51 +54,6 @@ const propertyData = {
       "Medical facilities - 8 minutes drive",
     ],
   },
-  "phase-2": {
-    id: "phase-2",
-    name: "Nondon Estate Phase 2",
-    status: "Sold Out",
-    type: "Executive fully detached 4-bedroom bungalows",
-    bedrooms: 4,
-    units: 8,
-    location: "Chief Geff Ozor Avenue by Adorable British College, Enugu",
-    price: "₦110,000,000",
-    priceRange: null,
-    images: [
-      "/images/phases/phase-2-c.jpg",
-      "/images/bungalows/nondon-almonds-bungalows.jpg",
-    ],
-    description:
-      "Elegant executive bungalows designed for sophisticated living. Located on the prestigious Chief Geff Ozor Avenue, these properties offer single-level luxury with all the modern amenities you expect from Nondon Real Estate.",
-    amenities: [
-      "All rooms en-suite with luxury fittings",
-      "POP ceilings throughout (including BQ)",
-      "10mm tempered glass balconies",
-      "Rolling security gate system",
-      "Advanced CCTV surveillance system",
-      "Smoke detectors and fire safety equipment",
-      "Fire extinguishers & fire blanket in kitchens",
-      "Pre-wired for inverter installation",
-      "Interlocked driveway and compound",
-      "One-year facility maintenance guarantee",
-      "90W solar street lights",
-      "Gated community with 24/7 security",
-    ],
-    paymentPlan: "Pay 30% now; spread 70% over 12 months",
-    soldOut: true,
-    specifications: {
-      landSize: "450 sqm",
-      buildingArea: "280 sqm",
-      parking: "200 sqm (3-4 cars)",
-      floors: "1 floor + BQ",
-    },
-    nearbyAmenities: [
-      "Adorable British College - Adjacent",
-      "Shopping centers - 3 minutes drive",
-      "Banks and ATMs - 5 minutes walk",
-      "Restaurants - 2 minutes drive",
-    ],
-  },
   "phase-3": {
     id: "phase-3",
     name: "Nondon Estate Phase 3",
@@ -300,7 +255,7 @@ export default function PropertyPage({ params }: PropertyPageProps) {
           <div className="flex justify-between items-center h-16">
             <Link href="/" className="flex items-center space-x-2">
               <Image
-                src="/Abstract-25.jpg"
+                src="/logo-nondon.png"
                 alt="Nondon Real Estate Logo"
                 width={32}
                 height={32}

@@ -1,11 +1,12 @@
 "use client"
 
-import { useState, useEffect } from "react"
+import { useState, useEffect, memo } from "react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import Link from "next/link"
+import Image from "next/image"
 import { Search, MapPin, Home, Building, Clock } from "lucide-react"
 
 interface SearchResult {
@@ -222,10 +223,23 @@ const searchData: SearchResult[] = [
   }
 ]
 
-export default function SearchComponent() {
+interface SearchComponentProps {
+  onSearchStateChange?: (isActive: boolean) => void
+}
+
+const SearchComponent = memo(function SearchComponent({ onSearchStateChange }: SearchComponentProps) {
   const [query, setQuery] = useState("")
   const [results, setResults] = useState<SearchResult[]>([])
   const [isOpen, setIsOpen] = useState(false)
+  const [isStable, setIsStable] = useState(false)
+
+  // Mark component as stable after initial mount
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsStable(true)
+    }, 1000)
+    return () => clearTimeout(timer)
+  }, [])
 
   useEffect(() => {
     if (query.length < 2) {
@@ -244,6 +258,18 @@ export default function SearchComponent() {
     setResults(filteredResults)
     setIsOpen(filteredResults.length > 0)
   }, [query])
+
+  // Prevent closing if component is stable and has results
+  useEffect(() => {
+    if (isStable && results.length > 0) {
+      setIsOpen(true)
+    }
+  }, [isStable, results.length])
+
+  // Notify parent component about search state
+  useEffect(() => {
+    onSearchStateChange?.(isOpen && results.length > 0)
+  }, [isOpen, results.length, onSearchStateChange])
 
   const getIcon = (type: string) => {
     switch (type) {
@@ -305,7 +331,7 @@ export default function SearchComponent() {
       </div>
 
       {isOpen && (
-        <Card className="absolute top-full left-0 right-0 mt-2 z-50 max-h-96 overflow-y-auto bg-white/98 backdrop-blur-sm border-white/50 shadow-2xl">
+        <Card className="absolute top-full left-0 right-0 mt-2 z-[60] max-h-96 overflow-y-auto bg-white/98 backdrop-blur-sm border-white/50 shadow-2xl">
           <CardContent className="p-0">
             {results.map((result) => (
               <Link
@@ -315,9 +341,11 @@ export default function SearchComponent() {
                 className="flex items-start gap-4 p-4 hover:bg-gray-50 transition-colors duration-200 border-b border-gray-100 last:border-b-0"
               >
                 {result.image && (
-                  <img
+                  <Image
                     src={result.image}
                     alt={result.title}
+                    width={64}
+                    height={64}
                     className="w-16 h-16 object-cover rounded-lg flex-shrink-0"
                   />
                 )}
@@ -367,4 +395,6 @@ export default function SearchComponent() {
       )}
     </div>
   )
-}
+})
+
+export default SearchComponent

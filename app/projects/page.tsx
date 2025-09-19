@@ -30,27 +30,6 @@ const estates = [
     soldOut: true,
   },
   {
-    id: "phase-2",
-    name: "Nondon Estate Phase 2",
-    status: "Sold Out",
-    type: "Executive fully detached 4-bedroom bungalows",
-    bedrooms: 4,
-    units: 8,
-    location: "Chief Geff Ozor Avenue by Adorable British College, Enugu",
-    price: "₦110,000,000",
-    priceRange: null,
-    image: "/images/phases/phase-2-c.jpg",
-    amenities: [
-      "All rooms en-suite",
-      "POP ceilings",
-      "CCTV system",
-      "One-year facility maintenance",
-      "Solar street lights",
-    ],
-    paymentPlan: "Pay 30% now; spread 70% over 12 months",
-    soldOut: true,
-  },
-  {
     id: "phase-3",
     name: "Nondon Estate Phase 3",
     status: "Ongoing", // Updated status from "Now Selling" to "Ongoing"

@@ -112,14 +112,6 @@ const milestones = [
     color: "from-green-600 to-green-800"
   },
   {
-    year: "2020",
-    title: "Phase 2 Excellence",
-    description: "Delivered executive fully detached 4-bedroom bungalows, establishing our reputation for premium residential communities.",
-    image: "/images/phases/phase-2-c.jpg",
-    phase: "Phase 2",
-    color: "from-purple-600 to-purple-800"
-  },
-  {
     year: "2022",
     title: "Phase 3 Innovation",
     description: "Launched Phase 3 with 4 & 5-bedroom detached and semi-detached duplexes, featuring modern amenities and smart technology.",
