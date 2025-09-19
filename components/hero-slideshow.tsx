@@ -99,7 +99,9 @@ export default function HeroSlideshow() {
       ))}
 
       {/* Main Content */}
-      <div className="relative z-10 flex items-center justify-center min-h-screen py-12 sm:py-16 lg:py-20">
+      <div className={`relative z-10 flex items-center justify-center py-12 sm:py-16 lg:py-20 ${
+        isSearchActive ? 'min-h-[80vh] sm:min-h-screen' : 'min-h-screen'
+      }`}>
         <div className="text-center text-white px-6 sm:px-8 max-w-5xl mx-auto w-full">
           
           {/* TRANSITIONING CONTENT - Only captions and taglines change */}
@@ -119,7 +121,7 @@ export default function HeroSlideshow() {
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extralight mb-4 sm:mb-6 mt-6 sm:mt-8 animate-fadeInUp"
               style={{animationDelay: '300ms'}}
             >
-              <span className="font-thin whitespace-nowrap">{currentSlideData.mainTitle.split(' ').slice(0, -2).join(' ')}</span>
+              <span className="font-thin sm:whitespace-nowrap">{currentSlideData.mainTitle.split(' ').slice(0, -2).join(' ')}</span>
               <br />
               <span className="font-bold bg-gradient-to-r from-white via-gray-100 to-white bg-clip-text text-transparent">
                 {currentSlideData.mainTitle.split(' ').slice(-2).join(' ')}

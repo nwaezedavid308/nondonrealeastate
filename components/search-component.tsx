@@ -331,8 +331,11 @@ const SearchComponent = memo(function SearchComponent({ onSearchStateChange }: S
       </div>
 
       {isOpen && (
-        <Card className="absolute top-full left-0 right-0 mt-2 z-[60] max-h-96 overflow-y-auto bg-white/98 backdrop-blur-sm border-white/50 shadow-2xl">
-          <CardContent className="p-0">
+        <>
+          {/* Mobile backdrop overlay */}
+          <div className="fixed inset-0 bg-black/20 z-[59] sm:hidden" onClick={clearSearch}></div>
+          <Card className="absolute top-full left-0 right-0 mt-2 z-[60] max-h-[70vh] sm:max-h-96 overflow-y-auto bg-white/98 backdrop-blur-sm border-white/50 shadow-2xl mobile-search-results">
+            <CardContent className="p-0">
             {results.map((result) => (
               <Link
                 key={result.id}
@@ -392,6 +395,7 @@ const SearchComponent = memo(function SearchComponent({ onSearchStateChange }: S
             )}
           </CardContent>
         </Card>
+        </>
       )}
     </div>
   )

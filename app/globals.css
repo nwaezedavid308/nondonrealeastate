@@ -478,6 +478,25 @@ html {
   box-shadow: 0 20px 40px rgba(220, 38, 38, 0.15), 0 8px 20px rgba(220, 38, 38, 0.1);
 }
 
+/* Mobile Search Results Optimization */
+@media (max-width: 640px) {
+  .mobile-search-results {
+    max-height: 60vh !important;
+    position: fixed !important;
+    top: 50% !important;
+    left: 1rem !important;
+    right: 1rem !important;
+    transform: translateY(-50%) !important;
+    z-index: 9999 !important;
+    margin: 0 !important;
+  }
+  
+  .mobile-search-results .card-content {
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+}
+
 /* Enhanced border styles */
 .border-red-luxury {
   border: 1px solid rgba(220, 38, 38, 0.3);
