@@ -16,7 +16,14 @@ export function Footer() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
             <Input type="email" placeholder="Enter your email" className="flex-1 bg-white text-gray-900" />
-            <Button className="btn-gradient-red text-white">Subscribe</Button>
+            <Button
+              className="btn-gradient-red text-white"
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('triggerNewsletterPopup'));
+              }}
+            >
+              Subscribe
+            </Button>
           </div>
         </div>
       </section>

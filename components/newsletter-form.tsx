@@ -8,27 +8,12 @@ export default function NewsletterForm({ compact = false }: { compact?: boolean 
   const [email, setEmail] = useState('');
   const [status, setStatus] = useState<{ type: 'idle' | 'loading' | 'success' | 'error'; msg?: string }>({ type: 'idle' });
 
-  const onSubmit = async (e: React.FormEvent) => {
+  const onSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!email) return;
 
-    setStatus({ type: 'loading' });
-    try {
-      const res = await fetch('/api/newsletter/subscribe', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
-      });
-      const data = await res.json();
-      if (!res.ok) {
-        setStatus({ type: 'error', msg: data?.error || 'Something went wrong' });
-      } else {
-        setStatus({ type: 'success', msg: data?.message || 'Success' });
-        setEmail('');
-      }
-    } catch {
-      setStatus({ type: 'error', msg: 'Network error' });
-    }
+    // Trigger the newsletter popup instead of direct submission
+    window.dispatchEvent(new CustomEvent('triggerNewsletterPopup'));
   };
 
   return (

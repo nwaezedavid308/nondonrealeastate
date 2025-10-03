@@ -23,6 +23,21 @@ export default function NewsletterPopup() {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    // Listen for custom event to trigger popup
+    const handleTriggerPopup = () => {
+      setIsVisible(true);
+      setIsClosed(false);
+      localStorage.removeItem('newsletter-popup-closed');
+    };
+
+    window.addEventListener('triggerNewsletterPopup', handleTriggerPopup);
+
+    return () => {
+      window.removeEventListener('triggerNewsletterPopup', handleTriggerPopup);
+    };
+  }, []);
+
   const handleClose = () => {
     setIsVisible(false);
     localStorage.setItem('newsletter-popup-closed', 'true');

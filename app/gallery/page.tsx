@@ -338,7 +338,11 @@ export default function GalleryPage() {
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-3">
                     <h3 className="text-lg font-semibold text-gray-900">{project.name}</h3>
-                    <Badge className="bg-red-100 text-red-700 border-red-200">{project.status}</Badge>
+                    <Badge className={`${
+                      project.status.toLowerCase().includes('sold out')
+                        ? 'bg-red-100 text-red-700 border-red-200'
+                        : 'bg-green-100 text-green-700 border-green-200'
+                    }`}>{project.status}</Badge>
                   </div>
                   <p className="text-gray-600 text-sm">{project.description}</p>
                 </CardContent>

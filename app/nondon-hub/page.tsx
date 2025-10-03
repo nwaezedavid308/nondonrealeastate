@@ -10,7 +10,13 @@ export default function NondonHubPage() {
 
       {/* Hero Section */}
       <section className="relative h-96 flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-800" />
+        <div
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{
+            backgroundImage: "url('/images/apartments/luxury-apartment-1.jpg')",
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-r from-red-600/80 to-red-800/80" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">Nondon Hub</h1>
           <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto text-balance">
