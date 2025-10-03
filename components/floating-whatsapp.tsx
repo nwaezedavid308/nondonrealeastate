@@ -4,7 +4,7 @@ import Link from "next/link"
 import { MessageCircle } from "lucide-react"
 
 export default function FloatingWhatsApp() {
-  const whatsappLink = "https://wa.me/2348143329493?text=Hello%20Nondon%20Real%20Estate,%20I%20would%20like%20to%20talk%20to%20an%20agent";
+  const whatsappLink = "https://wa.me/2348143326274?text=Hello%20Nondon%20Real%20Estate,%20I%20would%20like%20to%20talk%20to%20an%20agent";
 
   return (
     <div className="fixed bottom-6 right-6 z-50">
