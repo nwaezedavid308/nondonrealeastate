@@ -88,7 +88,7 @@ const smartHomes = [
     location: "Thinkers Corner, Enugu East, Enugu State",
     price: "₦235,000,000",
     priceRange: "₦235,000,000 - ₦250,000,000",
-    image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
+    image: "/images/smart-homes/SMART HOMES 3D/SMART HOMES 3D (1).jpeg",
     amenities: [
       "Smart lighting & locks",
       "24/7 smart security cameras",
@@ -112,7 +112,7 @@ const otherProjects = [
     location: "Centenary City, Enugu",
     price: "₦135,000,000",
     priceRange: null,
-    image: "/images/bungalows/BUNGALOW (1).jpg",
+    image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg",
     amenities: [
       "Fully fitted bathroom",
       "State of the art kitchen",

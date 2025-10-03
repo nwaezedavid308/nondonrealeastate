@@ -65,7 +65,7 @@ const searchData: SearchResult[] = [
     location: "Centenary City, Enugu",
     status: "Now Selling",
     href: "/projects/nondon-almonds",
-    image: "/images/bungalows/nondon-almonds-bungalows.jpg"
+    image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg"
   },
   // Locations
   {

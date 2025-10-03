@@ -153,8 +153,8 @@ const propertyData = {
     price: "₦235,000,000",
     priceRange: "₦235,000,000 - ₦250,000,000",
     images: [
-      "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
-      "/images/3d-renders/3D RENDER SMART HOME (2).jpg",
+      "/images/smart-homes/SMART HOMES 3D/SMART HOMES 3D (1).jpeg",
+      "/images/smart-homes/SMART HOMES 3D/SMART HOMES 3D (2).jpeg",
     ],
     description:
       "Experience the future of living with our fully automated smart homes. These 6-bedroom duplexes feature cutting-edge technology, premium finishes, and intelligent systems that respond to your lifestyle needs.",
@@ -198,8 +198,8 @@ const propertyData = {
     price: "₦135,000,000",
     priceRange: null,
     images: [
-      "/images/bungalows/nondon-almonds-bungalows.jpg",
-      "/images/bungalows/BUNGALOW (1).jpg",
+      "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg",
+      "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (2).jpeg",
     ],
     description:
       "Premium luxury 4-bedroom bungalows in the prestigious Centenary City, Enugu. These homes combine traditional elegance with modern luxury, offering comfortable single-level living in a prime location.",

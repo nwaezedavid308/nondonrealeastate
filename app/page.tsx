@@ -182,7 +182,7 @@ export default function NondonRealEstate() {
                 <Card className="group hover:shadow-xl transition-all duration-500">
               <div className="relative overflow-hidden rounded-t-lg">
                 <Image
-                  src="/images/bungalows/BUNGALOW (1).jpg"
+                  src="/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg"
                   alt="Nondon Almonds Bungalows"
                   width={400}
                   height={256}

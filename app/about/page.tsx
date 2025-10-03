@@ -131,7 +131,7 @@ const milestones = [
     year: "2024",
     title: "Smart Homes Revolution",
     description: "Pioneered fully automated luxury homes with cutting-edge smart technology, voice assistants, and 24/7 security.",
-    image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
+    image: "/images/smart-homes/SMART HOMES 3D/SMART HOMES 3D (1).jpeg",
     phase: "Smart Homes",
     color: "from-cyan-600 to-cyan-800"
   },
@@ -139,7 +139,7 @@ const milestones = [
     year: "2024",
     title: "Bungalow Collection",
     description: "Launched Nondon Almonds luxury bungalows, combining traditional elegance with modern luxury finishes.",
-    image: "/images/bungalows/BUNGALOW (1).jpg",
+    image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg",
     phase: "Bungalows",
     color: "from-red-600 to-red-800"
   },

@@ -23,7 +23,7 @@ const galleryProjects = [
         description: "Contemporary architectural excellence",
       },
       {
-        image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
+        image: "/images/smart-homes/SMART HOMES 3D/SMART HOMES 3D (1).jpeg",
         title: "Smart Home Innovation",
         description: "Technology-enabled luxury living",
       },
@@ -108,26 +108,51 @@ const galleryProjects = [
     status: "Sales Ongoing - ₦235M-₦250M",
     vision: [
       {
-        image: "/images/3d-renders/3D RENDER SMART HOME (1).jpg",
-        title: "Smart Home Exterior",
+        image: "/images/smart-homes/SMART HOMES 3D/SMART HOMES 3D (1).jpeg",
+        title: "Smart Home Exterior Design",
         description: "Modern automated luxury living",
       },
       {
-        image: "/images/3d-renders/3D RENDER SMART HOME (2).jpg",
+        image: "/images/smart-homes/SMART HOMES 3D/SMART HOMES 3D (2).jpeg",
         title: "Smart Technology Integration",
         description: "Voice-controlled home automation",
-      },
-      {
-        image: "/images/3d-renders/3D RENDER SMART HOME (3).jpg",
-        title: "Luxury Interior Design",
-        description: "Premium smart home finishes",
       },
     ],
     reality: [
       {
-        image: "/images/smart-homes/nodon-smart-homes-9.jpeg",
-        title: "Smart Home Construction",
-        description: "Active development progress",
+        image: "/images/smart-homes/SMART HOMES REALITY/NODON SMART HOMES (1).jpeg",
+        title: "Smart Home Construction Progress",
+        description: "Active development in progress",
+      },
+      {
+        image: "/images/smart-homes/SMART HOMES REALITY/NODON SMART HOMES (2).jpeg",
+        title: "Real Smart Home Exterior",
+        description: "Actual construction completion",
+      },
+      {
+        image: "/images/smart-homes/SMART HOMES REALITY/NODON SMART HOMES (3).jpeg",
+        title: "Interior Finishing",
+        description: "Premium quality construction",
+      },
+      {
+        image: "/images/smart-homes/SMART HOMES REALITY/NODON SMART HOMES (6).jpeg",
+        title: "Smart Home Amenities",
+        description: "Luxury facilities and features",
+      },
+      {
+        image: "/images/smart-homes/SMART HOMES REALITY/NODON SMART HOMES (9).jpeg",
+        title: "Completed Smart Home",
+        description: "Ready for occupancy",
+      },
+      {
+        image: "/images/smart-homes/SMART HOMES REALITY/nodon-smart-homes-9.jpeg",
+        title: "Construction Overview",
+        description: "Project development status",
+      },
+      {
+        image: "/images/smart-homes/SMART HOMES REALITY/WhatsApp Image 2025-09-09 at 10.32.19 AM.jpeg",
+        title: "Latest Progress Update",
+        description: "Recent construction developments",
       },
     ],
   },
@@ -138,34 +163,34 @@ const galleryProjects = [
     status: "Now Selling - ₦135M",
     vision: [
       {
-        image: "/images/bungalows/BUNGALOW (1).jpg",
+        image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg",
         title: "Luxury Bungalow Design",
         description: "Elegant single-story living",
       },
       {
-        image: "/images/bungalows/BUNGALOW (2).jpg",
+        image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (2).jpeg",
         title: "Premium Finishing",
         description: "State-of-the-art kitchen and bathrooms",
       },
       {
-        image: "/images/bungalows/BUNGALOW (3).jpg",
+        image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (3).jpeg",
         title: "Modern Architecture",
         description: "Contemporary bungalow aesthetics",
       },
     ],
     reality: [
       {
-        image: "/images/bungalows/BUNGALOWS (1).PNG",
+        image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg",
         title: "Bungalow Construction",
         description: "Active development progress",
       },
       {
-        image: "/images/bungalows/BUNGALOWS (2).PNG",
+        image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (2).jpeg",
         title: "Interior Finishing",
         description: "Premium quality construction",
       },
       {
-        image: "/images/bungalows/BUNGALOWS (3).PNG",
+        image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (3).jpeg",
         title: "Exterior Completion",
         description: "Final construction stages",
       },
