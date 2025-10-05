@@ -37,7 +37,7 @@ export function AnimatedWrapper({
     animate: {
       ...selectedAnimation.animate,
       transition: {
-        ...selectedAnimation.animate?.transition,
+        ...selectedAnimation.animate,
         delay,
         duration,
       },

@@ -79,9 +79,9 @@ export const sendGeneralInquiry = async (formData: {
   } catch (error) {
     console.error('Error sending general inquiry:', error);
     console.error('Error details:', {
-      message: error.message,
-      status: error.status,
-      text: error.text
+      message: (error as Error).message,
+      status: (error as Error).name,
+      text: (error as Error).message
     });
     return { success: false, error };
   }
@@ -129,9 +129,9 @@ export const sendPropertyReservation = async (formData: {
   } catch (error) {
     console.error('Error sending property reservation:', error);
     console.error('Error details:', {
-      message: error.message,
-      status: error.status,
-      text: error.text
+      message: (error as Error).message,
+      status: (error as Error).name,
+      text: (error as Error).message
     });
     return { success: false, error };
   }

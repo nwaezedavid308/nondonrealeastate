@@ -235,12 +235,13 @@ const propertyData = {
 }
 
 interface PropertyPageProps {
-  params: {
+  params: Promise<{
     id: string
-  }
+  }>
 }
 
-export default function PropertyPage({ params }: PropertyPageProps) {
+export default async function PropertyPage(props: PropertyPageProps) {
+  const params = await props.params;
   const property = propertyData[params.id as keyof typeof propertyData]
 
   if (!property) {
@@ -288,7 +289,6 @@ export default function PropertyPage({ params }: PropertyPageProps) {
           </div>
         </div>
       </nav>
-
       {/* Breadcrumb */}
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -305,7 +305,6 @@ export default function PropertyPage({ params }: PropertyPageProps) {
           </div>
         </div>
       </div>
-
       {/* Property Header */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -362,7 +361,6 @@ export default function PropertyPage({ params }: PropertyPageProps) {
           </div>
         </div>
       </section>
-
       {/* Property Images */}
       <section className="py-8">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -381,7 +379,6 @@ export default function PropertyPage({ params }: PropertyPageProps) {
           </div>
         </div>
       </section>
-
       {/* Property Details */}
       <section className="py-12">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -555,7 +552,6 @@ export default function PropertyPage({ params }: PropertyPageProps) {
           </div>
         </div>
       </section>
-
       {/* CTA Section */}
       <section className="bg-gray-50 py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -586,7 +582,7 @@ export default function PropertyPage({ params }: PropertyPageProps) {
         </div>
       </section>
     </div>
-  )
+  );
 }
 
 // Generate static params for all properties
@@ -597,7 +593,8 @@ export function generateStaticParams() {
 }
 
 // Generate metadata for each property
-export function generateMetadata({ params }: PropertyPageProps) {
+export async function generateMetadata(props: PropertyPageProps) {
+  const params = await props.params;
   const property = propertyData[params.id as keyof typeof propertyData]
 
   if (!property) {
