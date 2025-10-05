@@ -16,10 +16,12 @@ export default function NondonHubPage() {
             backgroundImage: "url('/images/apartments/luxury-apartment-1.jpg')",
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-red-600/80 to-red-800/80" />
+        {/* Multi-layer gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-r from-red-900/60 via-red-600/70 to-red-800/80" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent" />
         <div className="relative z-10 text-center text-white max-w-4xl mx-auto px-4">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance">Nondon Hub</h1>
-          <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto text-balance">
+          <h1 className="text-4xl md:text-6xl font-bold mb-6 text-balance drop-shadow-lg">Nondon Hub</h1>
+          <p className="text-xl md:text-2xl opacity-90 max-w-3xl mx-auto text-balance drop-shadow-md">
             Coming Soon - Your Gateway to Exclusive Real Estate Opportunities
           </p>
         </div>
