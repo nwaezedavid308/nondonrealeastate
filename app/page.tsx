@@ -8,6 +8,7 @@ import HeroSlideshow from "@/components/hero-slideshow"
 import HeroVideo from "@/components/hero-video"
 // import { FadeInUp, FadeInLeft, FadeInRight, ScaleIn, StaggerContainer, StaggerItem } from "@/components/css-animations"
 import { Home, Video, Star, Check } from "lucide-react"
+import NewsletterPopup from "@/components/newsletter-popup"
 
 export default function NondonRealEstate() {
   return (

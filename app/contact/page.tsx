@@ -14,6 +14,7 @@ import { Navigation } from "@/components/navigation"
 import { useFormSubmission } from "@/hooks/useFormSubmission"
 import { initEmailJS, testEmailJS } from "@/lib/emailjs"
 import { useEffect, useState } from "react"
+import NewsletterPopup from "@/components/newsletter-popup"
 
 const contactMethods = [
   {
@@ -682,6 +683,27 @@ export default function ContactPage() {
 
         </div>
 
+      </section>
+
+      {/* Stay Updated Section */}
+      <section className="bg-gradient-to-r from-red-600 to-red-800 py-16 text-white">
+        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Stay Updated with Nondon</h2>
+          <p className="text-xl text-white/90 mb-8 text-balance">
+            Get exclusive updates on new properties, special offers, and real estate insights delivered to your inbox.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
+            <Button
+              size="lg"
+              className="bg-white text-red-600 hover:bg-gray-100 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              onClick={() => {
+                window.dispatchEvent(new CustomEvent('triggerNewsletterPopup'));
+              }}
+            >
+              Subscribe Now
+            </Button>
+          </div>
+        </div>
       </section>
 
       {/* CTA Section */}
