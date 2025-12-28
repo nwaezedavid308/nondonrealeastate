@@ -4,8 +4,8 @@ import { Footer } from '@/components/footer'
 import FloatingWhatsApp from '@/components/floating-whatsapp'
 
 export const metadata: Metadata = {
-  title: 'My Next.js App',
-  description: 'Deployed on Netlify',
+  title: 'Nondon Real Estate and Properties',
+  description: 'Buy, sell, and invest in real estate with confidence',
 }
 
 export default function RootLayout({
