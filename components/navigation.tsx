@@ -48,7 +48,7 @@ export function Navigation() {
                 key={item.href}
                 href={item.href}
                 className={`transition-colors ${
-                  isActive(item.href) ? "text-red-600 font-semibold" : "text-gray-600 hover:text-red-600"
+                  isActive(item.href) ? "text-emerald-700 font-semibold" : "text-gray-600 hover:text-emerald-700"
                 }`}
               >
                 {item.label}
@@ -59,7 +59,7 @@ export function Navigation() {
           <div className="flex items-center space-x-4">
             <Button
               asChild
-              className="bg-red-600 hover:bg-red-700 text-white font-medium px-6 py-2 transition-all duration-300 hover:shadow-lg"
+              className="bg-emerald-700 hover:bg-emerald-800 text-white font-medium px-6 py-2 transition-all duration-300 hover:shadow-lg"
             >
               <Link href="/contact">Secure Now</Link>
             </Button>
@@ -67,7 +67,7 @@ export function Navigation() {
             {/* Mobile Navigation */}
             <Sheet open={isOpen} onOpenChange={setIsOpen}>
               <SheetTrigger asChild className="md:hidden">
-                <Button variant="ghost" size="icon" className="text-gray-900 hover:text-red-600 hover:bg-gray-50">
+                <Button variant="ghost" size="icon" className="text-gray-900 hover:text-emerald-700 hover:bg-emerald-50">
                   <span className="text-xl font-bold">☰</span>
                 </Button>
               </SheetTrigger>
@@ -89,8 +89,8 @@ export function Navigation() {
                       onClick={() => setIsOpen(false)}
                       className={`text-lg transition-colors px-4 py-3 rounded-lg hover:bg-gray-50 ${
                         isActive(item.href)
-                          ? "text-red-600 font-semibold bg-red-50"
-                          : "text-gray-600 hover:text-red-600"
+                          ? "text-emerald-700 font-semibold bg-emerald-50"
+                          : "text-gray-600 hover:text-emerald-700"
                       }`}
                     >
                       {item.label}
@@ -98,7 +98,7 @@ export function Navigation() {
                   ))}
                   <Button
                     asChild
-                    className="bg-red-600 hover:bg-red-700 text-white font-medium mt-8 mx-4 py-3 transition-all duration-300"
+                    className="bg-emerald-700 hover:bg-emerald-800 text-white font-medium mt-8 mx-4 py-3 transition-all duration-300"
                   >
                     <Link href="/contact" onClick={() => setIsOpen(false)}>
                       Secure Now

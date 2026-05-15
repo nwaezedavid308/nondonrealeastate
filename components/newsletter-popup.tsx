@@ -132,7 +132,7 @@ export default function NewsletterPopup() {
             
             <Button 
               type="submit" 
-              className="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white py-3 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="w-full bg-gradient-to-r from-emerald-700 to-slate-800 hover:from-emerald-800 hover:to-slate-900 text-white py-3 font-semibold transition-all duration-300 hover:scale-105 hover:shadow-lg"
               disabled={status.type === 'loading'}
             >
               {status.type === 'loading' ? (

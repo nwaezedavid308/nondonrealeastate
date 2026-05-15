@@ -120,33 +120,33 @@ body {
   --card-foreground: oklch(0.2 0 0);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.2 0 0);
-  --primary: oklch(0.55 0.22 25); /* Vibrant red */
-  --primary-foreground: oklch(1 0 0); /* White text on red */
+  --primary: oklch(0.43 0.12 160); /* Calm emerald */
+  --primary-foreground: oklch(1 0 0); /* White text on emerald */
   --secondary: oklch(0.95 0 0); /* Light gray */
   --secondary-foreground: oklch(0.2 0 0);
   --muted: oklch(0.97 0 0);
   --muted-foreground: oklch(0.5 0 0); /* Medium gray */
-  --accent: oklch(0.45 0.22 25); /* Dark red accent */
+  --accent: oklch(0.38 0.1 160); /* Deep emerald accent */
   --accent-foreground: oklch(1 0 0);
   --destructive: oklch(0.55 0.22 25);
   --destructive-foreground: oklch(1 0 0);
   --border: oklch(0.9 0 0); /* Light border */
   --input: oklch(0.98 0 0);
-  --ring: oklch(0.55 0.22 25 / 0.3); /* Red focus ring */
-  --chart-1: oklch(0.55 0.22 25);
-  --chart-2: oklch(0.45 0.22 25);
+  --ring: oklch(0.43 0.12 160 / 0.3); /* Emerald focus ring */
+  --chart-1: oklch(0.43 0.12 160);
+  --chart-2: oklch(0.38 0.1 160);
   --chart-3: oklch(0.5 0 0);
   --chart-4: oklch(0.95 0 0);
   --chart-5: oklch(1 0 0);
   --radius: 0.625rem;
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.55 0.22 25);
+  --sidebar-primary: oklch(0.43 0.12 160);
   --sidebar-primary-foreground: oklch(1 0 0);
   --sidebar-accent: oklch(0.97 0 0);
   --sidebar-accent-foreground: oklch(0.2 0 0);
   --sidebar-border: oklch(0.9 0 0);
-  --sidebar-ring: oklch(0.55 0.22 25 / 0.3);
+  --sidebar-ring: oklch(0.43 0.12 160 / 0.3);
 }
 
 .dark {
@@ -156,32 +156,32 @@ body {
   --card-foreground: oklch(0.985 0 0);
   --popover: oklch(0.145 0 0);
   --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.65 0.22 25); /* Lighter red for dark mode */
+  --primary: oklch(0.6 0.12 160); /* Lighter emerald for dark mode */
   --primary-foreground: oklch(0.145 0 0);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
   --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.55 0.22 25);
+  --accent: oklch(0.48 0.11 160);
   --accent-foreground: oklch(0.985 0 0);
   --destructive: oklch(0.65 0.22 25);
   --destructive-foreground: oklch(0.145 0 0);
   --border: oklch(0.269 0 0);
   --input: oklch(0.269 0 0);
-  --ring: oklch(0.65 0.22 25 / 0.3);
-  --chart-1: oklch(0.65 0.22 25);
-  --chart-2: oklch(0.55 0.22 25);
+  --ring: oklch(0.6 0.12 160 / 0.3);
+  --chart-1: oklch(0.6 0.12 160);
+  --chart-2: oklch(0.48 0.11 160);
   --chart-3: oklch(0.708 0 0);
   --chart-4: oklch(0.269 0 0);
   --chart-5: oklch(0.145 0 0);
   --sidebar: oklch(0.205 0 0);
   --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.65 0.22 25);
+  --sidebar-primary: oklch(0.6 0.12 160);
   --sidebar-primary-foreground: oklch(0.145 0 0);
   --sidebar-accent: oklch(0.269 0 0);
   --sidebar-accent-foreground: oklch(0.985 0 0);
   --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.65 0.22 25 / 0.3);
+  --sidebar-ring: oklch(0.6 0.12 160 / 0.3);
 }
 
 @theme inline {
@@ -409,17 +409,17 @@ html {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Added gradient red color utilities for prestige look */
+/* Added gradient color utilities for prestige look */
 .bg-gradient-red {
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  background: linear-gradient(135deg, #047857 0%, #0f172a 100%);
 }
 
 .bg-gradient-red-hover {
-  background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+  background: linear-gradient(135deg, #065f46 0%, #020617 100%);
 }
 
 .text-gradient-red {
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  background: linear-gradient(135deg, #047857 0%, #0f172a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -427,14 +427,14 @@ html {
 
 /* Enhanced gradient button styles */
 .btn-gradient-red {
-  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  background: linear-gradient(135deg, #047857 0%, #0f172a 100%);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .btn-gradient-red:hover {
-  background: linear-gradient(135deg, #b91c1c 0%, #7f1d1d 100%);
+  background: linear-gradient(135deg, #065f46 0%, #020617 100%);
   transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(220, 38, 38, 0.3);
+  box-shadow: 0 10px 25px rgba(4, 120, 87, 0.25);
 }
 
 /* Luxury glass morphism effect */

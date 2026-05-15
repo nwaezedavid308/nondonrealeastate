@@ -18,7 +18,7 @@ const galleryProjects = [
     status: "Multiple Phases",
     vision: [
       {
-        image: "/images/3d-renders/3D RENDER 4  BEDROOM DUPLEX PHASE 3.jpeg",
+        image: "/ESTATE PHASE 3  MORE PICTURES/4 BEDROOM DUPLEX.jpg",
         title: "Modern Duplex Design",
         description: "Contemporary architectural excellence",
       },
@@ -40,12 +40,12 @@ const galleryProjects = [
         description: "Successfully delivered luxury homes",
       },
       {
-        image: "/images/phases/PHASE 3/PHASE 3 (1).jpg",
+        image: "/ESTATE PHASE 3  MORE PICTURES/4 BEDROOM SEMI DETACHED.jpg",
         title: "Phase 3 Real Construction",
         description: "4 & 5-bedroom luxury duplexes under construction",
       },
       {
-        image: "/images/phases/PHASE 3/PHASE 3 (2).jpg",
+        image: "/ESTATE PHASE 3  MORE PICTURES/5 BEDROOM LUXURY.jpg",
         title: "Phase 3 Progress",
         description: "Active construction in progress",
       },
@@ -157,10 +157,50 @@ const galleryProjects = [
     ],
   },
   {
+    id: "five-unit-luxury-duplexes",
+    name: "5 Unit Luxury Duplexes",
+    description: "Exclusive 5-unit luxury duplex development on Nza Street, Enugu State, Nigeria",
+    status: "Now Selling - ₦410M",
+    vision: [
+      {
+        image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png",
+        title: "5 Unit Luxury Duplexes",
+        description: "Premium duplex development on Nza Street",
+      },
+      {
+        image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (2).png",
+        title: "Luxury Duplex Exterior",
+        description: "Refined residential architecture",
+      },
+      {
+        image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (3).png",
+        title: "Exclusive Duplex Development",
+        description: "Limited 5-unit luxury offering",
+      },
+    ],
+    reality: [
+      {
+        image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png",
+        title: "Nza Street Duplex View",
+        description: "New luxury duplex presentation",
+      },
+      {
+        image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (2).png",
+        title: "Duplex Development Preview",
+        description: "Premium units selling for ₦410M",
+      },
+      {
+        image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (3).png",
+        title: "5 Unit Luxury Duplexes",
+        description: "Exclusive Nondon development in Enugu",
+      },
+    ],
+  },
+  {
     id: "bungalows",
     name: "Nondon Almonds Bungalows",
     description: "Premium luxury bungalows in Centenary City, Enugu",
-    status: "Now Selling - ₦135M",
+    status: "Sold Out",
     vision: [
       {
         image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg",
@@ -464,7 +504,7 @@ export default function GalleryPage() {
             <Button
               asChild
               size="lg"
-              className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-8"
+              className="bg-gradient-to-r from-emerald-700 to-slate-800 hover:from-emerald-800 hover:to-slate-900 text-white px-8"
             >
               <Link href="/contact">Start Your Project</Link>
             </Button>
@@ -474,7 +514,7 @@ export default function GalleryPage() {
               asChild
               variant="outline"
               size="lg"
-              className="border-red-200 text-red-600 hover:bg-red-50 px-8 bg-transparent"
+              className="border-emerald-200 text-emerald-700 hover:bg-emerald-50 px-8 bg-transparent"
             >
               <Link href="/projects">View All Projects</Link>
             </Button>

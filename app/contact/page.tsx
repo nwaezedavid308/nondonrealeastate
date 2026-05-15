@@ -63,8 +63,9 @@ const offices = [
 const properties = [
   "Nondon Estate Phase 3",
   "Nondon Luxury Apartment",
+  "5 Unit Luxury Duplexes",
   "Nondon Smart Homes",
-  "Nondon Almonds",
+  "Nondon Almonds (Sold Out)",
   "Other/General Inquiry",
 ]
 
@@ -208,8 +209,8 @@ export default function ContactPage() {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <CardHeader className="pb-4">
-                  <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-all duration-300 group-hover:scale-110">
-                    <method.icon className="w-8 h-8 text-red-600 group-hover:text-white transition-colors" />
+                  <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-700 transition-all duration-300 group-hover:scale-110">
+                    <method.icon className="w-8 h-8 text-emerald-700 group-hover:text-white transition-colors" />
                   </div>
                   <CardTitle className="text-xl font-bold text-gray-900">{method.title}</CardTitle>
                   <CardDescription className="text-gray-600">{method.description}</CardDescription>
@@ -219,7 +220,7 @@ export default function ContactPage() {
                   <div className="text-sm text-gray-500">{method.available}</div>
                   <Button
                     asChild
-                    className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    className="w-full bg-emerald-700 hover:bg-emerald-800 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
                   >
                     <Link href={method.action}>Contact Now</Link>
                   </Button>
@@ -343,7 +344,7 @@ export default function ContactPage() {
 
                   <Button 
                     type="submit"
-                    className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    className="w-full bg-emerald-700 hover:bg-emerald-800 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
                     disabled={generalSubmitting}
                   >
                     {generalSubmitting ? (
@@ -502,7 +503,7 @@ export default function ContactPage() {
 
                   <Button 
                     type="submit"
-                    className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                    className="w-full bg-emerald-700 hover:bg-emerald-800 text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
                     disabled={reservationSubmitting}
                   >
                     {reservationSubmitting ? (
@@ -567,14 +568,14 @@ export default function ContactPage() {
                   <div className="flex gap-2">
                     <Button
                       asChild
-                      className="flex-1 bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:scale-105"
+                      className="flex-1 bg-emerald-700 hover:bg-emerald-800 text-white transition-all duration-300 hover:scale-105"
                     >
                       <Link href={`tel:${office.phone}`}>Call Office</Link>
                     </Button>
                     <Button
                       asChild
                       variant="outline"
-                      className="flex-1 border-red-200 text-red-600 hover:bg-red-50 bg-transparent transition-all duration-300 hover:scale-105"
+                      className="flex-1 border-emerald-200 text-emerald-700 hover:bg-emerald-50 bg-transparent transition-all duration-300 hover:scale-105"
                     >
                       <Link href={`mailto:${office.email}`}>Send Email</Link>
                     </Button>
@@ -686,7 +687,7 @@ export default function ContactPage() {
       </section>
 
       {/* Stay Updated Section */}
-      <section className="bg-gradient-to-r from-red-600 to-red-800 py-16 text-white">
+      <section className="bg-gradient-to-r from-emerald-800 to-slate-900 py-16 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Stay Updated with Nondon</h2>
           <p className="text-xl text-white/90 mb-8 text-balance">
@@ -695,7 +696,7 @@ export default function ContactPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Button
               size="lg"
-              className="bg-white text-red-600 hover:bg-gray-100 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-white text-emerald-800 hover:bg-emerald-50 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
               onClick={() => {
                 window.dispatchEvent(new CustomEvent('triggerNewsletterPopup'));
               }}
@@ -708,7 +709,7 @@ export default function ContactPage() {
 
       {/* CTA Section */}
 
-      <section className="bg-red-600 text-white py-16">
+      <section className="bg-gradient-to-r from-emerald-800 to-slate-900 text-white py-16">
 
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up">
 
@@ -730,7 +731,7 @@ export default function ContactPage() {
 
               size="lg"
 
-              className="bg-white text-red-600 hover:bg-gray-100 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-white text-emerald-800 hover:bg-emerald-50 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
 
             >
 
@@ -746,7 +747,7 @@ export default function ContactPage() {
 
               size="lg"
 
-              className="border-white text-white hover:bg-white hover:text-red-600 px-8 bg-transparent transition-all duration-300 hover:scale-105"
+              className="border-white text-white hover:bg-white hover:text-emerald-800 px-8 bg-transparent transition-all duration-300 hover:scale-105"
 
             >
 

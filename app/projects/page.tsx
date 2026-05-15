@@ -38,8 +38,8 @@ const estates = [
     units: "Multiple",
     location: "Opp. Innoson warehouse New Heaven Extension, Enugu State",
     price: null,
-    priceRange: "₦125,000,000 - ₦290,000,000",
-    image: "/images/phases/PHASE 3/PHASE 3 (1).jpg",
+    priceRange: "₦140,000,000 - ₦280,000,000",
+    image: "/ESTATE PHASE 3  MORE PICTURES/4 BEDROOM DUPLEX.jpg",
     amenities: [
       "5-aside football pitch",
       "Swimming pool",
@@ -47,7 +47,7 @@ const estates = [
       "24-hour power",
       "Round-the-clock security",
     ],
-    paymentPlan: "4BR Duplex: ₦160M (Outright) | ₦170M (Installment) • 4BR Semi: ₦125M (Outright) | ₦135M (Installment) • 5BR Duplex: ₦200M (Outright) | ₦210M (Installment) • 5BR Luxury: ₦280M (Outright) | ₦290M (Installment)",
+    paymentPlan: "Semi-detached 4BR Duplex: ₦140M (₦150M in installments) • 4BR Duplex: ₦170M (₦180M in installments) • 5BR Duplex: ₦210M (₦220M in installments) • 5BR Luxury Suite: ₦270M (₦280M in installments)",
     soldOut: false,
   },
 ]
@@ -73,6 +73,27 @@ const apartments = [
       "Restaurant",
     ],
     paymentPlan: "Pay 30% now; spread 70% over 12 months",
+    soldOut: false,
+  },
+  {
+    id: "five-unit-luxury-duplexes",
+    name: "5 Unit Luxury Duplexes",
+    status: "Now Selling",
+    type: "Exclusive 5-unit luxury duplex development",
+    bedrooms: 5,
+    units: 5,
+    location: "Nza Street, Enugu State, Nigeria",
+    price: "₦410,000,000",
+    priceRange: null,
+    image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png",
+    amenities: [
+      "Luxury duplex layout",
+      "Premium finishing",
+      "Private residential setting",
+      "Secure access",
+      "Prime Nza Street location",
+    ],
+    paymentPlan: "Selling for ₦410M",
     soldOut: false,
   },
 ]
@@ -105,7 +126,7 @@ const otherProjects = [
   {
     id: "nondon-almonds",
     name: "Nondon Almonds",
-    status: "Now Selling", // Updated status to show it's actively selling with green badge
+    status: "Sold Out",
     type: "Premium luxury bungalows",
     bedrooms: 4,
     units: 2,
@@ -121,7 +142,7 @@ const otherProjects = [
       "4 car parking space",
     ],
     paymentPlan: "Pay 30% now; spread 70% over 12 months",
-    soldOut: false,
+    soldOut: true,
   },
 ]
 
@@ -167,7 +188,7 @@ function PropertyCard({ property, category }: { property: any; category: string 
                   ? "bg-white text-red-600 border-red-200"
                   : property.status === "Now Selling" || property.status === "Ongoing"
                     ? "bg-green-600 text-white" // Green badges for active selling properties
-                    : "bg-red-600 text-white"
+                    : "bg-emerald-700 text-white"
             }`}
           >
             {property.status}
@@ -245,7 +266,7 @@ function PropertyCard({ property, category }: { property: any; category: string 
                   ? "bg-gray-400 cursor-not-allowed" // Inactive styling for sold out properties
                   : property.status === "Now Selling" || property.status === "Ongoing"
                     ? "bg-green-600 hover:bg-green-700" // Green buttons for active selling properties
-                    : "bg-red-600 hover:bg-red-700"
+                    : "bg-emerald-700 hover:bg-emerald-800"
               }`}
               disabled={property.soldOut}
             >
@@ -260,7 +281,7 @@ function PropertyCard({ property, category }: { property: any; category: string 
                 className={`flex-1 transition-all duration-300 hover:shadow-lg ${
                   property.status === "Now Selling" || property.status === "Ongoing"
                     ? "border-green-200 text-green-600 hover:bg-green-50" // Green outline buttons for active properties
-                    : "border-red-200 text-red-600 hover:bg-red-50"
+                    : "border-emerald-200 text-emerald-700 hover:bg-emerald-50"
                 } bg-transparent`}
               >
                 <Link href="/contact">Secure Now</Link>
@@ -313,31 +334,31 @@ export default function ProjectsPage() {
                 {/* Improved mobile responsiveness with better spacing */}
                 <TabsTrigger
                   value="estates"
-                  className="data-[state=active]:bg-red-600 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300" // Better responsive text sizing
+                  className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300" // Better responsive text sizing
                 >
                   Estates
                 </TabsTrigger>
                 <TabsTrigger
                   value="apartments"
-                  className="data-[state=active]:bg-red-600 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300"
+                  className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300"
                 >
                   Apartments
                 </TabsTrigger>
                 <TabsTrigger
                   value="smart-homes"
-                  className="data-[state=active]:bg-red-600 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300"
+                  className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300"
                 >
                   Smart Homes
                 </TabsTrigger>
                 <TabsTrigger
                   value="other"
-                  className="data-[state=active]:bg-red-600 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300"
+                  className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300"
                 >
                   Projects
                 </TabsTrigger>
                 <TabsTrigger
                   value="coming-soon"
-                  className="data-[state=active]:bg-red-600 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300"
+                  className="data-[state=active]:bg-emerald-700 data-[state=active]:text-white text-xs sm:text-sm py-2 px-1 sm:px-2 whitespace-nowrap transition-all duration-300"
                 >
                   Coming Soon
                 </TabsTrigger>
@@ -428,21 +449,21 @@ export default function ProjectsPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-red-600 to-red-800 py-16">
+      <section className="bg-gradient-to-r from-emerald-800 to-slate-900 py-16">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-balance">Ready to Own Your Dream Home?</h2>
           <p className="text-xl text-white/90 mb-8 text-balance">
             Start your journey with Nondon Real Estate today. Our team is ready to help you find the perfect property.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button asChild size="lg" className="bg-white text-red-600 hover:bg-gray-100 px-8">
+            <Button asChild size="lg" className="bg-white text-emerald-800 hover:bg-emerald-50 px-8">
               <Link href="/contact">Secure Now</Link>
             </Button>
             <Button
               asChild
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-red-600 px-8 bg-transparent"
+              className="border-white text-white hover:bg-white hover:text-emerald-800 px-8 bg-transparent"
             >
               <Link href="/contact">Talk to Us</Link>
             </Button>

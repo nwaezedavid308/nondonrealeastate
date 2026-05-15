@@ -163,7 +163,7 @@ export default function HeroSlideshow() {
             <div className="hover:scale-105 transition-transform duration-200">
               <Button
                 asChild
-                className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg"
+                className="bg-gradient-to-r from-emerald-700 to-slate-800 hover:from-emerald-800 hover:to-slate-900 text-white px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 hover:shadow-lg"
               >
                 <Link href="/projects">Explore Properties</Link>
               </Button>
@@ -172,7 +172,7 @@ export default function HeroSlideshow() {
               <Button
                 asChild
                 variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-red-600 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 bg-transparent"
+                className="border-2 border-white text-white hover:bg-white hover:text-emerald-800 px-6 sm:px-8 py-3 sm:py-4 text-base sm:text-lg font-semibold transition-all duration-300 bg-transparent"
               >
                 <Link href="/contact">Contact Us</Link>
               </Button>

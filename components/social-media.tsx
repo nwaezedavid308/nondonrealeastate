@@ -54,7 +54,7 @@ export function SocialMedia({
       case "floating":
         return {
           container: "fixed top-1/2 right-4 transform -translate-y-1/2 z-40 flex flex-col space-y-4",
-          link: "group flex items-center justify-center w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 hover:bg-red-600 hover:border-red-600 transition-all duration-300 hover:scale-110 hover:shadow-xl",
+          link: "group flex items-center justify-center w-14 h-14 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 hover:bg-emerald-700 hover:border-emerald-700 transition-all duration-300 hover:scale-110 hover:shadow-xl",
           icon: "w-6 h-6 text-gray-600 group-hover:text-white",
           text: "hidden"
         }
@@ -68,7 +68,7 @@ export function SocialMedia({
       default:
         return {
           container: "flex space-x-4",
-          link: "group flex items-center space-x-3 p-3 rounded-xl bg-gray-100 hover:bg-red-50 transition-all duration-300 hover:scale-105",
+          link: "group flex items-center space-x-3 p-3 rounded-xl bg-gray-100 hover:bg-emerald-50 transition-all duration-300 hover:scale-105",
           icon: "w-6 h-6",
           text: "text-base font-medium"
         }

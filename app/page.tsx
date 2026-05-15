@@ -33,24 +33,24 @@ export default function NondonRealEstate() {
             {/* Video Features */}
             <div className="grid md:grid-cols-3 gap-6 mt-12">
               <div className="text-center group hover:scale-105 transition-transform duration-300 animate-fadeInUp">
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-300">
-                  <Home className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-700 transition-colors duration-300">
+                  <Home className="w-8 h-8 text-emerald-700 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Virtual Tours</h3>
                 <p className="text-muted-foreground text-sm font-normal">Experience our properties from the comfort of your home</p>
               </div>
               
               <div className="text-center group hover:scale-105 transition-transform duration-300 animate-fadeInUp" style={{animationDelay: '100ms'}}>
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-300">
-                  <Video className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-700 transition-colors duration-300">
+                  <Video className="w-8 h-8 text-emerald-700 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Behind the Scenes</h3>
                 <p className="text-muted-foreground text-sm font-normal">See the craftsmanship and attention to detail in every project</p>
               </div>
               
               <div className="text-center group hover:scale-105 transition-transform duration-300 animate-fadeInUp" style={{animationDelay: '200ms'}}>
-                <div className="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-red-600 transition-colors duration-300">
-                  <Star className="w-8 h-8 text-red-600 group-hover:text-white transition-colors duration-300" />
+                <div className="w-16 h-16 bg-emerald-100 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:bg-emerald-700 transition-colors duration-300">
+                  <Star className="w-8 h-8 text-emerald-700 group-hover:text-white transition-colors duration-300" />
                 </div>
                 <h3 className="text-lg font-semibold mb-2">Customer Stories</h3>
                 <p className="text-muted-foreground text-sm font-normal">Hear from satisfied homeowners about their Nondon experience</p>
@@ -75,7 +75,7 @@ export default function NondonRealEstate() {
                 <Card className="group hover:shadow-xl transition-all duration-500">
               <div className="relative overflow-hidden rounded-t-lg">
                 <Image
-                  src="/images/3d-renders/3D RENDER 4  BEDROOM DUPLEX PHASE 3.jpeg"
+                  src="/ESTATE PHASE 3  MORE PICTURES/4 BEDROOM DUPLEX.jpg"
                   alt="Nondon Estate Phase 3"
                   width={400}
                   height={256}
@@ -91,11 +91,11 @@ export default function NondonRealEstate() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  <div className="text-2xl font-bold text-red-600">₦125M – ₦290M</div>
-                  <p className="text-sm text-muted-foreground font-normal">4–5 Bedroom Luxury & Deluxe Duplexes</p>
+                  <div className="text-2xl font-bold text-red-600">₦140M – ₦280M</div>
+                  <p className="text-sm text-muted-foreground font-normal">4–5 Bedroom Duplexes & Luxury Suites</p>
                   <Button
                     asChild
-                    className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:shadow-lg"
+                    className="w-full bg-emerald-700 hover:bg-emerald-800 text-white transition-all duration-300 hover:shadow-lg"
                   >
                     <Link href="/projects/phase-3">View Details →</Link>
                   </Button>
@@ -131,9 +131,45 @@ export default function NondonRealEstate() {
                   <p className="text-sm text-muted-foreground font-normal">1,2,3 Bedroom Studio Apartments</p>
                   <Button
                     asChild
-                    className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:shadow-lg"
+                    className="w-full bg-emerald-700 hover:bg-emerald-800 text-white transition-all duration-300 hover:shadow-lg"
                   >
                     <Link href="/projects/luxury-apartment">View Details →</Link>
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+              </div>
+            </div>
+
+            {/* 5 Unit Luxury Duplexes */}
+            <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
+              <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
+                <Card className="group hover:shadow-xl transition-all duration-500">
+              <div className="relative overflow-hidden rounded-t-lg">
+                <Image
+                  src="/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png"
+                  alt="5 Unit Luxury Duplexes"
+                  width={400}
+                  height={256}
+                  className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
+                />
+                <Badge className="absolute top-4 left-4 bg-green-600 text-white">Now Selling</Badge>
+              </div>
+              <CardHeader>
+                <CardTitle className="text-xl">5 Unit Luxury Duplexes</CardTitle>
+                <CardDescription className="flex items-center text-muted-foreground">
+                  Nza Street, Enugu State, Nigeria
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-3">
+                  <div className="text-2xl font-bold text-red-600">₦410M</div>
+                  <p className="text-sm text-muted-foreground font-normal">Exclusive 5-unit luxury duplex development</p>
+                  <Button
+                    asChild
+                    className="w-full bg-emerald-700 hover:bg-emerald-800 text-white transition-all duration-300 hover:shadow-lg"
+                  >
+                    <Link href="/projects/five-unit-luxury-duplexes">View Details →</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -167,7 +203,7 @@ export default function NondonRealEstate() {
                   <p className="text-sm text-muted-foreground font-normal">6-Bedroom Smart Duplexes with BQ</p>
                   <Button
                     asChild
-                    className="w-full bg-red-600 hover:bg-red-700 text-white transition-all duration-300 hover:shadow-lg"
+                    className="w-full bg-emerald-700 hover:bg-emerald-800 text-white transition-all duration-300 hover:shadow-lg"
                   >
                     <Link href="/projects/smart-homes">View Details →</Link>
                   </Button>
@@ -189,7 +225,7 @@ export default function NondonRealEstate() {
                   height={256}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
                 />
-                <Badge className="absolute top-4 left-4 bg-green-600 text-white">Now Selling</Badge>
+                <Badge className="absolute top-4 left-4 bg-gray-600 text-white">Sold Out</Badge>
               </div>
               <CardHeader>
                 <CardTitle className="text-xl">Nondon Almonds</CardTitle>
@@ -203,9 +239,9 @@ export default function NondonRealEstate() {
                   <p className="text-sm text-muted-foreground font-normal">4-Bedroom Luxury Bungalows</p>
                   <Button
                     asChild
-                    className="w-full bg-green-600 hover:bg-green-700 text-white transition-all duration-300 hover:shadow-lg"
+                    className="w-full bg-gray-400 hover:bg-gray-400 text-white cursor-not-allowed transition-all duration-300"
                   >
-                    <Link href="/projects/nondon-almonds">View Details →</Link>
+                    <Link href="/projects/nondon-almonds">Sold Out</Link>
                   </Button>
                 </div>
               </CardContent>
@@ -241,14 +277,14 @@ export default function NondonRealEstate() {
                     <Button
                       asChild
                       variant="outline"
-                      className="flex-1 bg-transparent border-red-200 text-red-600 hover:bg-red-50 transition-all duration-300"
+                      className="flex-1 bg-transparent border-emerald-200 text-emerald-700 hover:bg-emerald-50 transition-all duration-300"
                     >
                       <Link href="/contact">Join Waitlist</Link>
                     </Button>
                     <Button
                       asChild
                       size="sm"
-                      className="bg-red-600 hover:bg-red-700 text-white"
+                      className="bg-emerald-700 hover:bg-emerald-800 text-white"
                     >
                       <Link href="/contact">Learn More</Link>
                     </Button>
@@ -287,14 +323,14 @@ export default function NondonRealEstate() {
                     <Button
                       asChild
                       variant="outline"
-                      className="flex-1 bg-transparent border-red-200 text-red-600 hover:bg-red-50 transition-all duration-300"
+                      className="flex-1 bg-transparent border-emerald-200 text-emerald-700 hover:bg-emerald-50 transition-all duration-300"
                     >
                       <Link href="/contact">Join Waitlist</Link>
                     </Button>
                     <Button
                       asChild
                       size="sm"
-                      className="bg-red-600 hover:bg-red-700 text-white"
+                      className="bg-emerald-700 hover:bg-emerald-800 text-white"
                     >
                       <Link href="/contact">Learn More</Link>
                     </Button>
@@ -319,7 +355,7 @@ export default function NondonRealEstate() {
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
               <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
+                <div className="w-16 h-16 bg-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-emerald-800 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
                 <span className="text-2xl font-bold text-white">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Browse</h3>
@@ -329,7 +365,7 @@ export default function NondonRealEstate() {
 
             <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
               <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
+                <div className="w-16 h-16 bg-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-emerald-800 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
                 <span className="text-2xl font-bold text-white">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Secure</h3>
@@ -339,7 +375,7 @@ export default function NondonRealEstate() {
 
             <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
               <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
+                <div className="w-16 h-16 bg-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-emerald-800 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
                 <span className="text-2xl font-bold text-white">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Pay Flexibly</h3>
@@ -349,7 +385,7 @@ export default function NondonRealEstate() {
 
             <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
               <div className="text-center group hover:scale-105 transition-transform duration-300">
-                <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-red-700 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
+                <div className="w-16 h-16 bg-emerald-700 rounded-full flex items-center justify-center mx-auto mb-4 transition-all duration-300 group-hover:bg-emerald-800 group-hover:shadow-lg hover:scale-110 hover:rotate-5">
                 <span className="text-2xl font-bold text-white">4</span>
               </div>
               <h3 className="text-xl font-semibold mb-2">Move In</h3>
@@ -423,7 +459,7 @@ export default function NondonRealEstate() {
       </section>
 
       {/* Call to Action */}
-      <section className="py-20 bg-red-600 text-white">
+      <section className="py-20 bg-gradient-to-r from-emerald-800 to-slate-900 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 animate-fadeInUp">
           <h2 className="text-4xl font-bold mb-6 text-balance">Start Your Homeownership Journey Today</h2>
           <p className="text-xl mb-8 text-pretty opacity-90 font-normal">
@@ -434,7 +470,7 @@ export default function NondonRealEstate() {
             <Button
               asChild
               size="lg"
-                className="bg-white text-red-600 hover:bg-gray-100 transition-all duration-300 hover:shadow-lg"
+                className="bg-white text-emerald-800 hover:bg-emerald-50 transition-all duration-300 hover:shadow-lg"
             >
               <Link href="/contact">Talk to Us</Link>
             </Button>
@@ -444,7 +480,7 @@ export default function NondonRealEstate() {
               asChild
               size="lg"
               variant="outline"
-                className="border-white text-white hover:bg-white hover:text-red-600 bg-transparent transition-all duration-300"
+                className="border-white text-white hover:bg-white hover:text-emerald-800 bg-transparent transition-all duration-300"
             >
               <Link href="/contact">Secure Now</Link>
             </Button>

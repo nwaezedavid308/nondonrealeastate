@@ -1,3 +1,5 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -142,7 +144,7 @@ const milestones = [
     description: "Launched Nondon Almonds luxury bungalows, combining traditional elegance with modern luxury finishes.",
     image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg",
     phase: "Bungalows",
-    color: "from-red-600 to-red-800"
+    color: "from-emerald-700 to-slate-800"
   },
   {
     year: "2025",
@@ -151,7 +153,7 @@ const milestones = [
       "Premium Nondon Crest luxury development in Enugu and expansion of our luxury apartments to Asaba. Status: Ongoing.",
     image: "/images/coming-soon/coming-soon-1.jpg",
     phase: "Future Developments",
-    color: "from-red-600 to-red-800"
+    color: "from-emerald-700 to-slate-800"
   }
 ]
 
@@ -295,7 +297,7 @@ export default function AboutPage() {
       </section>
 
       {/* Achievements */}
-      <section className="py-16 bg-red-600 text-white">
+      <section className="py-16 bg-gradient-to-r from-emerald-800 to-slate-900 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 animate-fade-in-up">
             <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Our Achievements</h2>
@@ -432,7 +434,7 @@ export default function AboutPage() {
 
             {/* Journey End Badge */}
             <div className="text-center mt-16">
-              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-red-600 to-red-800 text-white rounded-full shadow-2xl">
+              <div className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-emerald-700 to-slate-800 text-white rounded-full shadow-2xl">
                 <span className="text-lg font-bold">Journey Continues...</span>
                 <div className="ml-3 w-2 h-2 bg-white rounded-full animate-pulse"></div>
               </div>
@@ -497,7 +499,7 @@ export default function AboutPage() {
       </section>
 
       {/* Stay Updated Section */}
-      <section className="bg-gradient-to-r from-red-600 to-red-800 py-16 text-white">
+      <section className="bg-gradient-to-r from-emerald-800 to-slate-900 py-16 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Stay Updated with Nondon</h2>
           <p className="text-xl text-white/90 mb-8 text-balance">
@@ -506,7 +508,7 @@ export default function AboutPage() {
           <div className="flex flex-col sm:flex-row gap-4 justify-center max-w-md mx-auto">
             <Button
               size="lg"
-              className="bg-white text-red-600 hover:bg-gray-100 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-white text-emerald-800 hover:bg-emerald-50 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
               onClick={() => {
                 window.dispatchEvent(new CustomEvent('triggerNewsletterPopup'));
               }}
@@ -518,7 +520,7 @@ export default function AboutPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-r from-red-600 to-red-800 py-16 text-white">
+      <section className="bg-gradient-to-r from-emerald-800 to-slate-900 py-16 text-white">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-bold mb-6 text-balance">Ready to Start Your Real Estate Journey?</h2>
           <p className="text-xl text-white/90 mb-8 text-balance">
@@ -528,7 +530,7 @@ export default function AboutPage() {
             <Button
               asChild
               size="lg"
-              className="bg-white text-red-600 hover:bg-gray-100 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+              className="bg-white text-emerald-800 hover:bg-emerald-50 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
             >
               <Link href="/projects">View Our Projects</Link>
             </Button>
@@ -536,7 +538,7 @@ export default function AboutPage() {
               asChild
               variant="outline"
               size="lg"
-              className="border-white text-white hover:bg-white hover:text-red-600 px-8 bg-transparent transition-all duration-300 hover:scale-105"
+              className="border-white text-white hover:bg-white hover:text-emerald-800 px-8 bg-transparent transition-all duration-300 hover:scale-105"
             >
               <Link href="/contact">Contact Us Today</Link>
             </Button>

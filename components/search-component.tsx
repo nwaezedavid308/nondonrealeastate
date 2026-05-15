@@ -27,12 +27,23 @@ const searchData: SearchResult[] = [
     id: "phase-3",
     title: "Nondon Estate Phase 3",
     type: "property",
-    description: "4–5 Bedroom Luxury & Deluxe Duplexes with modern amenities",
-    price: "₦125M – ₦290M",
+    description: "4–5 Bedroom Duplexes & Luxury Suites with modern amenities",
+    price: "₦140M – ₦280M",
     location: "Opp. Innoson Warehouse, New Heaven Extension, Enugu",
     status: "Now Selling",
     href: "/projects/phase-3",
-    image: "/images/3d-renders/3D RENDER 4  BEDROOM DUPLEX PHASE 3.jpeg"
+    image: "/ESTATE PHASE 3  MORE PICTURES/4 BEDROOM DUPLEX.jpg"
+  },
+  {
+    id: "five-unit-luxury-duplexes",
+    title: "5 Unit Luxury Duplexes",
+    type: "property",
+    description: "Exclusive 5-unit luxury duplex development on Nza Street",
+    price: "₦410M",
+    location: "Nza Street, Enugu State, Nigeria",
+    status: "Now Selling",
+    href: "/projects/five-unit-luxury-duplexes",
+    image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png"
   },
   {
     id: "luxury-apartments",
@@ -63,7 +74,7 @@ const searchData: SearchResult[] = [
     description: "4-Bedroom Luxury Bungalows with traditional elegance",
     price: "₦135M",
     location: "Centenary City, Enugu",
-    status: "Now Selling",
+    status: "Sold Out",
     href: "/projects/nondon-almonds",
     image: "/images/bungalows/BUNGALOWS NONDON ALMONDS REALITY IMAGES/ALMONDS BUNGALOW (1).jpeg"
   },

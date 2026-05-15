@@ -63,11 +63,17 @@ const propertyData = {
     units: "Multiple",
     location: "Opp. Innoson warehouse New Heaven Extension, Enugu State",
     price: null,
-    priceRange: "₦125,000,000 - ₦290,000,000",
+    priceRange: "₦140,000,000 - ₦280,000,000",
     images: [
-      "/images/phases/PHASE 3/PHASE 3 (1).jpg",
-      "/images/phases/PHASE 3/PHASE 3 (2).jpg",
-      "/images/phases/PHASE 3/PHASE 3 (3).jpg",
+      "/ESTATE PHASE 3  MORE PICTURES/4 BEDROOM DUPLEX.jpg",
+      "/ESTATE PHASE 3  MORE PICTURES/4 BEDROOM SEMI DETACHED.jpg",
+      "/ESTATE PHASE 3  MORE PICTURES/5 BEDROOM LUXURY.jpg",
+      "/ESTATE PHASE 3  MORE PICTURES/LUXURY DUPLEXES (1).jpg",
+      "/ESTATE PHASE 3  MORE PICTURES/LUXURY DUPLEXES (2).jpg",
+      "/ESTATE PHASE 3  MORE PICTURES/LUXURY DUPLEXES (3).jpg",
+      "/ESTATE PHASE 3  MORE PICTURES/LUXURY DUPLEXES (4).jpg",
+      "/ESTATE PHASE 3  MORE PICTURES/LUXURY DUPLEXES (5).jpg",
+      "/ESTATE PHASE 3  MORE PICTURES/LUXURY DUPLEXES (6).jpg",
     ],
     description:
       "Our most ambitious project yet, featuring a variety of luxury options from 4-bedroom semi-detached to 5-bedroom luxury duplexes. This estate includes recreational facilities and modern infrastructure for the ultimate living experience.",
@@ -85,7 +91,7 @@ const propertyData = {
       "Visitor parking areas",
       "Modern drainage and sewage system",
     ],
-    paymentPlan: "4BR Duplex: ₦160M (Outright) | ₦170M (Installment) • 4BR Semi: ₦125M (Outright) | ₦135M (Installment) • 5BR Duplex: ₦200M (Outright) | ₦210M (Installment) • 5BR Luxury: ₦280M (Outright) | ₦290M (Installment)",
+    paymentPlan: "Semi-detached 4BR Duplex: ₦140M (₦150M in installments) • 4BR Duplex: ₦170M (₦180M in installments) • 5BR Duplex: ₦210M (₦220M in installments) • 5BR Luxury Suite: ₦270M (₦280M in installments)",
     soldOut: false,
     specifications: {
       landSize: "400-600 sqm",
@@ -187,10 +193,50 @@ const propertyData = {
       "Medical facilities - 10 minutes drive",
     ],
   },
+  "five-unit-luxury-duplexes": {
+    id: "five-unit-luxury-duplexes",
+    name: "5 Unit Luxury Duplexes",
+    status: "Now Selling",
+    type: "Exclusive 5-unit luxury duplex development",
+    bedrooms: 5,
+    units: 5,
+    location: "Nza Street, Enugu State, Nigeria",
+    price: "₦410,000,000",
+    priceRange: null,
+    images: [
+      "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png",
+      "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (2).png",
+      "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (3).png",
+    ],
+    description:
+      "A limited 5-unit luxury duplex development on Nza Street, Enugu State, Nigeria. Designed for buyers who want privacy, premium finishes, and a refined residential address in one of Enugu's established neighbourhoods.",
+    amenities: [
+      "Exclusive 5-unit development",
+      "Luxury duplex layout",
+      "Premium finishing throughout",
+      "Secure residential environment",
+      "Prime Nza Street location",
+      "Modern architectural design",
+    ],
+    paymentPlan: "Selling for ₦410,000,000",
+    soldOut: false,
+    specifications: {
+      units: "5 luxury duplexes",
+      price: "₦410M",
+      location: "Nza Street, Enugu",
+      status: "Now Selling",
+    },
+    nearbyAmenities: [
+      "Independence Layout corridor - nearby",
+      "Restaurants and essential services - short drive",
+      "Schools and offices - accessible from Nza Street",
+      "Central Enugu routes - convenient access",
+    ],
+  },
   "nondon-almonds": {
     id: "nondon-almonds",
     name: "Nondon Almonds",
-    status: "Ongoing",
+    status: "Sold Out",
     type: "4-bedroom bungalow",
     bedrooms: 4,
     units: 2,
@@ -218,7 +264,7 @@ const propertyData = {
       "Spacious rooms with natural lighting",
     ],
     paymentPlan: "₦135,000,000 - Premium luxury bungalows in Centenary City",
-    soldOut: false,
+    soldOut: true,
     specifications: {
       landSize: "500 sqm",
       buildingArea: "250 sqm",
@@ -266,24 +312,24 @@ export default async function PropertyPage(props: PropertyPageProps) {
             </Link>
 
             <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-red-600 transition-colors">
+              <Link href="/" className="text-gray-600 hover:text-emerald-700 transition-colors">
                 Home
               </Link>
-              <Link href="/projects" className="text-red-600 font-semibold">
+              <Link href="/projects" className="text-emerald-700 font-semibold">
                 Projects
               </Link>
-              <Link href="/gallery" className="text-gray-600 hover:text-red-600 transition-colors">
+              <Link href="/gallery" className="text-gray-600 hover:text-emerald-700 transition-colors">
                 Gallery
               </Link>
-              <Link href="/about" className="text-gray-600 hover:text-red-600 transition-colors">
+              <Link href="/about" className="text-gray-600 hover:text-emerald-700 transition-colors">
                 About
               </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-red-600 transition-colors">
+              <Link href="/contact" className="text-gray-600 hover:text-emerald-700 transition-colors">
                 Contact
               </Link>
             </div>
 
-            <Button asChild className="bg-red-600 hover:bg-red-700 text-white">
+            <Button asChild className="bg-emerald-700 hover:bg-emerald-800 text-white">
               <Link href="/contact">Secure Now</Link>
             </Button>
           </div>
@@ -293,11 +339,11 @@ export default async function PropertyPage(props: PropertyPageProps) {
       <div className="bg-gray-50 py-4">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center space-x-2 text-sm text-gray-600">
-            <Link href="/" className="hover:text-red-600">
+            <Link href="/" className="hover:text-emerald-700">
               Home
             </Link>
             <span>/</span>
-            <Link href="/projects" className="hover:text-red-600">
+            <Link href="/projects" className="hover:text-emerald-700">
               Projects
             </Link>
             <span>/</span>
@@ -314,7 +360,7 @@ export default async function PropertyPage(props: PropertyPageProps) {
                 <Badge
                   variant={property.soldOut ? "secondary" : "default"}
                   className={`${
-                    property.soldOut ? "bg-gray-500 text-white" : "bg-red-600 text-white"
+                    property.soldOut ? "bg-gray-500 text-white" : "bg-emerald-700 text-white"
                   } text-sm px-3 py-1`}
                 >
                   {property.status}
@@ -328,10 +374,10 @@ export default async function PropertyPage(props: PropertyPageProps) {
               </div>
             </div>
 
-            <div className="bg-gradient-to-r from-red-50 to-red-100 rounded-lg p-6 border border-red-200">
+            <div className="bg-gradient-to-r from-emerald-50 to-slate-50 rounded-lg p-6 border border-emerald-200">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
                 <div>
-                  <div className="text-4xl md:text-5xl font-bold text-red-600 mb-2">
+                  <div className="text-4xl md:text-5xl font-bold text-emerald-800 mb-2">
                     {property.price || property.priceRange}
                   </div>
                   {property.paymentPlan && <p className="text-gray-700 text-lg">{property.paymentPlan}</p>}
@@ -340,7 +386,7 @@ export default async function PropertyPage(props: PropertyPageProps) {
                   <Button
                     asChild
                     size="lg"
-                    className="bg-gradient-to-r from-red-600 to-red-800 hover:from-red-700 hover:to-red-900 text-white px-8"
+                    className="bg-gradient-to-r from-emerald-700 to-slate-800 hover:from-emerald-800 hover:to-slate-900 text-white px-8"
                     disabled={property.soldOut}
                   >
                     <Link href="/contact">{property.soldOut ? "Sold Out" : "Secure Now"}</Link>
@@ -350,7 +396,7 @@ export default async function PropertyPage(props: PropertyPageProps) {
                       asChild
                       variant="outline"
                       size="lg"
-                      className="border-red-300 text-red-700 hover:bg-red-100 px-8 bg-white"
+                      className="border-emerald-300 text-emerald-800 hover:bg-emerald-50 px-8 bg-white"
                     >
                       <Link href="/contact">Schedule Visit</Link>
                     </Button>
@@ -484,7 +530,7 @@ export default async function PropertyPage(props: PropertyPageProps) {
                     </div>
                     <Badge
                       variant={property.soldOut ? "secondary" : "default"}
-                      className={property.soldOut ? "bg-gray-500 text-white" : "bg-red-600 text-white"}
+                    className={property.soldOut ? "bg-gray-500 text-white" : "bg-emerald-700 text-white"}
                     >
                       {property.status}
                     </Badge>
@@ -501,7 +547,7 @@ export default async function PropertyPage(props: PropertyPageProps) {
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Button asChild className="w-full bg-red-600 hover:bg-red-700 text-white">
+                  <Button asChild className="w-full bg-emerald-700 hover:bg-emerald-800 text-white">
                     <Link href="/contact">
                       <Phone className="w-4 h-4 mr-2" />
                       Call Us Now
@@ -510,7 +556,7 @@ export default async function PropertyPage(props: PropertyPageProps) {
                   <Button
                     asChild
                     variant="outline"
-                    className="w-full border-red-200 text-red-600 hover:bg-red-50 bg-transparent"
+                    className="w-full border-emerald-200 text-emerald-700 hover:bg-emerald-50 bg-transparent"
                   >
                     <Link href="/contact">
                       <Mail className="w-4 h-4 mr-2" />
@@ -520,7 +566,7 @@ export default async function PropertyPage(props: PropertyPageProps) {
                   <Button
                     asChild
                     variant="outline"
-                    className="w-full border-red-200 text-red-600 hover:bg-red-50 bg-transparent"
+                    className="w-full border-emerald-200 text-emerald-700 hover:bg-emerald-50 bg-transparent"
                   >
                     <Link href="/contact">
                       <MessageCircle className="w-4 h-4 mr-2" />
@@ -565,7 +611,7 @@ export default async function PropertyPage(props: PropertyPageProps) {
             <Button
               asChild
               size="lg"
-              className="bg-red-600 hover:bg-red-700 text-white px-8"
+              className="bg-emerald-700 hover:bg-emerald-800 text-white px-8"
               disabled={property.soldOut}
             >
               <Link href="/contact">{property.soldOut ? "Property Sold Out" : "Secure This Property"}</Link>
@@ -574,7 +620,7 @@ export default async function PropertyPage(props: PropertyPageProps) {
               asChild
               variant="outline"
               size="lg"
-              className="border-red-200 text-red-600 hover:bg-red-50 px-8 bg-transparent"
+              className="border-emerald-200 text-emerald-700 hover:bg-emerald-50 px-8 bg-transparent"
             >
               <Link href="/projects">View Other Projects</Link>
             </Button>
