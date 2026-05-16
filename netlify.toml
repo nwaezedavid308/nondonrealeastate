@@ -3,6 +3,7 @@
 
 [build.environment]
   NODE_VERSION = "18"
+  NEXT_DISABLE_ESLINT = "1"
 
 [[plugins]]
   package = "@netlify/plugin-nextjs"
