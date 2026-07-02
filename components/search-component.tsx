@@ -39,7 +39,7 @@ const searchData: SearchResult[] = [
     title: "5 Unit Luxury Duplexes",
     type: "property",
     description: "Exclusive 5-unit luxury duplex development on Nza Street",
-    price: "₦410M",
+    price: "Coming Soon",
     location: "Nza Street, Enugu State, Nigeria",
     status: "Now Selling",
     href: "/projects/five-unit-luxury-duplexes",
