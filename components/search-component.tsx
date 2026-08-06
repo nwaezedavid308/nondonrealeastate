@@ -36,7 +36,7 @@ const searchData: SearchResult[] = [
   },
   {
     id: "five-unit-luxury-duplexes",
-    title: "5 Unit Luxury Duplexes",
+    title: "Empire Apartments (5 Unit Luxury Duplexes)",
     type: "property",
     description: "Exclusive 5-unit luxury duplex development on Nza Street",
     price: "Coming Soon",

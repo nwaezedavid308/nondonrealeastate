@@ -63,7 +63,7 @@ const offices = [
 const properties = [
   "Nondon Estate Phase 3",
   "Nondon Luxury Apartment",
-  "5 Unit Luxury Duplexes",
+  "Empire Apartments (5 Unit Luxury Duplexes)",
   "Nondon Smart Homes",
   "Nondon Almonds (Sold Out)",
   "Other/General Inquiry",

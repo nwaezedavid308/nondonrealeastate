@@ -158,13 +158,13 @@ const galleryProjects = [
   },
   {
     id: "five-unit-luxury-duplexes",
-    name: "5 Unit Luxury Duplexes",
+    name: "Empire Apartments (5 Unit Luxury Duplexes)",
     description: "Exclusive 5-unit luxury duplex development on Nza Street, Enugu State, Nigeria",
     status: "Now Selling - Coming Soon",
     vision: [
       {
         image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png",
-        title: "5 Unit Luxury Duplexes",
+        title: "Empire Apartments (5 Unit Luxury Duplexes)",
         description: "Premium duplex development on Nza Street",
       },
       {
@@ -191,7 +191,7 @@ const galleryProjects = [
       },
       {
         image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (3).png",
-        title: "5 Unit Luxury Duplexes",
+        title: "Empire Apartments (5 Unit Luxury Duplexes)",
         description: "Exclusive Nondon development in Enugu",
       },
     ],

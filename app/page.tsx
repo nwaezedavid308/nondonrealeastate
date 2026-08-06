@@ -141,14 +141,14 @@ export default function NondonRealEstate() {
               </div>
             </div>
 
-            {/* 5 Unit Luxury Duplexes */}
+            {/* Empire Apartments (5 Unit Luxury Duplexes) */}
             <div className="animate-fadeInUp" style={{animationDelay: '100ms'}}>
               <div className="hover:-translate-y-2 hover:scale-105 transition-all duration-300">
                 <Card className="group hover:shadow-xl transition-all duration-500">
               <div className="relative overflow-hidden rounded-t-lg">
                 <Image
                   src="/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png"
-                  alt="5 Unit Luxury Duplexes"
+                  alt="Empire Apartments (5 Unit Luxury Duplexes)"
                   width={400}
                   height={256}
                   className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-500"
@@ -156,7 +156,7 @@ export default function NondonRealEstate() {
                 <Badge className="absolute top-4 left-4 bg-green-600 text-white">Now Selling</Badge>
               </div>
               <CardHeader>
-                <CardTitle className="text-xl">5 Unit Luxury Duplexes</CardTitle>
+                <CardTitle className="text-xl">Empire Apartments (5 Unit Luxury Duplexes)</CardTitle>
                 <CardDescription className="flex items-center text-muted-foreground">
                   Nza Street, Enugu State, Nigeria
                 </CardDescription>
