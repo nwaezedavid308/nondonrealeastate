@@ -160,7 +160,7 @@ const galleryProjects = [
     id: "five-unit-luxury-duplexes",
     name: "Empire Apartments (5 Unit Luxury Duplexes)",
     description: "Exclusive 5-unit luxury duplex development on Nza Street, Enugu State, Nigeria",
-    status: "Now Selling - Coming Soon",
+    status: "Now Available",
     vision: [
       {
         image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png",
@@ -187,7 +187,7 @@ const galleryProjects = [
       {
         image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (2).png",
         title: "Duplex Development Preview",
-        description: "Premium units coming soon",
+        description: "Premium units now available",
       },
       {
         image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (3).png",
