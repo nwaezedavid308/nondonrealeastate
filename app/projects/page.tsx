@@ -77,7 +77,7 @@ const apartments = [
   },
   {
     id: "five-unit-luxury-duplexes",
-    name: "5 Unit Luxury Duplexes",
+    name: "Empire Apartments (5 Unit Luxury Duplexes)",
     status: "Now Selling",
     type: "Exclusive 5-unit luxury duplex development",
     bedrooms: 5,
