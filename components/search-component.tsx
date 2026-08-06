@@ -39,7 +39,7 @@ const searchData: SearchResult[] = [
     title: "Empire Apartments (5 Unit Luxury Duplexes)",
     type: "property",
     description: "Exclusive 5-unit luxury duplex development on Nza Street",
-    price: "Coming Soon",
+    price: "Now Available",
     location: "Nza Street, Enugu State, Nigeria",
     status: "Now Selling",
     href: "/projects/five-unit-luxury-duplexes",

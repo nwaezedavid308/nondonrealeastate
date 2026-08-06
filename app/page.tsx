@@ -163,7 +163,7 @@ export default function NondonRealEstate() {
               </CardHeader>
               <CardContent>
                 <div className="space-y-3">
-                  <div className="text-2xl font-bold text-red-600">Coming Soon</div>
+                  <div className="text-2xl font-bold text-red-600">Now Available</div>
                   <p className="text-sm text-muted-foreground font-normal">Exclusive 5-unit luxury duplex development</p>
                   <Button
                     asChild

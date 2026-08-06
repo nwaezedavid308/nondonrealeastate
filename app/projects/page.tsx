@@ -83,7 +83,7 @@ const apartments = [
     bedrooms: 5,
     units: 5,
     location: "Nza Street, Enugu State, Nigeria",
-    price: "Coming Soon",
+    price: "Now Available",
     priceRange: null,
     image: "/NEW 5 UNIT DUPLEXES/5 UNIT LUXURY DUPLEXES (1).png",
     amenities: [
@@ -93,7 +93,7 @@ const apartments = [
       "Secure access",
       "Prime Nza Street location",
     ],
-    paymentPlan: "Coming Soon",
+    paymentPlan: "Now Available",
     soldOut: false,
   },
 ]
